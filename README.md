@@ -6,6 +6,7 @@
 - **Institution:** Miva University
 - **Course:** MIT8103 — Advanced Database Systems
 - **Project:** Media Production and Asset Management Database
+- **Public repository:** https://github.com/koyabuzz/Ipinlaiye_Samuel_2026-A-MIT-0971
 
 ## Portfolio overview
 
