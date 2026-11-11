@@ -1,104 +1,138 @@
 # MIT8103 Advanced Database Systems Portfolio
 
-> **Academic integrity note:** The schema, diagram, and explanatory notes in this
-> repository are review drafts produced with AI assistance. They must be checked,
-> understood, and revised by the student before they are used in assessed work.
+- **Student:** Samuel Oluwakoya Ipinlaiye
+- **Matriculation number:** 2026/A/MIT/0971
+- **Programme:** Master of Information Technology
+- **Institution:** Miva University
+- **Course:** MIT8103 — Advanced Database Systems
+- **Project:** Media Production and Asset Management Database
 
-## Fictional organisation
+## Portfolio overview
 
-This portfolio models a fictional media production company that produces video,
-audio, photography, and other digital content for clients. The company needs to
-record its clients and projects, assign employees and freelancers to project
-roles, catalogue media assets and their versions, and reserve production
-equipment without double-booking it.
+This repository contains five completed database exercises for a fictional
+media production company. The case study manages clients, projects, employees
+and freelancers, media assets, project roles, equipment, and reservations.
+PostgreSQL provides the normalised operational database and transaction
+controls. MongoDB demonstrates a document model and a separate local
+three-member distributed deployment.
 
-## Current scope
+The scripts and explanations were produced with AI assistance and checked
+through actual database execution. Genuine terminal output is retained under
+`evidence/`. The student must understand and review the work before
+submission; the final personal reflection remains a student task.
 
-Only Portfolio Component 1 (database design and modelling) is currently drafted.
-The relational model contains seven tables:
+## Implemented components and results
 
-- `client`
-- `project`
-- `staff`
-- `project_assignment`
-- `media_asset`
-- `equipment`
-- `equipment_reservation`
+1. **Database Design and Modelling** — Seven PostgreSQL tables, a Mermaid
+   Crow's Foot ERD, 3NF rationale, foreign keys, checks, case-insensitive email
+   uniqueness, an active-staff trigger, and a GiST exclusion constraint. The
+   rollback-only suite passed 11 of 11 checks.
+2. **Query Processing and Optimisation** — A deterministic 766,500-row dataset,
+   three analytical queries, and five baseline and five optimised plans per
+   query. Median times changed from 24.040 to 6.572 ms for Query 1, 17.116 to
+   17.795 ms for Query 2 (candidate index unused), and 13.577 to 3.765 ms for
+   Query 3.
+3. **Transactions and Concurrency** — Genuine `COMMIT`/`ROLLBACK` tests,
+   two-session reservation conflicts, lock monitoring, cleanup, and a comparison
+   of `READ COMMITTED` with `REPEATABLE READ`.
+4. **NoSQL and Advanced Data Models** — Five validated MongoDB collections with
+   12,350 deterministic documents, CRUD and aggregation examples, reference and
+   snapshot checks, bounded arrays, and a `COLLSCAN`-to-`IXSCAN` comparison.
+   The indexed query examined 554 rather than 10,000 documents; its reported
+   time changed from 5 ms to 4 ms.
+5. **Distributed and Cloud Database Concepts** — A local authenticated
+   three-node MongoDB replica set. It demonstrated majority writes, secondary
+   reads, primary election in approximately four seconds, recovery of the former
+   primary, and 31 matching final documents on every member. This is a local
+   distributed exercise, not a cloud deployment.
 
-The database stores media metadata and simulated storage references, not real
-video or audio files. Historical records are retained by using statuses and
-active flags rather than automatically deleting related data.
+Detailed interpretations and limitations accompany the evidence. Local timing
+results should not be generalised as production benchmarks.
 
-Project statuses are `planned`, `active`, `on_hold`, `completed`, and
-`cancelled`. Media asset statuses are `raw`, `editing`, `review`, `approved`, and
-`archived`. Reservation statuses are `pending`, `confirmed`, `checked_out`,
-`returned`, and `cancelled`. Only confirmed and checked-out reservations block
-overlapping bookings; all statuses remain available as history.
-
-Components 2–5 are represented only by empty placeholder folders and are not
-implemented at this stage.
-
-## Requirements
+## Architecture and prerequisites
 
 - macOS on Apple Silicon
 - PostgreSQL 18.4 supplied by Postgres.app
-- Git
-- Docker Desktop and Docker Compose (needed for MongoDB in a later component,
-  not for the current PostgreSQL draft)
+- `psql`, `createdb`, Git, and a POSIX-compatible shell
+- Docker Desktop with Docker Compose
+- MongoDB Community image `mongo:8.2.12-noble`
+- Sufficient Docker memory for the Component 5 three-node replica set
 
-## Review the design
+PostgreSQL database: `mit8103_media_portfolio`. Components 4 and 5 use
+separate MongoDB deployments, credentials, networks, and named volumes.
+Credentials belong in ignored `.env` files; Component 5 member authentication
+also uses an ignored keyfile. Never commit either secret.
 
-Before running any SQL, review:
+## Repository structure
 
-1. [The Crow's Foot ER diagram](component-1-design/diagrams/media-production-er.md)
-2. [The draft PostgreSQL schema](component-1-design/sql/001_schema_draft.sql)
-3. [The normalisation and constraint notes](component-1-design/notes/design-rationale.md)
-4. [The validation checklist](component-1-design/notes/validation-checklist.md)
+```text
+component-1-design/                 ERD, PostgreSQL schema and validation tests
+component-2-query-optimisation/     Generator, queries, plans and comparison
+component-3-transactions/           Transaction, concurrency and isolation tests
+component-4-nosql/                  MongoDB document model and single-node Compose
+component-5-distributed-cloud/      Authenticated three-node replica set
+docs/                               Project overview, decisions and final report
+evidence/component-1/               Genuine design-validation output
+evidence/component-2/               Genuine PostgreSQL plans and measurements
+evidence/component-3/               Genuine multi-session and lock output
+evidence/component-4/               Genuine MongoDB outputs and explain plans
+evidence/component-5/               Genuine replication and failover output
+```
 
-The executed validation output is recorded in
-[`evidence/component-1/component-1-validation-2026-11-10.txt`](evidence/component-1/component-1-validation-2026-11-10.txt).
+Start with each component's `README.md`, then read its `analysis/` material
+before executing scripts. The submission report draft is
+[`docs/final-report.md`](docs/final-report.md).
 
-## Create an isolated local database
+## Reproducibility
 
-These commands create a new database and apply the reviewed Component 1 schema.
-The database name must first be checked to avoid changing an existing database.
+### PostgreSQL components
+
+For a **new isolated environment**, confirm the database name is unused before
+creating it. Do not run the schema against an unrelated database.
 
 ```bash
 pg_isready
 psql --dbname=postgres --command="SELECT datname FROM pg_database WHERE datname = 'mit8103_media_portfolio';"
 createdb mit8103_media_portfolio
-psql --dbname=mit8103_media_portfolio \
-  --file=component-1-design/sql/001_schema_draft.sql
+psql --dbname=mit8103_media_portfolio --no-psqlrc \
+  --set=ON_ERROR_STOP=1 --file=component-1-design/sql/001_schema_draft.sql
+psql --dbname=mit8103_media_portfolio --no-psqlrc \
+  --set=ON_ERROR_STOP=1 --file=component-1-design/sql/002_validation_tests.sql
 ```
 
-The rollback-only validation suite can be repeated with:
+Component 2 scripts run in numeric order after Component 1. Its generator
+refuses to run unless all seven tables are empty. Component 3 is a coordinated
+multi-session experiment; follow its experiment instructions exactly and use
+its targeted cleanup.
 
-```bash
-psql --dbname=mit8103_media_portfolio \
-  --file=component-1-design/sql/002_validation_tests.sql
-```
+For the **existing validated environment**, do not recreate the database or
+rerun data generation. Inspect it with `psql` and compare its catalog and row
+counts with the preserved evidence.
 
-To inspect the result interactively:
+### MongoDB components
 
-```bash
-psql --dbname=mit8103_media_portfolio
-```
+For a **first-time deployment**, copy each `.env.example` to an ignored
+`.env`, replace the placeholders with strong local credentials, verify that
+the named volumes and database are unused, and follow that component's
+experiment instructions. Components 4 and 5 are independent Compose projects.
 
-Then, inside `psql`, `\dt` lists the tables and `\d equipment_reservation`
-shows the reservation constraints. Do not execute the schema against an
-unrelated or important database.
+For an **existing retained deployment**, do not repeat initialisation or delete
+volumes. Use `docker compose ps` from the relevant component directory and
+authenticated read-only inspection. Never run `docker compose down --volumes`.
 
-## Repository layout
+The evidence records the original experiment runs. Re-execution can produce new
+PIDs, transaction IDs, election times, buffer activity, and execution timings.
 
-```text
-docs/                              Project-level notes and decisions
-component-1-design/                Current design and modelling draft
-component-2-query-optimisation/    Reserved; not implemented
-component-3-transactions/          Reserved; not implemented
-component-4-nosql/                 Reserved; not implemented
-component-5-distributed-cloud/     Reserved; not implemented
-evidence/                          Genuine evidence added during later work
-```
+## Evidence and academic integrity
 
-No GitHub repository has been created and nothing has been pushed.
+Evidence files contain real command output, including documented failed setup
+attempts retained for transparency. They are not fabricated screenshots or
+invented benchmarks. AI assisted planning, implementation, debugging, and
+documentation; claims were checked against actual PostgreSQL and MongoDB
+execution evidence. Personal reflection and final wording must be reviewed and
+completed by the student.
+
+The official assignment brief is not stored in this repository. Before final
+submission, confirm the required repository naming convention, report format,
+screenshot requirements, assessor GitHub account, and submission-portal steps.
 
