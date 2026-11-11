@@ -1,0 +1,13 @@
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ANALYZE
+ANALYZE
+ANALYZE
+               indexname               |                                                                                                                                  indexdef                                                                                                                                  
+---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ix_assignment_staff_dates_project     | CREATE INDEX ix_assignment_staff_dates_project ON public.project_assignment USING btree (staff_id, assigned_from, project_id) INCLUDE (assigned_until)
+ ix_media_asset_review_created_project | CREATE INDEX ix_media_asset_review_created_project ON public.media_asset USING btree (status, created_at, project_id) INCLUDE (file_size_bytes)
+ ix_reservation_blocking_start         | CREATE INDEX ix_reservation_blocking_start ON public.equipment_reservation USING btree (start_at, equipment_id) INCLUDE (end_at, project_id, reserved_by) WHERE ((status)::text = ANY ((ARRAY['confirmed'::character varying, 'checked_out'::character varying])::text[]))
+(3 rows)
+

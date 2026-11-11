@@ -1,0 +1,4 @@
+docker_kernel=7.0.12-linuxkit docker_arch=aarch64 docker_server=29.8.0
+image=mongo:8.2.12-noble image_id=sha256:dc23b0dde2221277b581dd76933f39f8a765fee9dbd99b9deb19184c063c061f repo_digest=["mongo@sha256:dc23b0dde2221277b581dd76933f39f8a765fee9dbd99b9deb19184c063c061f"] architecture=arm64
+container=/mit8103-component4-mongodb state=running health=healthy image=mongo:8.2.12-noble started=2026-11-11T06:30:03.375054512Z
+volume=mit8103_component4_mongo_data created=2026-11-11T06:17:12Z driver=local

@@ -1,0 +1,9 @@
+component4=running/healthy image=mongo:8.2.12-noble
+{
+  projects: 200,
+  staff: 50,
+  mediaAssets: 10000,
+  equipment: 100,
+  equipmentReservations: 2000,
+  total: 12350
+}

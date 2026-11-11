@@ -1,0 +1,181 @@
+ Image mongo:8.0 Pulling 
+ 2f795b3be8ec Pulling fs layer 0B
+ eff542bc65a5 Pulling fs layer 0B
+ 7f3d6e7ee639 Pulling fs layer 0B
+ 61462fde1f3a Pulling fs layer 0B
+ a381c886d74f Pulling fs layer 0B
+ 2beab8233266 Pulling fs layer 0B
+ b784af536c2f Pulling fs layer 0B
+ e2d2bb84d022 Pulling fs layer 0B
+ 688cc61c8c2e Download complete 0B
+ 06df9995ece3 Downloading 1.049MB
+ eff542bc65a5 Download complete 0B
+ 06df9995ece3 Download complete 0B
+ e2d2bb84d022 Downloading 1.049MB
+ e2d2bb84d022 Downloading 3.146MB
+ a381c886d74f Downloading 1.049MB
+ e2d2bb84d022 Downloading 3.146MB
+ e2d2bb84d022 Downloading 5.243MB
+ 61462fde1f3a Download complete 0B
+ a381c886d74f Download complete 0B
+ e2d2bb84d022 Downloading 7.34MB
+ e2d2bb84d022 Downloading 8.389MB
+ e2d2bb84d022 Downloading 8.389MB
+ 2beab8233266 Download complete 0B
+ e2d2bb84d022 Downloading 11.53MB
+ 7f3d6e7ee639 Download complete 0B
+ e2d2bb84d022 Downloading 13.63MB
+ e2d2bb84d022 Downloading 16.78MB
+ e2d2bb84d022 Downloading 17.83MB
+ 2f795b3be8ec Download complete 0B
+ b784af536c2f Downloading 1.049MB
+ b784af536c2f Downloading 2.097MB
+ e2d2bb84d022 Downloading 20.97MB
+ b784af536c2f Downloading 3.146MB
+ e2d2bb84d022 Downloading 22.02MB
+ e2d2bb84d022 Downloading 24.12MB
+ b784af536c2f Downloading 4.194MB
+ e2d2bb84d022 Downloading 26.21MB
+ b784af536c2f Downloading 6.291MB
+ e2d2bb84d022 Downloading 26.21MB
+ b784af536c2f Downloading 6.291MB
+ b784af536c2f Downloading 8.389MB
+ e2d2bb84d022 Download complete 0B
+ e2d2bb84d022 Extracting 1B
+ b784af536c2f Downloading 9.437MB
+ e2d2bb84d022 Extracting 1B
+ b784af536c2f Downloading 11.53MB
+ e2d2bb84d022 Extracting 1B
+ b784af536c2f Downloading 13.63MB
+ e2d2bb84d022 Extracting 1B
+ b784af536c2f Downloading 14.68MB
+ e2d2bb84d022 Extracting 1B
+ b784af536c2f Downloading 16.78MB
+ e2d2bb84d022 Extracting 1B
+ b784af536c2f Downloading 18.87MB
+ a381c886d74f Extracting 1B
+ 2beab8233266 Pull complete 0B
+ e2d2bb84d022 Pull complete 0B
+ b784af536c2f Downloading 22.02MB
+ eff542bc65a5 Pull complete 0B
+ 61462fde1f3a Pull complete 0B
+ a381c886d74f Pull complete 0B
+ 7f3d6e7ee639 Pull complete 0B
+ b784af536c2f Downloading 24.12MB
+ b784af536c2f Downloading 26.21MB
+ b784af536c2f Downloading 29.36MB
+ b784af536c2f Downloading 31.46MB
+ b784af536c2f Downloading 34.6MB
+ b784af536c2f Downloading 36.7MB
+ b784af536c2f Downloading 38.8MB
+ b784af536c2f Downloading 39.85MB
+ b784af536c2f Downloading 42.99MB
+ b784af536c2f Downloading 46.14MB
+ b784af536c2f Downloading 49.28MB
+ b784af536c2f Downloading 52.43MB
+ b784af536c2f Downloading 52.43MB
+ b784af536c2f Downloading 56.62MB
+ b784af536c2f Downloading 60.82MB
+ b784af536c2f Downloading 60.82MB
+ b784af536c2f Downloading 67.11MB
+ b784af536c2f Downloading 68.16MB
+ b784af536c2f Downloading 73.4MB
+ b784af536c2f Downloading 76.55MB
+ b784af536c2f Downloading 80.74MB
+ b784af536c2f Downloading 84.93MB
+ b784af536c2f Downloading 87.03MB
+ b784af536c2f Downloading 91.23MB
+ b784af536c2f Downloading 95.42MB
+ b784af536c2f Downloading 99.61MB
+ b784af536c2f Downloading 104.9MB
+ b784af536c2f Downloading 108MB
+ b784af536c2f Downloading 110.1MB
+ b784af536c2f Downloading 112.2MB
+ b784af536c2f Downloading 118.5MB
+ b784af536c2f Downloading 121.6MB
+ b784af536c2f Downloading 126.9MB
+ b784af536c2f Downloading 127.9MB
+ b784af536c2f Downloading 132.1MB
+ b784af536c2f Downloading 136.3MB
+ b784af536c2f Downloading 141.6MB
+ b784af536c2f Downloading 144.7MB
+ b784af536c2f Downloading 145.8MB
+ b784af536c2f Downloading 149.9MB
+ b784af536c2f Downloading 155.2MB
+ b784af536c2f Downloading 160.4MB
+ b784af536c2f Downloading 163.6MB
+ b784af536c2f Downloading 166.7MB
+ b784af536c2f Downloading 172MB
+ b784af536c2f Downloading 176.2MB
+ b784af536c2f Downloading 179.3MB
+ b784af536c2f Downloading 184.5MB
+ b784af536c2f Downloading 187.7MB
+ b784af536c2f Downloading 188.7MB
+ b784af536c2f Downloading 194MB
+ b784af536c2f Downloading 199.2MB
+ b784af536c2f Downloading 203.4MB
+ b784af536c2f Downloading 208.7MB
+ b784af536c2f Downloading 209.7MB
+ b784af536c2f Downloading 215MB
+ b784af536c2f Downloading 218.1MB
+ b784af536c2f Downloading 221.2MB
+ b784af536c2f Downloading 226.5MB
+ b784af536c2f Downloading 226.5MB
+ b784af536c2f Downloading 228.6MB
+ b784af536c2f Downloading 234.9MB
+ b784af536c2f Downloading 239.1MB
+ b784af536c2f Downloading 244.3MB
+ b784af536c2f Downloading 246.4MB
+ b784af536c2f Downloading 250.6MB
+ b784af536c2f Downloading 253.8MB
+ b784af536c2f Downloading 255.9MB
+ b784af536c2f Downloading 260MB
+ b784af536c2f Downloading 265.3MB
+ b784af536c2f Downloading 268.4MB
+ b784af536c2f Downloading 272MB
+ b784af536c2f Downloading 272MB
+ b784af536c2f Download complete 0B
+ b784af536c2f Extracting 1B
+ b784af536c2f Extracting 1B
+ b784af536c2f Extracting 1B
+ b784af536c2f Extracting 1B
+ b784af536c2f Extracting 1B
+ b784af536c2f Extracting 1B
+ b784af536c2f Extracting 1B
+ b784af536c2f Extracting 1B
+ b784af536c2f Extracting 1B
+ b784af536c2f Extracting 1B
+ b784af536c2f Extracting 1B
+ b784af536c2f Extracting 2B
+ b784af536c2f Extracting 2B
+ b784af536c2f Extracting 2B
+ b784af536c2f Extracting 2B
+ b784af536c2f Extracting 2B
+ b784af536c2f Extracting 2B
+ b784af536c2f Extracting 2B
+ b784af536c2f Extracting 2B
+ b784af536c2f Extracting 2B
+ b784af536c2f Extracting 2B
+ b784af536c2f Extracting 3B
+ b784af536c2f Extracting 3B
+ b784af536c2f Extracting 3B
+ b784af536c2f Extracting 3B
+ b784af536c2f Extracting 3B
+ b784af536c2f Extracting 3B
+ b784af536c2f Extracting 3B
+ b784af536c2f Extracting 3B
+ 2f795b3be8ec Pull complete 0B
+ b784af536c2f Pull complete 0B
+ Image mongo:8.0 Pulled 
+ Network mit8103-component4_default Creating 
+ Volume mit8103_component4_mongo_data Creating 
+ Volume mit8103_component4_mongo_data Creating 
+ Network mit8103-component4_default Creating 
+ Volume mit8103_component4_mongo_data Created 
+ Volume mit8103_component4_mongo_data Created 
+ Network mit8103-component4_default Created 
+ Network mit8103-component4_default Created 
+ Container mit8103-component4-mongodb Creating 
+ Container mit8103-component4-mongodb Created 
+ Container mit8103-component4-mongodb Starting 
+ Container mit8103-component4-mongodb Started 

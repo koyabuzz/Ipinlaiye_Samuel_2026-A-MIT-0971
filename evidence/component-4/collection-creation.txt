@@ -1,0 +1,10 @@
+{
+  acknowledged: true,
+  createdCollections: [
+    'projects',
+    'staff',
+    'mediaAssets',
+    'equipment',
+    'equipmentReservations'
+  ]
+}

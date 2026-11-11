@@ -1,0 +1,34 @@
+                                                             version                                                             
+---------------------------------------------------------------------------------------------------------------------------------
+ PostgreSQL 18.4 (Postgres.app) on aarch64-apple-darwin23.6.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+(1 row)
+
+      table_name       |  rows  | total_size 
+-----------------------+--------+------------
+ client                |    500 | 144 kB
+ staff                 |   1000 | 352 kB
+ equipment             |   5000 | 1536 kB
+ project               |  10000 | 2160 kB
+ project_assignment    |  50000 | 12 MB
+ equipment_reservation | 200000 | 31 MB
+ media_asset           | 500000 | 270 MB
+(7 rows)
+
+       tablename       |            indexname             |                                                                                                                             indexdef                                                                                                                              
+-----------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ client                | pk_client                        | CREATE UNIQUE INDEX pk_client ON public.client USING btree (client_id)
+ equipment             | pk_equipment                     | CREATE UNIQUE INDEX pk_equipment ON public.equipment USING btree (equipment_id)
+ equipment             | uq_equipment_asset_tag           | CREATE UNIQUE INDEX uq_equipment_asset_tag ON public.equipment USING btree (asset_tag)
+ equipment             | uq_equipment_serial_number       | CREATE UNIQUE INDEX uq_equipment_serial_number ON public.equipment USING btree (serial_number)
+ equipment_reservation | ex_reservation_no_active_overlap | CREATE INDEX ex_reservation_no_active_overlap ON public.equipment_reservation USING gist (equipment_id, tstzrange(start_at, end_at, '[)'::text)) WHERE ((status)::text = ANY ((ARRAY['confirmed'::character varying, 'checked_out'::character varying])::text[]))
+ equipment_reservation | pk_equipment_reservation         | CREATE UNIQUE INDEX pk_equipment_reservation ON public.equipment_reservation USING btree (reservation_id)
+ media_asset           | pk_media_asset                   | CREATE UNIQUE INDEX pk_media_asset ON public.media_asset USING btree (asset_id)
+ media_asset           | uq_asset_file_uri                | CREATE UNIQUE INDEX uq_asset_file_uri ON public.media_asset USING btree (file_uri)
+ media_asset           | uq_asset_version                 | CREATE UNIQUE INDEX uq_asset_version ON public.media_asset USING btree (project_id, asset_name, version_number)
+ project               | pk_project                       | CREATE UNIQUE INDEX pk_project ON public.project USING btree (project_id)
+ project_assignment    | pk_project_assignment            | CREATE UNIQUE INDEX pk_project_assignment ON public.project_assignment USING btree (assignment_id)
+ project_assignment    | uq_assignment_role_start         | CREATE UNIQUE INDEX uq_assignment_role_start ON public.project_assignment USING btree (project_id, staff_id, role_name, assigned_from)
+ staff                 | pk_staff                         | CREATE UNIQUE INDEX pk_staff ON public.staff USING btree (staff_id)
+ staff                 | uq_staff_email_ci                | CREATE UNIQUE INDEX uq_staff_email_ci ON public.staff USING btree (lower((email)::text)) WHERE (email IS NOT NULL)
+(14 rows)
+

@@ -1,0 +1,30 @@
+8.2.12-noble: Pulling from library/mongo
+65a169ff6104: Pulling fs layer
+4a5c42880683: Pulling fs layer
+cd1bcfc1f2cd: Pulling fs layer
+4b987da45db4: Pulling fs layer
+f63c3d3f0aca: Pulling fs layer
+838beff7af47: Pulling fs layer
+68513c7222d1: Pulling fs layer
+e0263a1d8c98: Pulling fs layer
+4a5c42880683: Download complete
+65a169ff6104: Download complete
+838beff7af47: Download complete
+f63c3d3f0aca: Download complete
+68513c7222d1: Download complete
+cd1bcfc1f2cd: Download complete
+a1dae7c14176: Download complete
+4b987da45db4: Download complete
+b2eef83d6e8e: Download complete
+4a5c42880683: Pull complete
+4b987da45db4: Pull complete
+838beff7af47: Pull complete
+f63c3d3f0aca: Pull complete
+68513c7222d1: Pull complete
+cd1bcfc1f2cd: Pull complete
+e0263a1d8c98: Download complete
+e0263a1d8c98: Pull complete
+65a169ff6104: Pull complete
+Digest: sha256:dc23b0dde2221277b581dd76933f39f8a765fee9dbd99b9deb19184c063c061f
+Status: Downloaded newer image for mongo:8.2.12-noble
+docker.io/library/mongo:8.2.12-noble

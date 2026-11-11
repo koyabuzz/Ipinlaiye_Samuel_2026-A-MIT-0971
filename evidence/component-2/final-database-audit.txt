@@ -1,0 +1,32 @@
+      database_name      |   server_version    
+-------------------------+---------------------
+ mit8103_media_portfolio | 18.4 (Postgres.app)
+(1 row)
+
+      table_name       |  rows  
+-----------------------+--------
+ client                |    500
+ staff                 |   1000
+ equipment             |   5000
+ project               |  10000
+ project_assignment    |  50000
+ equipment_reservation | 200000
+ media_asset           | 500000
+(7 rows)
+
+               indexname               |  size   |                                                                                                                                  indexdef                                                                                                                                  
+---------------------------------------+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ix_assignment_staff_dates_project     | 1840 kB | CREATE INDEX ix_assignment_staff_dates_project ON public.project_assignment USING btree (staff_id, assigned_from, project_id) INCLUDE (assigned_until)
+ ix_media_asset_review_created_project | 25 MB   | CREATE INDEX ix_media_asset_review_created_project ON public.media_asset USING btree (status, created_at, project_id) INCLUDE (file_size_bytes)
+ ix_reservation_blocking_start         | 3896 kB | CREATE INDEX ix_reservation_blocking_start ON public.equipment_reservation USING btree (start_at, equipment_id) INCLUDE (end_at, project_id, reserved_by) WHERE ((status)::text = ANY ((ARRAY['confirmed'::character varying, 'checked_out'::character varying])::text[]))
+(3 rows)
+
+  status  | count  
+----------+--------
+ approved | 100000
+ archived | 100000
+ editing  | 100000
+ raw      | 100000
+ review   | 100000
+(5 rows)
+

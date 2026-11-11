@@ -1,0 +1,7 @@
+.DS_Store
+.env
+component-5-distributed-cloud/secrets/
+*.log
+*.dump
+*.sql.gz
+

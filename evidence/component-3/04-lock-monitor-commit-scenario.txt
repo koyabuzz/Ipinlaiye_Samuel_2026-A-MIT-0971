@@ -1,0 +1,43 @@
+SET
+SET
+Activity and blockers
+  pid  |     application_name      | state  | wait_event_type |  wait_event   | blocking_pids |          xact_start           |          query_start          |                                        query                                         
+-------+---------------------------+--------+-----------------+---------------+---------------+-------------------------------+-------------------------------+--------------------------------------------------------------------------------------
+ 22592 | MIT8103_C3_RES_A_COMMIT   | active | Timeout         | PgSleep       | {}            | 2026-11-10 18:03:51.102651+01 | 2026-11-10 18:03:51.116348+01 | SELECT pg_sleep(5);
+ 22596 | MIT8103_C3_RES_B_CONFLICT | active | Lock            | transactionid | {22592}       | 2026-11-10 18:03:51.629361+01 | 2026-11-10 18:03:51.629506+01 | INSERT INTO equipment_reservation                                                   +
+       |                           |        |                 |               |               |                               |                               |  (reservation_id,equipment_id,project_id,reserved_by,start_at,end_at,status,purpose)+
+       |                           |        |                 |               |               |                               |                               | OVERRIDING SYSTEM VALUE                                                             +
+       |                           |        |                 |               |               |                               |                               | VALUES (-300002,1,1,1,'2035-01-15 11:00+01','2035-01-15 13:00+01',                  +
+       |                           |        |                 |               |               |                               |                               |         'confirmed','Component 3 Session B conflict');
+(2 rows)
+
+Locks for experiment sessions
+  pid  |     application_name      |   locktype    |       mode       | granted |             relation             | transactionid | virtualxid 
+-------+---------------------------+---------------+------------------+---------+----------------------------------+---------------+------------
+ 22592 | MIT8103_C3_RES_A_COMMIT   | relation      | AccessShareLock  | t       | pk_staff                         |               | 
+ 22592 | MIT8103_C3_RES_A_COMMIT   | relation      | AccessShareLock  | t       | staff                            |               | 
+ 22592 | MIT8103_C3_RES_A_COMMIT   | relation      | AccessShareLock  | t       | uq_staff_email_ci                |               | 
+ 22592 | MIT8103_C3_RES_A_COMMIT   | relation      | RowExclusiveLock | t       | equipment_reservation            |               | 
+ 22592 | MIT8103_C3_RES_A_COMMIT   | relation      | RowShareLock     | t       | project                          |               | 
+ 22592 | MIT8103_C3_RES_A_COMMIT   | relation      | RowShareLock     | t       | equipment                        |               | 
+ 22592 | MIT8103_C3_RES_A_COMMIT   | relation      | RowShareLock     | t       | uq_equipment_serial_number       |               | 
+ 22592 | MIT8103_C3_RES_A_COMMIT   | relation      | RowShareLock     | t       | pk_equipment                     |               | 
+ 22592 | MIT8103_C3_RES_A_COMMIT   | relation      | RowShareLock     | t       | uq_staff_email_ci                |               | 
+ 22592 | MIT8103_C3_RES_A_COMMIT   | relation      | RowShareLock     | t       | pk_project                       |               | 
+ 22592 | MIT8103_C3_RES_A_COMMIT   | relation      | RowShareLock     | t       | staff                            |               | 
+ 22592 | MIT8103_C3_RES_A_COMMIT   | relation      | RowShareLock     | t       | uq_equipment_asset_tag           |               | 
+ 22592 | MIT8103_C3_RES_A_COMMIT   | relation      | RowShareLock     | t       | pk_staff                         |               | 
+ 22592 | MIT8103_C3_RES_A_COMMIT   | transactionid | ExclusiveLock    | t       |                                  |        753717 | 
+ 22592 | MIT8103_C3_RES_A_COMMIT   | virtualxid    | ExclusiveLock    | t       |                                  |               | 40/6
+ 22596 | MIT8103_C3_RES_B_CONFLICT | transactionid | ShareLock        | f       |                                  |        753717 | 
+ 22596 | MIT8103_C3_RES_B_CONFLICT | relation      | AccessShareLock  | t       | uq_staff_email_ci                |               | 
+ 22596 | MIT8103_C3_RES_B_CONFLICT | relation      | AccessShareLock  | t       | staff                            |               | 
+ 22596 | MIT8103_C3_RES_B_CONFLICT | relation      | AccessShareLock  | t       | pk_staff                         |               | 
+ 22596 | MIT8103_C3_RES_B_CONFLICT | relation      | RowExclusiveLock | t       | equipment_reservation            |               | 
+ 22596 | MIT8103_C3_RES_B_CONFLICT | relation      | RowExclusiveLock | t       | pk_equipment_reservation         |               | 
+ 22596 | MIT8103_C3_RES_B_CONFLICT | relation      | RowExclusiveLock | t       | ex_reservation_no_active_overlap |               | 
+ 22596 | MIT8103_C3_RES_B_CONFLICT | relation      | RowExclusiveLock | t       | ix_reservation_blocking_start    |               | 
+ 22596 | MIT8103_C3_RES_B_CONFLICT | transactionid | ExclusiveLock    | t       |                                  |        753718 | 
+ 22596 | MIT8103_C3_RES_B_CONFLICT | virtualxid    | ExclusiveLock    | t       |                                  |               | 41/6
+(25 rows)
+

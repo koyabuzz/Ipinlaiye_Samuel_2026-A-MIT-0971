@@ -1,0 +1,8 @@
+db version v8.2.12
+Build Info: {
+    "version": "8.2.12",
+    "gitVersion": "0f912e80210b8fdfdcec618b14b6c0fced055cb8",
+    "openSSLVersion": "OpenSSL 3.0.13 30 Jan 2024",
+    "modules": [],
+    "allocator": "tcmalloc-google",
+    "environment": {

@@ -1,0 +1,6 @@
+{
+  collectionCount: 5,
+  strictValidators: 5,
+  total: 12350,
+  temporaryDocs: 0
+}

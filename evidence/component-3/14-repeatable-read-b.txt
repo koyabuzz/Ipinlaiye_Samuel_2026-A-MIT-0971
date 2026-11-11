@@ -1,0 +1,25 @@
+Timing is on.
+SET
+Time: 0.144 ms
+SET
+Time: 0.064 ms
+SET
+Time: 0.050 ms
+ rr_b_pid 
+----------
+    22736
+(1 row)
+
+Time: 0.265 ms
+BEGIN
+Time: 0.042 ms
+UPDATE 1
+Time: 0.789 ms
+COMMIT
+Time: 0.285 ms
+ value_committed_by_b 
+----------------------
+            120000.00
+(1 row)
+
+Time: 0.108 ms

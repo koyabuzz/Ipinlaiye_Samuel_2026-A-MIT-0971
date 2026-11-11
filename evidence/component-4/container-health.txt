@@ -1,0 +1,2 @@
+NAME                         IMAGE                COMMAND                  SERVICE   CREATED         STATUS                   PORTS
+mit8103-component4-mongodb   mongo:8.2.12-noble   "docker-entrypoint.s…"   mongodb   6 seconds ago   Up 6 seconds (healthy)   127.0.0.1:27017->27017/tcp

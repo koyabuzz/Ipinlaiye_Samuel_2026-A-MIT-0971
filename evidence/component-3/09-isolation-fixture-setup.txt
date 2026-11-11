@@ -1,0 +1,11 @@
+SET
+SET
+BEGIN
+INSERT 0 1
+INSERT 0 1
+COMMIT
+ project_id |  budget   
+------------+-----------
+    -320001 | 100000.00
+(1 row)
+

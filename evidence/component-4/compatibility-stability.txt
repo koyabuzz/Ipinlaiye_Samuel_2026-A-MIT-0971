@@ -1,0 +1,3 @@
+authenticated_initial=yes
+state_after_90_seconds=running
+image=mongo:8.2.12-noble status=running started=2026-11-11T06:28:07.205401055Z

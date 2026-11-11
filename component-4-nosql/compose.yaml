@@ -1,0 +1,34 @@
+name: mit8103-component4
+
+services:
+  mongodb:
+    image: mongo:8.2.12-noble
+    container_name: mit8103-component4-mongodb
+    restart: "no"
+    ports:
+      - "127.0.0.1:27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: media_portfolio
+    volumes:
+      - mongo_data:/data/db
+      - ./mongodb:/scripts:ro
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - >-
+          mongosh --quiet
+          --username "$${MONGO_INITDB_ROOT_USERNAME}"
+          --password "$${MONGO_INITDB_ROOT_PASSWORD}"
+          --authenticationDatabase admin
+          --eval 'quit(db.adminCommand({ping:1}).ok ? 0 : 2)'
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+
+volumes:
+  mongo_data:
+    name: mit8103_component4_mongo_data
+

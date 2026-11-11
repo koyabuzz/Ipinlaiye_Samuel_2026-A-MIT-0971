@@ -1,0 +1,214 @@
+name: mit8103-component5
+networks:
+  replica_net:
+    internal: true
+    name: mit8103_c5_replica_net
+services:
+  keyfile-init:
+    command:
+      - sh
+      - -c
+      - cp /source/replica-keyfile /target/keyfile && chown 999:999 /target/keyfile
+        && chmod 400 /target/keyfile
+    container_name: mit8103-c5-keyfile-init
+    image: mongo:8.2.12-noble
+    networks:
+      replica_net: null
+    restart: 'no'
+    volumes:
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: /Users/koya/Desktop/MIT8103-Advanced-Database-Portfolio/component-5-distributed-cloud/secrets/replica-keyfile
+        target: /source/replica-keyfile
+        type: bind
+      - source: keyfile_data
+        target: /target
+        type: volume
+        volume: {}
+  mongo1:
+    command:
+      - mongod
+      - --replSet
+      - rs0
+      - --keyFile
+      - /run/mongo-keyfile/keyfile
+      - --bind_ip_all
+    container_name: mit8103-c5-mongo1
+    depends_on:
+      keyfile-init:
+        condition: service_completed_successfully
+        required: true
+    environment:
+      MONGO_INITDB_DATABASE: media_distributed
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME}
+    healthcheck:
+      interval: 5s
+      retries: 18
+      start_period: 15s
+      test:
+        - CMD-SHELL
+        - 'mongosh --quiet --host 127.0.0.1 --username "$${MONGO_INITDB_ROOT_USERNAME}"
+          --password "$${MONGO_INITDB_ROOT_PASSWORD}" --authenticationDatabase admin
+          --eval ''quit(db.adminCommand({ping:1}).ok ? 0 : 2)'''
+      timeout: 5s
+    hostname: mongo1
+    image: mongo:8.2.12-noble
+    mem_limit: 768m
+    networks:
+      replica_net: null
+    restart: 'no'
+    volumes:
+      - source: mongo1_data
+        target: /data/db
+        type: volume
+        volume: {}
+      - read_only: true
+        source: keyfile_data
+        target: /run/mongo-keyfile
+        type: volume
+        volume: {}
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: /Users/koya/Desktop/MIT8103-Advanced-Database-Portfolio/component-5-distributed-cloud/mongodb
+        target: /scripts
+        type: bind
+  mongo2:
+    command:
+      - mongod
+      - --replSet
+      - rs0
+      - --keyFile
+      - /run/mongo-keyfile/keyfile
+      - --bind_ip_all
+    container_name: mit8103-c5-mongo2
+    depends_on:
+      keyfile-init:
+        condition: service_completed_successfully
+        required: true
+    environment:
+      MONGO_INITDB_DATABASE: media_distributed
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME}
+    healthcheck:
+      interval: 5s
+      retries: 18
+      start_period: 15s
+      test:
+        - CMD-SHELL
+        - 'mongosh --quiet --host 127.0.0.1 --username "$${MONGO_INITDB_ROOT_USERNAME}"
+          --password "$${MONGO_INITDB_ROOT_PASSWORD}" --authenticationDatabase admin
+          --eval ''quit(db.adminCommand({ping:1}).ok ? 0 : 2)'''
+      timeout: 5s
+    hostname: mongo2
+    image: mongo:8.2.12-noble
+    mem_limit: 768m
+    networks:
+      replica_net: null
+    restart: 'no'
+    volumes:
+      - source: mongo2_data
+        target: /data/db
+        type: volume
+        volume: {}
+      - read_only: true
+        source: keyfile_data
+        target: /run/mongo-keyfile
+        type: volume
+        volume: {}
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: /Users/koya/Desktop/MIT8103-Advanced-Database-Portfolio/component-5-distributed-cloud/mongodb
+        target: /scripts
+        type: bind
+  mongo3:
+    command:
+      - mongod
+      - --replSet
+      - rs0
+      - --keyFile
+      - /run/mongo-keyfile/keyfile
+      - --bind_ip_all
+    container_name: mit8103-c5-mongo3
+    depends_on:
+      keyfile-init:
+        condition: service_completed_successfully
+        required: true
+    environment:
+      MONGO_INITDB_DATABASE: media_distributed
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME}
+    healthcheck:
+      interval: 5s
+      retries: 18
+      start_period: 15s
+      test:
+        - CMD-SHELL
+        - 'mongosh --quiet --host 127.0.0.1 --username "$${MONGO_INITDB_ROOT_USERNAME}"
+          --password "$${MONGO_INITDB_ROOT_PASSWORD}" --authenticationDatabase admin
+          --eval ''quit(db.adminCommand({ping:1}).ok ? 0 : 2)'''
+      timeout: 5s
+    hostname: mongo3
+    image: mongo:8.2.12-noble
+    mem_limit: 768m
+    networks:
+      replica_net: null
+    restart: 'no'
+    volumes:
+      - source: mongo3_data
+        target: /data/db
+        type: volume
+        volume: {}
+      - read_only: true
+        source: keyfile_data
+        target: /run/mongo-keyfile
+        type: volume
+        volume: {}
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: /Users/koya/Desktop/MIT8103-Advanced-Database-Portfolio/component-5-distributed-cloud/mongodb
+        target: /scripts
+        type: bind
+volumes:
+  keyfile_data:
+    name: mit8103_c5_keyfile
+  mongo1_data:
+    name: mit8103_c5_mongo1_data
+  mongo2_data:
+    name: mit8103_c5_mongo2_data
+  mongo3_data:
+    name: mit8103_c5_mongo3_data
+x-mongo-common:
+  command:
+    - mongod
+    - --replSet
+    - rs0
+    - --keyFile
+    - /run/mongo-keyfile/keyfile
+    - --bind_ip_all
+  depends_on:
+    keyfile-init:
+      condition: service_completed_successfully
+  environment:
+    MONGO_INITDB_DATABASE: media_distributed
+    MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+    MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME}
+  healthcheck:
+    interval: 5s
+    retries: 18
+    start_period: 15s
+    test:
+      - CMD-SHELL
+      - 'mongosh --quiet --host 127.0.0.1 --username "$${MONGO_INITDB_ROOT_USERNAME}"
+        --password "$${MONGO_INITDB_ROOT_PASSWORD}" --authenticationDatabase admin
+        --eval ''quit(db.adminCommand({ping:1}).ok ? 0 : 2)'''
+    timeout: 5s
+  image: mongo:8.2.12-noble
+  mem_limit: 768m
+  networks:
+    - replica_net
+  restart: 'no'

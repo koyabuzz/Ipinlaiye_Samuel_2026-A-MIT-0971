@@ -1,0 +1,28 @@
+MIT8103 Component 2 genuine benchmark summary
+PostgreSQL 18.4; five recorded executions per query; medians in milliseconds
+
+Query 1 baseline:  27.374, 25.468, 24.040, 23.674, 22.969
+Query 1 optimised: 7.198, 6.781, 6.572, 6.504, 6.489
+Median: 24.040 -> 6.572 ms; 72.66% faster
+Plan: parallel sequential scan -> ix_media_asset_review_created_project index-only scan
+Median buffers: 19,531 (11,662 hit, 7,869 read) -> 367 hits
+
+Query 2 baseline:  18.426, 17.101, 16.995, 17.189, 17.116
+Query 2 optimised: 17.884, 17.154, 18.233, 17.795, 17.153
+Median: 17.116 -> 17.795 ms; 3.97% slower
+Plan: sequential project_assignment scan before and after; candidate index unused
+Median buffers: 765 hits -> 765 hits
+
+Query 3 baseline:  14.426, 13.577, 13.727, 12.786, 12.830
+Query 3 optimised: 4.365, 3.753, 3.775, 3.722, 3.765
+Median: 13.577 -> 3.765 ms; 72.27% faster
+Plan: parallel sequential scan -> ix_reservation_blocking_start index-only scan
+Median buffers: 3,282 hits -> 544 hits
+
+Index sizes:
+ix_media_asset_review_created_project=25 MB
+ix_assignment_staff_dates_project=1840 kB
+ix_reservation_blocking_start=3896 kB
+
+Complete plans are in baseline-plans.txt and optimised-plans.txt.
+

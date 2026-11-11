@@ -1,0 +1,1356 @@
+ project_id |       project_name       | client_name | review_asset_count | total_bytes |    latest_asset_at     
+------------+--------------------------+-------------+--------------------+-------------+------------------------
+       9993 | Production Project 09993 | Client 0493 |                 10 | 24992500000 | 2026-03-05 13:00:00+01
+       9992 | Production Project 09992 | Client 0492 |                 10 | 24990000000 | 2026-03-04 12:00:00+01
+       9991 | Production Project 09991 | Client 0491 |                 10 | 24987500000 | 2026-03-03 11:00:00+01
+       9990 | Production Project 09990 | Client 0490 |                 10 | 24985000000 | 2026-03-02 10:00:00+01
+       9983 | Production Project 09983 | Client 0483 |                 10 | 24967500000 | 2026-02-23 15:00:00+01
+       9982 | Production Project 09982 | Client 0482 |                 10 | 24965000000 | 2026-02-22 14:00:00+01
+       9981 | Production Project 09981 | Client 0481 |                 10 | 24962500000 | 2026-02-21 13:00:00+01
+       9980 | Production Project 09980 | Client 0480 |                 10 | 24960000000 | 2026-02-20 12:00:00+01
+       9653 | Production Project 09653 | Client 0153 |                 10 | 24142500000 | 2026-03-30 09:00:00+01
+       9652 | Production Project 09652 | Client 0152 |                 10 | 24140000000 | 2026-03-29 08:00:00+01
+       9651 | Production Project 09651 | Client 0151 |                 10 | 24137500000 | 2026-03-28 19:00:00+01
+       9650 | Production Project 09650 | Client 0150 |                 10 | 24135000000 | 2026-03-27 18:00:00+01
+       9643 | Production Project 09643 | Client 0143 |                 10 | 24117500000 | 2026-03-20 11:00:00+01
+       9642 | Production Project 09642 | Client 0142 |                 10 | 24115000000 | 2026-03-19 10:00:00+01
+       9641 | Production Project 09641 | Client 0141 |                 10 | 24112500000 | 2026-03-18 09:00:00+01
+       9640 | Production Project 09640 | Client 0140 |                 10 | 24110000000 | 2026-03-17 08:00:00+01
+       9633 | Production Project 09633 | Client 0133 |                 10 | 24092500000 | 2026-03-10 13:00:00+01
+       9632 | Production Project 09632 | Client 0132 |                 10 | 24090000000 | 2026-03-09 12:00:00+01
+       9631 | Production Project 09631 | Client 0131 |                 10 | 24087500000 | 2026-03-08 11:00:00+01
+       9630 | Production Project 09630 | Client 0130 |                 10 | 24085000000 | 2026-03-07 10:00:00+01
+       9623 | Production Project 09623 | Client 0123 |                 10 | 24067500000 | 2026-02-28 15:00:00+01
+       9622 | Production Project 09622 | Client 0122 |                 10 | 24065000000 | 2026-02-27 14:00:00+01
+       9621 | Production Project 09621 | Client 0121 |                 10 | 24062500000 | 2026-02-26 13:00:00+01
+       9620 | Production Project 09620 | Client 0120 |                 10 | 24060000000 | 2026-02-25 12:00:00+01
+       9613 | Production Project 09613 | Client 0113 |                 10 | 24042500000 | 2026-02-18 17:00:00+01
+       9612 | Production Project 09612 | Client 0112 |                 10 | 24040000000 | 2026-02-17 16:00:00+01
+       9611 | Production Project 09611 | Client 0111 |                 10 | 24037500000 | 2026-02-16 15:00:00+01
+       9610 | Production Project 09610 | Client 0110 |                 10 | 24035000000 | 2026-02-15 14:00:00+01
+       9283 | Production Project 09283 | Client 0283 |                 10 | 23217500000 | 2026-03-25 11:00:00+01
+       9282 | Production Project 09282 | Client 0282 |                 10 | 23215000000 | 2026-03-24 10:00:00+01
+       9281 | Production Project 09281 | Client 0281 |                 10 | 23212500000 | 2026-03-23 09:00:00+01
+       9280 | Production Project 09280 | Client 0280 |                 10 | 23210000000 | 2026-03-22 08:00:00+01
+       9273 | Production Project 09273 | Client 0273 |                 10 | 23192500000 | 2026-03-15 13:00:00+01
+       9272 | Production Project 09272 | Client 0272 |                 10 | 23190000000 | 2026-03-14 12:00:00+01
+       9271 | Production Project 09271 | Client 0271 |                 10 | 23187500000 | 2026-03-13 11:00:00+01
+       9270 | Production Project 09270 | Client 0270 |                 10 | 23185000000 | 2026-03-12 10:00:00+01
+       9263 | Production Project 09263 | Client 0263 |                 10 | 23167500000 | 2026-03-05 15:00:00+01
+       9262 | Production Project 09262 | Client 0262 |                 10 | 23165000000 | 2026-03-04 14:00:00+01
+       9261 | Production Project 09261 | Client 0261 |                 10 | 23162500000 | 2026-03-03 13:00:00+01
+       9260 | Production Project 09260 | Client 0260 |                 10 | 23160000000 | 2026-03-02 12:00:00+01
+       9253 | Production Project 09253 | Client 0253 |                 10 | 23142500000 | 2026-02-23 17:00:00+01
+       9252 | Production Project 09252 | Client 0252 |                 10 | 23140000000 | 2026-02-22 16:00:00+01
+       9251 | Production Project 09251 | Client 0251 |                 10 | 23137500000 | 2026-02-21 15:00:00+01
+       9250 | Production Project 09250 | Client 0250 |                 10 | 23135000000 | 2026-02-20 14:00:00+01
+       9973 | Production Project 09973 | Client 0473 |                  9 | 22448250000 | 2026-02-13 17:00:00+01
+       9972 | Production Project 09972 | Client 0472 |                  9 | 22446000000 | 2026-02-12 16:00:00+01
+       9971 | Production Project 09971 | Client 0471 |                  9 | 22443750000 | 2026-02-11 15:00:00+01
+       9970 | Production Project 09970 | Client 0470 |                  9 | 22441500000 | 2026-02-10 14:00:00+01
+       8923 | Production Project 08923 | Client 0423 |                 10 | 22317500000 | 2026-03-30 11:00:00+01
+       8922 | Production Project 08922 | Client 0422 |                 10 | 22315000000 | 2026-03-29 10:00:00+01
+(50 rows)
+
+ staff_id | first_name | last_name  | employment_type | active_project_count | active_role_count 
+----------+------------+------------+-----------------+----------------------+-------------------
+      105 | Staff105   | Surname105 | employee        |                   30 |                30
+      108 | Staff108   | Surname108 | freelancer      |                   30 |                30
+      115 | Staff115   | Surname115 | employee        |                   30 |                30
+      118 | Staff118   | Surname118 | employee        |                   30 |                30
+      125 | Staff125   | Surname125 | employee        |                   30 |                30
+      128 | Staff128   | Surname128 | freelancer      |                   30 |                30
+      135 | Staff135   | Surname135 | employee        |                   30 |                30
+      138 | Staff138   | Surname138 | employee        |                   30 |                30
+      145 | Staff145   | Surname145 | employee        |                   30 |                30
+      148 | Staff148   | Surname148 | freelancer      |                   30 |                30
+       15 | Staff15    | Surname15  | employee        |                   30 |                30
+      155 | Staff155   | Surname155 | employee        |                   30 |                30
+      158 | Staff158   | Surname158 | employee        |                   30 |                30
+      165 | Staff165   | Surname165 | employee        |                   30 |                30
+      168 | Staff168   | Surname168 | freelancer      |                   30 |                30
+      175 | Staff175   | Surname175 | employee        |                   30 |                30
+      178 | Staff178   | Surname178 | employee        |                   30 |                30
+       18 | Staff18    | Surname18  | employee        |                   30 |                30
+      185 | Staff185   | Surname185 | employee        |                   30 |                30
+      188 | Staff188   | Surname188 | freelancer      |                   30 |                30
+      195 | Staff195   | Surname195 | employee        |                   30 |                30
+      198 | Staff198   | Surname198 | employee        |                   30 |                30
+      205 | Staff205   | Surname205 | employee        |                   30 |                30
+      208 | Staff208   | Surname208 | freelancer      |                   30 |                30
+      215 | Staff215   | Surname215 | employee        |                   30 |                30
+      218 | Staff218   | Surname218 | employee        |                   30 |                30
+      225 | Staff225   | Surname225 | employee        |                   30 |                30
+      228 | Staff228   | Surname228 | freelancer      |                   30 |                30
+      235 | Staff235   | Surname235 | employee        |                   30 |                30
+      238 | Staff238   | Surname238 | employee        |                   30 |                30
+      245 | Staff245   | Surname245 | employee        |                   30 |                30
+      248 | Staff248   | Surname248 | freelancer      |                   30 |                30
+       25 | Staff25    | Surname25  | employee        |                   30 |                30
+      255 | Staff255   | Surname255 | employee        |                   30 |                30
+      258 | Staff258   | Surname258 | employee        |                   30 |                30
+      265 | Staff265   | Surname265 | employee        |                   30 |                30
+      268 | Staff268   | Surname268 | freelancer      |                   30 |                30
+      275 | Staff275   | Surname275 | employee        |                   30 |                30
+      278 | Staff278   | Surname278 | employee        |                   30 |                30
+       28 | Staff28    | Surname28  | freelancer      |                   30 |                30
+      285 | Staff285   | Surname285 | employee        |                   30 |                30
+      288 | Staff288   | Surname288 | freelancer      |                   30 |                30
+      295 | Staff295   | Surname295 | employee        |                   30 |                30
+      298 | Staff298   | Surname298 | employee        |                   30 |                30
+      305 | Staff305   | Surname305 | employee        |                   30 |                30
+      308 | Staff308   | Surname308 | freelancer      |                   30 |                30
+      315 | Staff315   | Surname315 | employee        |                   30 |                30
+      318 | Staff318   | Surname318 | employee        |                   30 |                30
+      325 | Staff325   | Surname325 | employee        |                   30 |                30
+      328 | Staff328   | Surname328 | freelancer      |                   30 |                30
+      335 | Staff335   | Surname335 | employee        |                   30 |                30
+      338 | Staff338   | Surname338 | employee        |                   30 |                30
+      345 | Staff345   | Surname345 | employee        |                   30 |                30
+      348 | Staff348   | Surname348 | freelancer      |                   30 |                30
+       35 | Staff35    | Surname35  | employee        |                   30 |                30
+      355 | Staff355   | Surname355 | employee        |                   30 |                30
+      358 | Staff358   | Surname358 | employee        |                   30 |                30
+      365 | Staff365   | Surname365 | employee        |                   30 |                30
+      368 | Staff368   | Surname368 | freelancer      |                   30 |                30
+      375 | Staff375   | Surname375 | employee        |                   30 |                30
+      378 | Staff378   | Surname378 | employee        |                   30 |                30
+       38 | Staff38    | Surname38  | employee        |                   30 |                30
+      385 | Staff385   | Surname385 | employee        |                   30 |                30
+      388 | Staff388   | Surname388 | freelancer      |                   30 |                30
+      395 | Staff395   | Surname395 | employee        |                   30 |                30
+      398 | Staff398   | Surname398 | employee        |                   30 |                30
+      405 | Staff405   | Surname405 | employee        |                   30 |                30
+      408 | Staff408   | Surname408 | freelancer      |                   30 |                30
+      415 | Staff415   | Surname415 | employee        |                   30 |                30
+      418 | Staff418   | Surname418 | employee        |                   30 |                30
+      425 | Staff425   | Surname425 | employee        |                   30 |                30
+      428 | Staff428   | Surname428 | freelancer      |                   30 |                30
+      435 | Staff435   | Surname435 | employee        |                   30 |                30
+      438 | Staff438   | Surname438 | employee        |                   30 |                30
+      445 | Staff445   | Surname445 | employee        |                   30 |                30
+      448 | Staff448   | Surname448 | freelancer      |                   30 |                30
+       45 | Staff45    | Surname45  | employee        |                   30 |                30
+      455 | Staff455   | Surname455 | employee        |                   30 |                30
+      458 | Staff458   | Surname458 | employee        |                   30 |                30
+      465 | Staff465   | Surname465 | employee        |                   30 |                30
+      468 | Staff468   | Surname468 | freelancer      |                   30 |                30
+      475 | Staff475   | Surname475 | employee        |                   30 |                30
+      478 | Staff478   | Surname478 | employee        |                   30 |                30
+       48 | Staff48    | Surname48  | freelancer      |                   30 |                30
+      485 | Staff485   | Surname485 | employee        |                   30 |                30
+      488 | Staff488   | Surname488 | freelancer      |                   30 |                30
+      495 | Staff495   | Surname495 | employee        |                   30 |                30
+      498 | Staff498   | Surname498 | employee        |                   30 |                30
+        5 | Staff5     | Surname5   | employee        |                   30 |                30
+      505 | Staff505   | Surname505 | employee        |                   30 |                30
+      508 | Staff508   | Surname508 | freelancer      |                   30 |                30
+      515 | Staff515   | Surname515 | employee        |                   30 |                30
+      518 | Staff518   | Surname518 | employee        |                   30 |                30
+      525 | Staff525   | Surname525 | employee        |                   30 |                30
+      528 | Staff528   | Surname528 | freelancer      |                   30 |                30
+      535 | Staff535   | Surname535 | employee        |                   30 |                30
+      538 | Staff538   | Surname538 | employee        |                   30 |                30
+      545 | Staff545   | Surname545 | employee        |                   30 |                30
+      548 | Staff548   | Surname548 | freelancer      |                   30 |                30
+       55 | Staff55    | Surname55  | employee        |                   30 |                30
+      555 | Staff555   | Surname555 | employee        |                   30 |                30
+      558 | Staff558   | Surname558 | employee        |                   30 |                30
+      565 | Staff565   | Surname565 | employee        |                   30 |                30
+      568 | Staff568   | Surname568 | freelancer      |                   30 |                30
+      575 | Staff575   | Surname575 | employee        |                   30 |                30
+      578 | Staff578   | Surname578 | employee        |                   30 |                30
+       58 | Staff58    | Surname58  | employee        |                   30 |                30
+      585 | Staff585   | Surname585 | employee        |                   30 |                30
+      588 | Staff588   | Surname588 | freelancer      |                   30 |                30
+      595 | Staff595   | Surname595 | employee        |                   30 |                30
+      598 | Staff598   | Surname598 | employee        |                   30 |                30
+      605 | Staff605   | Surname605 | employee        |                   30 |                30
+      608 | Staff608   | Surname608 | freelancer      |                   30 |                30
+      615 | Staff615   | Surname615 | employee        |                   30 |                30
+      618 | Staff618   | Surname618 | employee        |                   30 |                30
+      625 | Staff625   | Surname625 | employee        |                   30 |                30
+      628 | Staff628   | Surname628 | freelancer      |                   30 |                30
+      635 | Staff635   | Surname635 | employee        |                   30 |                30
+      638 | Staff638   | Surname638 | employee        |                   30 |                30
+      645 | Staff645   | Surname645 | employee        |                   30 |                30
+      648 | Staff648   | Surname648 | freelancer      |                   30 |                30
+       65 | Staff65    | Surname65  | employee        |                   30 |                30
+      655 | Staff655   | Surname655 | employee        |                   30 |                30
+      658 | Staff658   | Surname658 | employee        |                   30 |                30
+      665 | Staff665   | Surname665 | employee        |                   30 |                30
+      668 | Staff668   | Surname668 | freelancer      |                   30 |                30
+      675 | Staff675   | Surname675 | employee        |                   30 |                30
+      678 | Staff678   | Surname678 | employee        |                   30 |                30
+       68 | Staff68    | Surname68  | freelancer      |                   30 |                30
+      685 | Staff685   | Surname685 | employee        |                   30 |                30
+      688 | Staff688   | Surname688 | freelancer      |                   30 |                30
+      695 | Staff695   | Surname695 | employee        |                   30 |                30
+      698 | Staff698   | Surname698 | employee        |                   30 |                30
+      705 | Staff705   | Surname705 | employee        |                   30 |                30
+      708 | Staff708   | Surname708 | freelancer      |                   30 |                30
+      715 | Staff715   | Surname715 | employee        |                   30 |                30
+      718 | Staff718   | Surname718 | employee        |                   30 |                30
+      725 | Staff725   | Surname725 | employee        |                   30 |                30
+      728 | Staff728   | Surname728 | freelancer      |                   30 |                30
+      735 | Staff735   | Surname735 | employee        |                   30 |                30
+      738 | Staff738   | Surname738 | employee        |                   30 |                30
+      745 | Staff745   | Surname745 | employee        |                   30 |                30
+      748 | Staff748   | Surname748 | freelancer      |                   30 |                30
+       75 | Staff75    | Surname75  | employee        |                   30 |                30
+      755 | Staff755   | Surname755 | employee        |                   30 |                30
+      758 | Staff758   | Surname758 | employee        |                   30 |                30
+      765 | Staff765   | Surname765 | employee        |                   30 |                30
+      768 | Staff768   | Surname768 | freelancer      |                   30 |                30
+      775 | Staff775   | Surname775 | employee        |                   30 |                30
+      778 | Staff778   | Surname778 | employee        |                   30 |                30
+       78 | Staff78    | Surname78  | employee        |                   30 |                30
+      785 | Staff785   | Surname785 | employee        |                   30 |                30
+      788 | Staff788   | Surname788 | freelancer      |                   30 |                30
+      795 | Staff795   | Surname795 | employee        |                   30 |                30
+      798 | Staff798   | Surname798 | employee        |                   30 |                30
+        8 | Staff8     | Surname8   | freelancer      |                   30 |                30
+      805 | Staff805   | Surname805 | employee        |                   30 |                30
+      808 | Staff808   | Surname808 | freelancer      |                   30 |                30
+      815 | Staff815   | Surname815 | employee        |                   30 |                30
+      818 | Staff818   | Surname818 | employee        |                   30 |                30
+      825 | Staff825   | Surname825 | employee        |                   30 |                30
+      828 | Staff828   | Surname828 | freelancer      |                   30 |                30
+      835 | Staff835   | Surname835 | employee        |                   30 |                30
+      838 | Staff838   | Surname838 | employee        |                   30 |                30
+      845 | Staff845   | Surname845 | employee        |                   30 |                30
+      848 | Staff848   | Surname848 | freelancer      |                   30 |                30
+       85 | Staff85    | Surname85  | employee        |                   30 |                30
+      855 | Staff855   | Surname855 | employee        |                   30 |                30
+      858 | Staff858   | Surname858 | employee        |                   30 |                30
+      865 | Staff865   | Surname865 | employee        |                   30 |                30
+      868 | Staff868   | Surname868 | freelancer      |                   30 |                30
+      875 | Staff875   | Surname875 | employee        |                   30 |                30
+      878 | Staff878   | Surname878 | employee        |                   30 |                30
+       88 | Staff88    | Surname88  | freelancer      |                   30 |                30
+      885 | Staff885   | Surname885 | employee        |                   30 |                30
+      888 | Staff888   | Surname888 | freelancer      |                   30 |                30
+      895 | Staff895   | Surname895 | employee        |                   30 |                30
+      898 | Staff898   | Surname898 | employee        |                   30 |                30
+       95 | Staff95    | Surname95  | employee        |                   30 |                30
+       98 | Staff98    | Surname98  | employee        |                   30 |                30
+        1 | Staff1     | Surname1   | employee        |                   20 |                20
+      101 | Staff101   | Surname101 | employee        |                   20 |                20
+      102 | Staff102   | Surname102 | employee        |                   20 |                20
+      104 | Staff104   | Surname104 | freelancer      |                   20 |                20
+      106 | Staff106   | Surname106 | employee        |                   20 |                20
+      107 | Staff107   | Surname107 | employee        |                   20 |                20
+      109 | Staff109   | Surname109 | employee        |                   20 |                20
+       11 | Staff11    | Surname11  | employee        |                   20 |                20
+      111 | Staff111   | Surname111 | employee        |                   20 |                20
+      112 | Staff112   | Surname112 | freelancer      |                   20 |                20
+      114 | Staff114   | Surname114 | employee        |                   20 |                20
+      116 | Staff116   | Surname116 | freelancer      |                   20 |                20
+      117 | Staff117   | Surname117 | employee        |                   20 |                20
+      119 | Staff119   | Surname119 | employee        |                   20 |                20
+       12 | Staff12    | Surname12  | freelancer      |                   20 |                20
+      121 | Staff121   | Surname121 | employee        |                   20 |                20
+      122 | Staff122   | Surname122 | employee        |                   20 |                20
+      124 | Staff124   | Surname124 | freelancer      |                   20 |                20
+      126 | Staff126   | Surname126 | employee        |                   20 |                20
+      127 | Staff127   | Surname127 | employee        |                   20 |                20
+      129 | Staff129   | Surname129 | employee        |                   20 |                20
+      131 | Staff131   | Surname131 | employee        |                   20 |                20
+      132 | Staff132   | Surname132 | freelancer      |                   20 |                20
+      134 | Staff134   | Surname134 | employee        |                   20 |                20
+      136 | Staff136   | Surname136 | freelancer      |                   20 |                20
+      137 | Staff137   | Surname137 | employee        |                   20 |                20
+      139 | Staff139   | Surname139 | employee        |                   20 |                20
+       14 | Staff14    | Surname14  | employee        |                   20 |                20
+      141 | Staff141   | Surname141 | employee        |                   20 |                20
+      142 | Staff142   | Surname142 | employee        |                   20 |                20
+      144 | Staff144   | Surname144 | freelancer      |                   20 |                20
+      146 | Staff146   | Surname146 | employee        |                   20 |                20
+      147 | Staff147   | Surname147 | employee        |                   20 |                20
+      149 | Staff149   | Surname149 | employee        |                   20 |                20
+      151 | Staff151   | Surname151 | employee        |                   20 |                20
+      152 | Staff152   | Surname152 | freelancer      |                   20 |                20
+      154 | Staff154   | Surname154 | employee        |                   20 |                20
+      156 | Staff156   | Surname156 | freelancer      |                   20 |                20
+      157 | Staff157   | Surname157 | employee        |                   20 |                20
+      159 | Staff159   | Surname159 | employee        |                   20 |                20
+       16 | Staff16    | Surname16  | freelancer      |                   20 |                20
+      161 | Staff161   | Surname161 | employee        |                   20 |                20
+      162 | Staff162   | Surname162 | employee        |                   20 |                20
+      164 | Staff164   | Surname164 | freelancer      |                   20 |                20
+      166 | Staff166   | Surname166 | employee        |                   20 |                20
+      167 | Staff167   | Surname167 | employee        |                   20 |                20
+      169 | Staff169   | Surname169 | employee        |                   20 |                20
+       17 | Staff17    | Surname17  | employee        |                   20 |                20
+      171 | Staff171   | Surname171 | employee        |                   20 |                20
+      172 | Staff172   | Surname172 | freelancer      |                   20 |                20
+      174 | Staff174   | Surname174 | employee        |                   20 |                20
+      176 | Staff176   | Surname176 | freelancer      |                   20 |                20
+      177 | Staff177   | Surname177 | employee        |                   20 |                20
+      179 | Staff179   | Surname179 | employee        |                   20 |                20
+      181 | Staff181   | Surname181 | employee        |                   20 |                20
+      182 | Staff182   | Surname182 | employee        |                   20 |                20
+      184 | Staff184   | Surname184 | freelancer      |                   20 |                20
+      186 | Staff186   | Surname186 | employee        |                   20 |                20
+      187 | Staff187   | Surname187 | employee        |                   20 |                20
+      189 | Staff189   | Surname189 | employee        |                   20 |                20
+       19 | Staff19    | Surname19  | employee        |                   20 |                20
+      191 | Staff191   | Surname191 | employee        |                   20 |                20
+      192 | Staff192   | Surname192 | freelancer      |                   20 |                20
+      194 | Staff194   | Surname194 | employee        |                   20 |                20
+      196 | Staff196   | Surname196 | freelancer      |                   20 |                20
+      197 | Staff197   | Surname197 | employee        |                   20 |                20
+      199 | Staff199   | Surname199 | employee        |                   20 |                20
+        2 | Staff2     | Surname2   | employee        |                   20 |                20
+      201 | Staff201   | Surname201 | employee        |                   20 |                20
+      202 | Staff202   | Surname202 | employee        |                   20 |                20
+      204 | Staff204   | Surname204 | freelancer      |                   20 |                20
+      206 | Staff206   | Surname206 | employee        |                   20 |                20
+      207 | Staff207   | Surname207 | employee        |                   20 |                20
+      209 | Staff209   | Surname209 | employee        |                   20 |                20
+       21 | Staff21    | Surname21  | employee        |                   20 |                20
+      211 | Staff211   | Surname211 | employee        |                   20 |                20
+      212 | Staff212   | Surname212 | freelancer      |                   20 |                20
+      214 | Staff214   | Surname214 | employee        |                   20 |                20
+      216 | Staff216   | Surname216 | freelancer      |                   20 |                20
+      217 | Staff217   | Surname217 | employee        |                   20 |                20
+      219 | Staff219   | Surname219 | employee        |                   20 |                20
+       22 | Staff22    | Surname22  | employee        |                   20 |                20
+      221 | Staff221   | Surname221 | employee        |                   20 |                20
+      222 | Staff222   | Surname222 | employee        |                   20 |                20
+      224 | Staff224   | Surname224 | freelancer      |                   20 |                20
+      226 | Staff226   | Surname226 | employee        |                   20 |                20
+      227 | Staff227   | Surname227 | employee        |                   20 |                20
+      229 | Staff229   | Surname229 | employee        |                   20 |                20
+      231 | Staff231   | Surname231 | employee        |                   20 |                20
+      232 | Staff232   | Surname232 | freelancer      |                   20 |                20
+      234 | Staff234   | Surname234 | employee        |                   20 |                20
+      236 | Staff236   | Surname236 | freelancer      |                   20 |                20
+      237 | Staff237   | Surname237 | employee        |                   20 |                20
+      239 | Staff239   | Surname239 | employee        |                   20 |                20
+       24 | Staff24    | Surname24  | freelancer      |                   20 |                20
+      241 | Staff241   | Surname241 | employee        |                   20 |                20
+      242 | Staff242   | Surname242 | employee        |                   20 |                20
+      244 | Staff244   | Surname244 | freelancer      |                   20 |                20
+      246 | Staff246   | Surname246 | employee        |                   20 |                20
+      247 | Staff247   | Surname247 | employee        |                   20 |                20
+      249 | Staff249   | Surname249 | employee        |                   20 |                20
+      251 | Staff251   | Surname251 | employee        |                   20 |                20
+      252 | Staff252   | Surname252 | freelancer      |                   20 |                20
+      254 | Staff254   | Surname254 | employee        |                   20 |                20
+      256 | Staff256   | Surname256 | freelancer      |                   20 |                20
+      257 | Staff257   | Surname257 | employee        |                   20 |                20
+      259 | Staff259   | Surname259 | employee        |                   20 |                20
+       26 | Staff26    | Surname26  | employee        |                   20 |                20
+      261 | Staff261   | Surname261 | employee        |                   20 |                20
+      262 | Staff262   | Surname262 | employee        |                   20 |                20
+      264 | Staff264   | Surname264 | freelancer      |                   20 |                20
+      266 | Staff266   | Surname266 | employee        |                   20 |                20
+      267 | Staff267   | Surname267 | employee        |                   20 |                20
+      269 | Staff269   | Surname269 | employee        |                   20 |                20
+       27 | Staff27    | Surname27  | employee        |                   20 |                20
+      271 | Staff271   | Surname271 | employee        |                   20 |                20
+      272 | Staff272   | Surname272 | freelancer      |                   20 |                20
+      274 | Staff274   | Surname274 | employee        |                   20 |                20
+      276 | Staff276   | Surname276 | freelancer      |                   20 |                20
+      277 | Staff277   | Surname277 | employee        |                   20 |                20
+      279 | Staff279   | Surname279 | employee        |                   20 |                20
+      281 | Staff281   | Surname281 | employee        |                   20 |                20
+      282 | Staff282   | Surname282 | employee        |                   20 |                20
+      284 | Staff284   | Surname284 | freelancer      |                   20 |                20
+      286 | Staff286   | Surname286 | employee        |                   20 |                20
+      287 | Staff287   | Surname287 | employee        |                   20 |                20
+      289 | Staff289   | Surname289 | employee        |                   20 |                20
+       29 | Staff29    | Surname29  | employee        |                   20 |                20
+      291 | Staff291   | Surname291 | employee        |                   20 |                20
+      292 | Staff292   | Surname292 | freelancer      |                   20 |                20
+      294 | Staff294   | Surname294 | employee        |                   20 |                20
+      296 | Staff296   | Surname296 | freelancer      |                   20 |                20
+      297 | Staff297   | Surname297 | employee        |                   20 |                20
+      299 | Staff299   | Surname299 | employee        |                   20 |                20
+      301 | Staff301   | Surname301 | employee        |                   20 |                20
+      302 | Staff302   | Surname302 | employee        |                   20 |                20
+      304 | Staff304   | Surname304 | freelancer      |                   20 |                20
+      306 | Staff306   | Surname306 | employee        |                   20 |                20
+      307 | Staff307   | Surname307 | employee        |                   20 |                20
+      309 | Staff309   | Surname309 | employee        |                   20 |                20
+       31 | Staff31    | Surname31  | employee        |                   20 |                20
+      311 | Staff311   | Surname311 | employee        |                   20 |                20
+      312 | Staff312   | Surname312 | freelancer      |                   20 |                20
+      314 | Staff314   | Surname314 | employee        |                   20 |                20
+      316 | Staff316   | Surname316 | freelancer      |                   20 |                20
+      317 | Staff317   | Surname317 | employee        |                   20 |                20
+      319 | Staff319   | Surname319 | employee        |                   20 |                20
+       32 | Staff32    | Surname32  | freelancer      |                   20 |                20
+      321 | Staff321   | Surname321 | employee        |                   20 |                20
+      322 | Staff322   | Surname322 | employee        |                   20 |                20
+      324 | Staff324   | Surname324 | freelancer      |                   20 |                20
+      326 | Staff326   | Surname326 | employee        |                   20 |                20
+      327 | Staff327   | Surname327 | employee        |                   20 |                20
+      329 | Staff329   | Surname329 | employee        |                   20 |                20
+      331 | Staff331   | Surname331 | employee        |                   20 |                20
+      332 | Staff332   | Surname332 | freelancer      |                   20 |                20
+      334 | Staff334   | Surname334 | employee        |                   20 |                20
+      336 | Staff336   | Surname336 | freelancer      |                   20 |                20
+      337 | Staff337   | Surname337 | employee        |                   20 |                20
+      339 | Staff339   | Surname339 | employee        |                   20 |                20
+       34 | Staff34    | Surname34  | employee        |                   20 |                20
+      341 | Staff341   | Surname341 | employee        |                   20 |                20
+      342 | Staff342   | Surname342 | employee        |                   20 |                20
+      344 | Staff344   | Surname344 | freelancer      |                   20 |                20
+      346 | Staff346   | Surname346 | employee        |                   20 |                20
+      347 | Staff347   | Surname347 | employee        |                   20 |                20
+      349 | Staff349   | Surname349 | employee        |                   20 |                20
+      351 | Staff351   | Surname351 | employee        |                   20 |                20
+      352 | Staff352   | Surname352 | freelancer      |                   20 |                20
+      354 | Staff354   | Surname354 | employee        |                   20 |                20
+      356 | Staff356   | Surname356 | freelancer      |                   20 |                20
+      357 | Staff357   | Surname357 | employee        |                   20 |                20
+      359 | Staff359   | Surname359 | employee        |                   20 |                20
+       36 | Staff36    | Surname36  | freelancer      |                   20 |                20
+      361 | Staff361   | Surname361 | employee        |                   20 |                20
+      362 | Staff362   | Surname362 | employee        |                   20 |                20
+      364 | Staff364   | Surname364 | freelancer      |                   20 |                20
+      366 | Staff366   | Surname366 | employee        |                   20 |                20
+      367 | Staff367   | Surname367 | employee        |                   20 |                20
+      369 | Staff369   | Surname369 | employee        |                   20 |                20
+       37 | Staff37    | Surname37  | employee        |                   20 |                20
+      371 | Staff371   | Surname371 | employee        |                   20 |                20
+      372 | Staff372   | Surname372 | freelancer      |                   20 |                20
+      374 | Staff374   | Surname374 | employee        |                   20 |                20
+      376 | Staff376   | Surname376 | freelancer      |                   20 |                20
+      377 | Staff377   | Surname377 | employee        |                   20 |                20
+      379 | Staff379   | Surname379 | employee        |                   20 |                20
+      381 | Staff381   | Surname381 | employee        |                   20 |                20
+      382 | Staff382   | Surname382 | employee        |                   20 |                20
+      384 | Staff384   | Surname384 | freelancer      |                   20 |                20
+      386 | Staff386   | Surname386 | employee        |                   20 |                20
+      387 | Staff387   | Surname387 | employee        |                   20 |                20
+      389 | Staff389   | Surname389 | employee        |                   20 |                20
+       39 | Staff39    | Surname39  | employee        |                   20 |                20
+      391 | Staff391   | Surname391 | employee        |                   20 |                20
+      392 | Staff392   | Surname392 | freelancer      |                   20 |                20
+      394 | Staff394   | Surname394 | employee        |                   20 |                20
+      396 | Staff396   | Surname396 | freelancer      |                   20 |                20
+      397 | Staff397   | Surname397 | employee        |                   20 |                20
+      399 | Staff399   | Surname399 | employee        |                   20 |                20
+        4 | Staff4     | Surname4   | freelancer      |                   20 |                20
+      401 | Staff401   | Surname401 | employee        |                   20 |                20
+      402 | Staff402   | Surname402 | employee        |                   20 |                20
+      404 | Staff404   | Surname404 | freelancer      |                   20 |                20
+      406 | Staff406   | Surname406 | employee        |                   20 |                20
+      407 | Staff407   | Surname407 | employee        |                   20 |                20
+      409 | Staff409   | Surname409 | employee        |                   20 |                20
+       41 | Staff41    | Surname41  | employee        |                   20 |                20
+      411 | Staff411   | Surname411 | employee        |                   20 |                20
+      412 | Staff412   | Surname412 | freelancer      |                   20 |                20
+      414 | Staff414   | Surname414 | employee        |                   20 |                20
+      416 | Staff416   | Surname416 | freelancer      |                   20 |                20
+      417 | Staff417   | Surname417 | employee        |                   20 |                20
+      419 | Staff419   | Surname419 | employee        |                   20 |                20
+       42 | Staff42    | Surname42  | employee        |                   20 |                20
+      421 | Staff421   | Surname421 | employee        |                   20 |                20
+      422 | Staff422   | Surname422 | employee        |                   20 |                20
+      424 | Staff424   | Surname424 | freelancer      |                   20 |                20
+      426 | Staff426   | Surname426 | employee        |                   20 |                20
+      427 | Staff427   | Surname427 | employee        |                   20 |                20
+      429 | Staff429   | Surname429 | employee        |                   20 |                20
+      431 | Staff431   | Surname431 | employee        |                   20 |                20
+      432 | Staff432   | Surname432 | freelancer      |                   20 |                20
+      434 | Staff434   | Surname434 | employee        |                   20 |                20
+      436 | Staff436   | Surname436 | freelancer      |                   20 |                20
+      437 | Staff437   | Surname437 | employee        |                   20 |                20
+      439 | Staff439   | Surname439 | employee        |                   20 |                20
+       44 | Staff44    | Surname44  | freelancer      |                   20 |                20
+      441 | Staff441   | Surname441 | employee        |                   20 |                20
+      442 | Staff442   | Surname442 | employee        |                   20 |                20
+      444 | Staff444   | Surname444 | freelancer      |                   20 |                20
+      446 | Staff446   | Surname446 | employee        |                   20 |                20
+      447 | Staff447   | Surname447 | employee        |                   20 |                20
+      449 | Staff449   | Surname449 | employee        |                   20 |                20
+      451 | Staff451   | Surname451 | employee        |                   20 |                20
+      452 | Staff452   | Surname452 | freelancer      |                   20 |                20
+      454 | Staff454   | Surname454 | employee        |                   20 |                20
+      456 | Staff456   | Surname456 | freelancer      |                   20 |                20
+      457 | Staff457   | Surname457 | employee        |                   20 |                20
+      459 | Staff459   | Surname459 | employee        |                   20 |                20
+       46 | Staff46    | Surname46  | employee        |                   20 |                20
+      461 | Staff461   | Surname461 | employee        |                   20 |                20
+      462 | Staff462   | Surname462 | employee        |                   20 |                20
+      464 | Staff464   | Surname464 | freelancer      |                   20 |                20
+      466 | Staff466   | Surname466 | employee        |                   20 |                20
+      467 | Staff467   | Surname467 | employee        |                   20 |                20
+      469 | Staff469   | Surname469 | employee        |                   20 |                20
+       47 | Staff47    | Surname47  | employee        |                   20 |                20
+      471 | Staff471   | Surname471 | employee        |                   20 |                20
+      472 | Staff472   | Surname472 | freelancer      |                   20 |                20
+      474 | Staff474   | Surname474 | employee        |                   20 |                20
+      476 | Staff476   | Surname476 | freelancer      |                   20 |                20
+      477 | Staff477   | Surname477 | employee        |                   20 |                20
+      479 | Staff479   | Surname479 | employee        |                   20 |                20
+      481 | Staff481   | Surname481 | employee        |                   20 |                20
+      482 | Staff482   | Surname482 | employee        |                   20 |                20
+      484 | Staff484   | Surname484 | freelancer      |                   20 |                20
+      486 | Staff486   | Surname486 | employee        |                   20 |                20
+      487 | Staff487   | Surname487 | employee        |                   20 |                20
+      489 | Staff489   | Surname489 | employee        |                   20 |                20
+       49 | Staff49    | Surname49  | employee        |                   20 |                20
+      491 | Staff491   | Surname491 | employee        |                   20 |                20
+      492 | Staff492   | Surname492 | freelancer      |                   20 |                20
+      494 | Staff494   | Surname494 | employee        |                   20 |                20
+      496 | Staff496   | Surname496 | freelancer      |                   20 |                20
+      497 | Staff497   | Surname497 | employee        |                   20 |                20
+      499 | Staff499   | Surname499 | employee        |                   20 |                20
+      501 | Staff501   | Surname501 | employee        |                   20 |                20
+      502 | Staff502   | Surname502 | employee        |                   20 |                20
+      504 | Staff504   | Surname504 | freelancer      |                   20 |                20
+      506 | Staff506   | Surname506 | employee        |                   20 |                20
+      507 | Staff507   | Surname507 | employee        |                   20 |                20
+      509 | Staff509   | Surname509 | employee        |                   20 |                20
+       51 | Staff51    | Surname51  | employee        |                   20 |                20
+      511 | Staff511   | Surname511 | employee        |                   20 |                20
+      512 | Staff512   | Surname512 | freelancer      |                   20 |                20
+      514 | Staff514   | Surname514 | employee        |                   20 |                20
+      516 | Staff516   | Surname516 | freelancer      |                   20 |                20
+      517 | Staff517   | Surname517 | employee        |                   20 |                20
+      519 | Staff519   | Surname519 | employee        |                   20 |                20
+       52 | Staff52    | Surname52  | freelancer      |                   20 |                20
+      521 | Staff521   | Surname521 | employee        |                   20 |                20
+      522 | Staff522   | Surname522 | employee        |                   20 |                20
+      524 | Staff524   | Surname524 | freelancer      |                   20 |                20
+      526 | Staff526   | Surname526 | employee        |                   20 |                20
+      527 | Staff527   | Surname527 | employee        |                   20 |                20
+      529 | Staff529   | Surname529 | employee        |                   20 |                20
+      531 | Staff531   | Surname531 | employee        |                   20 |                20
+      532 | Staff532   | Surname532 | freelancer      |                   20 |                20
+      534 | Staff534   | Surname534 | employee        |                   20 |                20
+      536 | Staff536   | Surname536 | freelancer      |                   20 |                20
+      537 | Staff537   | Surname537 | employee        |                   20 |                20
+      539 | Staff539   | Surname539 | employee        |                   20 |                20
+       54 | Staff54    | Surname54  | employee        |                   20 |                20
+      541 | Staff541   | Surname541 | employee        |                   20 |                20
+      542 | Staff542   | Surname542 | employee        |                   20 |                20
+      544 | Staff544   | Surname544 | freelancer      |                   20 |                20
+      546 | Staff546   | Surname546 | employee        |                   20 |                20
+      547 | Staff547   | Surname547 | employee        |                   20 |                20
+      549 | Staff549   | Surname549 | employee        |                   20 |                20
+      551 | Staff551   | Surname551 | employee        |                   20 |                20
+      552 | Staff552   | Surname552 | freelancer      |                   20 |                20
+      554 | Staff554   | Surname554 | employee        |                   20 |                20
+      556 | Staff556   | Surname556 | freelancer      |                   20 |                20
+      557 | Staff557   | Surname557 | employee        |                   20 |                20
+      559 | Staff559   | Surname559 | employee        |                   20 |                20
+       56 | Staff56    | Surname56  | freelancer      |                   20 |                20
+      561 | Staff561   | Surname561 | employee        |                   20 |                20
+      562 | Staff562   | Surname562 | employee        |                   20 |                20
+      564 | Staff564   | Surname564 | freelancer      |                   20 |                20
+      566 | Staff566   | Surname566 | employee        |                   20 |                20
+      567 | Staff567   | Surname567 | employee        |                   20 |                20
+      569 | Staff569   | Surname569 | employee        |                   20 |                20
+       57 | Staff57    | Surname57  | employee        |                   20 |                20
+      571 | Staff571   | Surname571 | employee        |                   20 |                20
+      572 | Staff572   | Surname572 | freelancer      |                   20 |                20
+      574 | Staff574   | Surname574 | employee        |                   20 |                20
+      576 | Staff576   | Surname576 | freelancer      |                   20 |                20
+      577 | Staff577   | Surname577 | employee        |                   20 |                20
+      579 | Staff579   | Surname579 | employee        |                   20 |                20
+      581 | Staff581   | Surname581 | employee        |                   20 |                20
+      582 | Staff582   | Surname582 | employee        |                   20 |                20
+      584 | Staff584   | Surname584 | freelancer      |                   20 |                20
+      586 | Staff586   | Surname586 | employee        |                   20 |                20
+      587 | Staff587   | Surname587 | employee        |                   20 |                20
+      589 | Staff589   | Surname589 | employee        |                   20 |                20
+       59 | Staff59    | Surname59  | employee        |                   20 |                20
+      591 | Staff591   | Surname591 | employee        |                   20 |                20
+      592 | Staff592   | Surname592 | freelancer      |                   20 |                20
+      594 | Staff594   | Surname594 | employee        |                   20 |                20
+      596 | Staff596   | Surname596 | freelancer      |                   20 |                20
+      597 | Staff597   | Surname597 | employee        |                   20 |                20
+      599 | Staff599   | Surname599 | employee        |                   20 |                20
+        6 | Staff6     | Surname6   | employee        |                   20 |                20
+      601 | Staff601   | Surname601 | employee        |                   20 |                20
+      602 | Staff602   | Surname602 | employee        |                   20 |                20
+      604 | Staff604   | Surname604 | freelancer      |                   20 |                20
+      606 | Staff606   | Surname606 | employee        |                   20 |                20
+      607 | Staff607   | Surname607 | employee        |                   20 |                20
+      609 | Staff609   | Surname609 | employee        |                   20 |                20
+       61 | Staff61    | Surname61  | employee        |                   20 |                20
+      611 | Staff611   | Surname611 | employee        |                   20 |                20
+      612 | Staff612   | Surname612 | freelancer      |                   20 |                20
+      614 | Staff614   | Surname614 | employee        |                   20 |                20
+      616 | Staff616   | Surname616 | freelancer      |                   20 |                20
+      617 | Staff617   | Surname617 | employee        |                   20 |                20
+      619 | Staff619   | Surname619 | employee        |                   20 |                20
+       62 | Staff62    | Surname62  | employee        |                   20 |                20
+      621 | Staff621   | Surname621 | employee        |                   20 |                20
+      622 | Staff622   | Surname622 | employee        |                   20 |                20
+      624 | Staff624   | Surname624 | freelancer      |                   20 |                20
+      626 | Staff626   | Surname626 | employee        |                   20 |                20
+      627 | Staff627   | Surname627 | employee        |                   20 |                20
+      629 | Staff629   | Surname629 | employee        |                   20 |                20
+      631 | Staff631   | Surname631 | employee        |                   20 |                20
+      632 | Staff632   | Surname632 | freelancer      |                   20 |                20
+      634 | Staff634   | Surname634 | employee        |                   20 |                20
+      636 | Staff636   | Surname636 | freelancer      |                   20 |                20
+      637 | Staff637   | Surname637 | employee        |                   20 |                20
+      639 | Staff639   | Surname639 | employee        |                   20 |                20
+       64 | Staff64    | Surname64  | freelancer      |                   20 |                20
+      641 | Staff641   | Surname641 | employee        |                   20 |                20
+      642 | Staff642   | Surname642 | employee        |                   20 |                20
+      644 | Staff644   | Surname644 | freelancer      |                   20 |                20
+      646 | Staff646   | Surname646 | employee        |                   20 |                20
+      647 | Staff647   | Surname647 | employee        |                   20 |                20
+      649 | Staff649   | Surname649 | employee        |                   20 |                20
+      651 | Staff651   | Surname651 | employee        |                   20 |                20
+      652 | Staff652   | Surname652 | freelancer      |                   20 |                20
+      654 | Staff654   | Surname654 | employee        |                   20 |                20
+      656 | Staff656   | Surname656 | freelancer      |                   20 |                20
+      657 | Staff657   | Surname657 | employee        |                   20 |                20
+      659 | Staff659   | Surname659 | employee        |                   20 |                20
+       66 | Staff66    | Surname66  | employee        |                   20 |                20
+      661 | Staff661   | Surname661 | employee        |                   20 |                20
+      662 | Staff662   | Surname662 | employee        |                   20 |                20
+      664 | Staff664   | Surname664 | freelancer      |                   20 |                20
+      666 | Staff666   | Surname666 | employee        |                   20 |                20
+      667 | Staff667   | Surname667 | employee        |                   20 |                20
+      669 | Staff669   | Surname669 | employee        |                   20 |                20
+       67 | Staff67    | Surname67  | employee        |                   20 |                20
+      671 | Staff671   | Surname671 | employee        |                   20 |                20
+      672 | Staff672   | Surname672 | freelancer      |                   20 |                20
+      674 | Staff674   | Surname674 | employee        |                   20 |                20
+      676 | Staff676   | Surname676 | freelancer      |                   20 |                20
+      677 | Staff677   | Surname677 | employee        |                   20 |                20
+      679 | Staff679   | Surname679 | employee        |                   20 |                20
+      681 | Staff681   | Surname681 | employee        |                   20 |                20
+      682 | Staff682   | Surname682 | employee        |                   20 |                20
+      684 | Staff684   | Surname684 | freelancer      |                   20 |                20
+      686 | Staff686   | Surname686 | employee        |                   20 |                20
+      687 | Staff687   | Surname687 | employee        |                   20 |                20
+      689 | Staff689   | Surname689 | employee        |                   20 |                20
+       69 | Staff69    | Surname69  | employee        |                   20 |                20
+      691 | Staff691   | Surname691 | employee        |                   20 |                20
+      692 | Staff692   | Surname692 | freelancer      |                   20 |                20
+      694 | Staff694   | Surname694 | employee        |                   20 |                20
+      696 | Staff696   | Surname696 | freelancer      |                   20 |                20
+      697 | Staff697   | Surname697 | employee        |                   20 |                20
+      699 | Staff699   | Surname699 | employee        |                   20 |                20
+        7 | Staff7     | Surname7   | employee        |                   20 |                20
+      701 | Staff701   | Surname701 | employee        |                   20 |                20
+      702 | Staff702   | Surname702 | employee        |                   20 |                20
+      704 | Staff704   | Surname704 | freelancer      |                   20 |                20
+      706 | Staff706   | Surname706 | employee        |                   20 |                20
+      707 | Staff707   | Surname707 | employee        |                   20 |                20
+      709 | Staff709   | Surname709 | employee        |                   20 |                20
+       71 | Staff71    | Surname71  | employee        |                   20 |                20
+      711 | Staff711   | Surname711 | employee        |                   20 |                20
+      712 | Staff712   | Surname712 | freelancer      |                   20 |                20
+      714 | Staff714   | Surname714 | employee        |                   20 |                20
+      716 | Staff716   | Surname716 | freelancer      |                   20 |                20
+      717 | Staff717   | Surname717 | employee        |                   20 |                20
+      719 | Staff719   | Surname719 | employee        |                   20 |                20
+       72 | Staff72    | Surname72  | freelancer      |                   20 |                20
+      721 | Staff721   | Surname721 | employee        |                   20 |                20
+      722 | Staff722   | Surname722 | employee        |                   20 |                20
+      724 | Staff724   | Surname724 | freelancer      |                   20 |                20
+      726 | Staff726   | Surname726 | employee        |                   20 |                20
+      727 | Staff727   | Surname727 | employee        |                   20 |                20
+      729 | Staff729   | Surname729 | employee        |                   20 |                20
+      731 | Staff731   | Surname731 | employee        |                   20 |                20
+      732 | Staff732   | Surname732 | freelancer      |                   20 |                20
+      734 | Staff734   | Surname734 | employee        |                   20 |                20
+      736 | Staff736   | Surname736 | freelancer      |                   20 |                20
+      737 | Staff737   | Surname737 | employee        |                   20 |                20
+      739 | Staff739   | Surname739 | employee        |                   20 |                20
+       74 | Staff74    | Surname74  | employee        |                   20 |                20
+      741 | Staff741   | Surname741 | employee        |                   20 |                20
+      742 | Staff742   | Surname742 | employee        |                   20 |                20
+      744 | Staff744   | Surname744 | freelancer      |                   20 |                20
+      746 | Staff746   | Surname746 | employee        |                   20 |                20
+      747 | Staff747   | Surname747 | employee        |                   20 |                20
+      749 | Staff749   | Surname749 | employee        |                   20 |                20
+      751 | Staff751   | Surname751 | employee        |                   20 |                20
+      752 | Staff752   | Surname752 | freelancer      |                   20 |                20
+      754 | Staff754   | Surname754 | employee        |                   20 |                20
+      756 | Staff756   | Surname756 | freelancer      |                   20 |                20
+      757 | Staff757   | Surname757 | employee        |                   20 |                20
+      759 | Staff759   | Surname759 | employee        |                   20 |                20
+       76 | Staff76    | Surname76  | freelancer      |                   20 |                20
+      761 | Staff761   | Surname761 | employee        |                   20 |                20
+      762 | Staff762   | Surname762 | employee        |                   20 |                20
+      764 | Staff764   | Surname764 | freelancer      |                   20 |                20
+      766 | Staff766   | Surname766 | employee        |                   20 |                20
+      767 | Staff767   | Surname767 | employee        |                   20 |                20
+      769 | Staff769   | Surname769 | employee        |                   20 |                20
+       77 | Staff77    | Surname77  | employee        |                   20 |                20
+      771 | Staff771   | Surname771 | employee        |                   20 |                20
+      772 | Staff772   | Surname772 | freelancer      |                   20 |                20
+      774 | Staff774   | Surname774 | employee        |                   20 |                20
+      776 | Staff776   | Surname776 | freelancer      |                   20 |                20
+      777 | Staff777   | Surname777 | employee        |                   20 |                20
+      779 | Staff779   | Surname779 | employee        |                   20 |                20
+      781 | Staff781   | Surname781 | employee        |                   20 |                20
+      782 | Staff782   | Surname782 | employee        |                   20 |                20
+      784 | Staff784   | Surname784 | freelancer      |                   20 |                20
+      786 | Staff786   | Surname786 | employee        |                   20 |                20
+      787 | Staff787   | Surname787 | employee        |                   20 |                20
+      789 | Staff789   | Surname789 | employee        |                   20 |                20
+       79 | Staff79    | Surname79  | employee        |                   20 |                20
+      791 | Staff791   | Surname791 | employee        |                   20 |                20
+      792 | Staff792   | Surname792 | freelancer      |                   20 |                20
+      794 | Staff794   | Surname794 | employee        |                   20 |                20
+      796 | Staff796   | Surname796 | freelancer      |                   20 |                20
+      797 | Staff797   | Surname797 | employee        |                   20 |                20
+      799 | Staff799   | Surname799 | employee        |                   20 |                20
+      801 | Staff801   | Surname801 | employee        |                   20 |                20
+      802 | Staff802   | Surname802 | employee        |                   20 |                20
+      804 | Staff804   | Surname804 | freelancer      |                   20 |                20
+      806 | Staff806   | Surname806 | employee        |                   20 |                20
+      807 | Staff807   | Surname807 | employee        |                   20 |                20
+      809 | Staff809   | Surname809 | employee        |                   20 |                20
+       81 | Staff81    | Surname81  | employee        |                   20 |                20
+      811 | Staff811   | Surname811 | employee        |                   20 |                20
+      812 | Staff812   | Surname812 | freelancer      |                   20 |                20
+      814 | Staff814   | Surname814 | employee        |                   20 |                20
+      816 | Staff816   | Surname816 | freelancer      |                   20 |                20
+      817 | Staff817   | Surname817 | employee        |                   20 |                20
+      819 | Staff819   | Surname819 | employee        |                   20 |                20
+       82 | Staff82    | Surname82  | employee        |                   20 |                20
+      821 | Staff821   | Surname821 | employee        |                   20 |                20
+      822 | Staff822   | Surname822 | employee        |                   20 |                20
+      824 | Staff824   | Surname824 | freelancer      |                   20 |                20
+      826 | Staff826   | Surname826 | employee        |                   20 |                20
+      827 | Staff827   | Surname827 | employee        |                   20 |                20
+      829 | Staff829   | Surname829 | employee        |                   20 |                20
+      831 | Staff831   | Surname831 | employee        |                   20 |                20
+      832 | Staff832   | Surname832 | freelancer      |                   20 |                20
+      834 | Staff834   | Surname834 | employee        |                   20 |                20
+      836 | Staff836   | Surname836 | freelancer      |                   20 |                20
+      837 | Staff837   | Surname837 | employee        |                   20 |                20
+      839 | Staff839   | Surname839 | employee        |                   20 |                20
+       84 | Staff84    | Surname84  | freelancer      |                   20 |                20
+      841 | Staff841   | Surname841 | employee        |                   20 |                20
+      842 | Staff842   | Surname842 | employee        |                   20 |                20
+      844 | Staff844   | Surname844 | freelancer      |                   20 |                20
+      846 | Staff846   | Surname846 | employee        |                   20 |                20
+      847 | Staff847   | Surname847 | employee        |                   20 |                20
+      849 | Staff849   | Surname849 | employee        |                   20 |                20
+      851 | Staff851   | Surname851 | employee        |                   20 |                20
+      852 | Staff852   | Surname852 | freelancer      |                   20 |                20
+      854 | Staff854   | Surname854 | employee        |                   20 |                20
+      856 | Staff856   | Surname856 | freelancer      |                   20 |                20
+      857 | Staff857   | Surname857 | employee        |                   20 |                20
+      859 | Staff859   | Surname859 | employee        |                   20 |                20
+       86 | Staff86    | Surname86  | employee        |                   20 |                20
+      861 | Staff861   | Surname861 | employee        |                   20 |                20
+      862 | Staff862   | Surname862 | employee        |                   20 |                20
+      864 | Staff864   | Surname864 | freelancer      |                   20 |                20
+      866 | Staff866   | Surname866 | employee        |                   20 |                20
+      867 | Staff867   | Surname867 | employee        |                   20 |                20
+      869 | Staff869   | Surname869 | employee        |                   20 |                20
+       87 | Staff87    | Surname87  | employee        |                   20 |                20
+      871 | Staff871   | Surname871 | employee        |                   20 |                20
+      872 | Staff872   | Surname872 | freelancer      |                   20 |                20
+      874 | Staff874   | Surname874 | employee        |                   20 |                20
+      876 | Staff876   | Surname876 | freelancer      |                   20 |                20
+      877 | Staff877   | Surname877 | employee        |                   20 |                20
+      879 | Staff879   | Surname879 | employee        |                   20 |                20
+      881 | Staff881   | Surname881 | employee        |                   20 |                20
+      882 | Staff882   | Surname882 | employee        |                   20 |                20
+      884 | Staff884   | Surname884 | freelancer      |                   20 |                20
+      886 | Staff886   | Surname886 | employee        |                   20 |                20
+      887 | Staff887   | Surname887 | employee        |                   20 |                20
+      889 | Staff889   | Surname889 | employee        |                   20 |                20
+       89 | Staff89    | Surname89  | employee        |                   20 |                20
+      891 | Staff891   | Surname891 | employee        |                   20 |                20
+      892 | Staff892   | Surname892 | freelancer      |                   20 |                20
+      894 | Staff894   | Surname894 | employee        |                   20 |                20
+      896 | Staff896   | Surname896 | freelancer      |                   20 |                20
+      897 | Staff897   | Surname897 | employee        |                   20 |                20
+      899 | Staff899   | Surname899 | employee        |                   20 |                20
+        9 | Staff9     | Surname9   | employee        |                   20 |                20
+       91 | Staff91    | Surname91  | employee        |                   20 |                20
+       92 | Staff92    | Surname92  | freelancer      |                   20 |                20
+       94 | Staff94    | Surname94  | employee        |                   20 |                20
+       96 | Staff96    | Surname96  | freelancer      |                   20 |                20
+       97 | Staff97    | Surname97  | employee        |                   20 |                20
+       99 | Staff99    | Surname99  | employee        |                   20 |                20
+       10 | Staff10    | Surname10  | employee        |                   10 |                10
+      100 | Staff100   | Surname100 | freelancer      |                   10 |                10
+      103 | Staff103   | Surname103 | employee        |                   10 |                10
+      110 | Staff110   | Surname110 | employee        |                   10 |                10
+      113 | Staff113   | Surname113 | employee        |                   10 |                10
+      120 | Staff120   | Surname120 | freelancer      |                   10 |                10
+      123 | Staff123   | Surname123 | employee        |                   10 |                10
+       13 | Staff13    | Surname13  | employee        |                   10 |                10
+      130 | Staff130   | Surname130 | employee        |                   10 |                10
+      133 | Staff133   | Surname133 | employee        |                   10 |                10
+      140 | Staff140   | Surname140 | freelancer      |                   10 |                10
+      143 | Staff143   | Surname143 | employee        |                   10 |                10
+      150 | Staff150   | Surname150 | employee        |                   10 |                10
+      153 | Staff153   | Surname153 | employee        |                   10 |                10
+      160 | Staff160   | Surname160 | freelancer      |                   10 |                10
+      163 | Staff163   | Surname163 | employee        |                   10 |                10
+      170 | Staff170   | Surname170 | employee        |                   10 |                10
+      173 | Staff173   | Surname173 | employee        |                   10 |                10
+      180 | Staff180   | Surname180 | freelancer      |                   10 |                10
+      183 | Staff183   | Surname183 | employee        |                   10 |                10
+      190 | Staff190   | Surname190 | employee        |                   10 |                10
+      193 | Staff193   | Surname193 | employee        |                   10 |                10
+       20 | Staff20    | Surname20  | freelancer      |                   10 |                10
+      200 | Staff200   | Surname200 | freelancer      |                   10 |                10
+      203 | Staff203   | Surname203 | employee        |                   10 |                10
+      210 | Staff210   | Surname210 | employee        |                   10 |                10
+      213 | Staff213   | Surname213 | employee        |                   10 |                10
+      220 | Staff220   | Surname220 | freelancer      |                   10 |                10
+      223 | Staff223   | Surname223 | employee        |                   10 |                10
+       23 | Staff23    | Surname23  | employee        |                   10 |                10
+      230 | Staff230   | Surname230 | employee        |                   10 |                10
+      233 | Staff233   | Surname233 | employee        |                   10 |                10
+      240 | Staff240   | Surname240 | freelancer      |                   10 |                10
+      243 | Staff243   | Surname243 | employee        |                   10 |                10
+      250 | Staff250   | Surname250 | employee        |                   10 |                10
+      253 | Staff253   | Surname253 | employee        |                   10 |                10
+      260 | Staff260   | Surname260 | freelancer      |                   10 |                10
+      263 | Staff263   | Surname263 | employee        |                   10 |                10
+      270 | Staff270   | Surname270 | employee        |                   10 |                10
+      273 | Staff273   | Surname273 | employee        |                   10 |                10
+      280 | Staff280   | Surname280 | freelancer      |                   10 |                10
+      283 | Staff283   | Surname283 | employee        |                   10 |                10
+      290 | Staff290   | Surname290 | employee        |                   10 |                10
+      293 | Staff293   | Surname293 | employee        |                   10 |                10
+        3 | Staff3     | Surname3   | employee        |                   10 |                10
+       30 | Staff30    | Surname30  | employee        |                   10 |                10
+      300 | Staff300   | Surname300 | freelancer      |                   10 |                10
+      303 | Staff303   | Surname303 | employee        |                   10 |                10
+      310 | Staff310   | Surname310 | employee        |                   10 |                10
+      313 | Staff313   | Surname313 | employee        |                   10 |                10
+      320 | Staff320   | Surname320 | freelancer      |                   10 |                10
+      323 | Staff323   | Surname323 | employee        |                   10 |                10
+       33 | Staff33    | Surname33  | employee        |                   10 |                10
+      330 | Staff330   | Surname330 | employee        |                   10 |                10
+      333 | Staff333   | Surname333 | employee        |                   10 |                10
+      340 | Staff340   | Surname340 | freelancer      |                   10 |                10
+      343 | Staff343   | Surname343 | employee        |                   10 |                10
+      350 | Staff350   | Surname350 | employee        |                   10 |                10
+      353 | Staff353   | Surname353 | employee        |                   10 |                10
+      360 | Staff360   | Surname360 | freelancer      |                   10 |                10
+      363 | Staff363   | Surname363 | employee        |                   10 |                10
+      370 | Staff370   | Surname370 | employee        |                   10 |                10
+      373 | Staff373   | Surname373 | employee        |                   10 |                10
+      380 | Staff380   | Surname380 | freelancer      |                   10 |                10
+      383 | Staff383   | Surname383 | employee        |                   10 |                10
+      390 | Staff390   | Surname390 | employee        |                   10 |                10
+      393 | Staff393   | Surname393 | employee        |                   10 |                10
+       40 | Staff40    | Surname40  | freelancer      |                   10 |                10
+      400 | Staff400   | Surname400 | freelancer      |                   10 |                10
+      403 | Staff403   | Surname403 | employee        |                   10 |                10
+      410 | Staff410   | Surname410 | employee        |                   10 |                10
+      413 | Staff413   | Surname413 | employee        |                   10 |                10
+      420 | Staff420   | Surname420 | freelancer      |                   10 |                10
+      423 | Staff423   | Surname423 | employee        |                   10 |                10
+       43 | Staff43    | Surname43  | employee        |                   10 |                10
+      430 | Staff430   | Surname430 | employee        |                   10 |                10
+      433 | Staff433   | Surname433 | employee        |                   10 |                10
+      440 | Staff440   | Surname440 | freelancer      |                   10 |                10
+      443 | Staff443   | Surname443 | employee        |                   10 |                10
+      450 | Staff450   | Surname450 | employee        |                   10 |                10
+      453 | Staff453   | Surname453 | employee        |                   10 |                10
+      460 | Staff460   | Surname460 | freelancer      |                   10 |                10
+      463 | Staff463   | Surname463 | employee        |                   10 |                10
+      470 | Staff470   | Surname470 | employee        |                   10 |                10
+      473 | Staff473   | Surname473 | employee        |                   10 |                10
+      480 | Staff480   | Surname480 | freelancer      |                   10 |                10
+      483 | Staff483   | Surname483 | employee        |                   10 |                10
+      490 | Staff490   | Surname490 | employee        |                   10 |                10
+      493 | Staff493   | Surname493 | employee        |                   10 |                10
+       50 | Staff50    | Surname50  | employee        |                   10 |                10
+      500 | Staff500   | Surname500 | freelancer      |                   10 |                10
+      503 | Staff503   | Surname503 | employee        |                   10 |                10
+      510 | Staff510   | Surname510 | employee        |                   10 |                10
+      513 | Staff513   | Surname513 | employee        |                   10 |                10
+      520 | Staff520   | Surname520 | freelancer      |                   10 |                10
+      523 | Staff523   | Surname523 | employee        |                   10 |                10
+       53 | Staff53    | Surname53  | employee        |                   10 |                10
+      530 | Staff530   | Surname530 | employee        |                   10 |                10
+      533 | Staff533   | Surname533 | employee        |                   10 |                10
+      540 | Staff540   | Surname540 | freelancer      |                   10 |                10
+      543 | Staff543   | Surname543 | employee        |                   10 |                10
+      550 | Staff550   | Surname550 | employee        |                   10 |                10
+      553 | Staff553   | Surname553 | employee        |                   10 |                10
+      560 | Staff560   | Surname560 | freelancer      |                   10 |                10
+      563 | Staff563   | Surname563 | employee        |                   10 |                10
+      570 | Staff570   | Surname570 | employee        |                   10 |                10
+      573 | Staff573   | Surname573 | employee        |                   10 |                10
+      580 | Staff580   | Surname580 | freelancer      |                   10 |                10
+      583 | Staff583   | Surname583 | employee        |                   10 |                10
+      590 | Staff590   | Surname590 | employee        |                   10 |                10
+      593 | Staff593   | Surname593 | employee        |                   10 |                10
+       60 | Staff60    | Surname60  | freelancer      |                   10 |                10
+      600 | Staff600   | Surname600 | freelancer      |                   10 |                10
+      603 | Staff603   | Surname603 | employee        |                   10 |                10
+      610 | Staff610   | Surname610 | employee        |                   10 |                10
+      613 | Staff613   | Surname613 | employee        |                   10 |                10
+      620 | Staff620   | Surname620 | freelancer      |                   10 |                10
+      623 | Staff623   | Surname623 | employee        |                   10 |                10
+       63 | Staff63    | Surname63  | employee        |                   10 |                10
+      630 | Staff630   | Surname630 | employee        |                   10 |                10
+      633 | Staff633   | Surname633 | employee        |                   10 |                10
+      640 | Staff640   | Surname640 | freelancer      |                   10 |                10
+      643 | Staff643   | Surname643 | employee        |                   10 |                10
+      650 | Staff650   | Surname650 | employee        |                   10 |                10
+      653 | Staff653   | Surname653 | employee        |                   10 |                10
+      660 | Staff660   | Surname660 | freelancer      |                   10 |                10
+      663 | Staff663   | Surname663 | employee        |                   10 |                10
+      670 | Staff670   | Surname670 | employee        |                   10 |                10
+      673 | Staff673   | Surname673 | employee        |                   10 |                10
+      680 | Staff680   | Surname680 | freelancer      |                   10 |                10
+      683 | Staff683   | Surname683 | employee        |                   10 |                10
+      690 | Staff690   | Surname690 | employee        |                   10 |                10
+      693 | Staff693   | Surname693 | employee        |                   10 |                10
+       70 | Staff70    | Surname70  | employee        |                   10 |                10
+      700 | Staff700   | Surname700 | freelancer      |                   10 |                10
+      703 | Staff703   | Surname703 | employee        |                   10 |                10
+      710 | Staff710   | Surname710 | employee        |                   10 |                10
+      713 | Staff713   | Surname713 | employee        |                   10 |                10
+      720 | Staff720   | Surname720 | freelancer      |                   10 |                10
+      723 | Staff723   | Surname723 | employee        |                   10 |                10
+       73 | Staff73    | Surname73  | employee        |                   10 |                10
+      730 | Staff730   | Surname730 | employee        |                   10 |                10
+      733 | Staff733   | Surname733 | employee        |                   10 |                10
+      740 | Staff740   | Surname740 | freelancer      |                   10 |                10
+      743 | Staff743   | Surname743 | employee        |                   10 |                10
+      750 | Staff750   | Surname750 | employee        |                   10 |                10
+      753 | Staff753   | Surname753 | employee        |                   10 |                10
+      760 | Staff760   | Surname760 | freelancer      |                   10 |                10
+      763 | Staff763   | Surname763 | employee        |                   10 |                10
+      770 | Staff770   | Surname770 | employee        |                   10 |                10
+      773 | Staff773   | Surname773 | employee        |                   10 |                10
+      780 | Staff780   | Surname780 | freelancer      |                   10 |                10
+      783 | Staff783   | Surname783 | employee        |                   10 |                10
+      790 | Staff790   | Surname790 | employee        |                   10 |                10
+      793 | Staff793   | Surname793 | employee        |                   10 |                10
+       80 | Staff80    | Surname80  | freelancer      |                   10 |                10
+      800 | Staff800   | Surname800 | freelancer      |                   10 |                10
+      803 | Staff803   | Surname803 | employee        |                   10 |                10
+      810 | Staff810   | Surname810 | employee        |                   10 |                10
+      813 | Staff813   | Surname813 | employee        |                   10 |                10
+      820 | Staff820   | Surname820 | freelancer      |                   10 |                10
+      823 | Staff823   | Surname823 | employee        |                   10 |                10
+       83 | Staff83    | Surname83  | employee        |                   10 |                10
+      830 | Staff830   | Surname830 | employee        |                   10 |                10
+      833 | Staff833   | Surname833 | employee        |                   10 |                10
+      840 | Staff840   | Surname840 | freelancer      |                   10 |                10
+      843 | Staff843   | Surname843 | employee        |                   10 |                10
+      850 | Staff850   | Surname850 | employee        |                   10 |                10
+      853 | Staff853   | Surname853 | employee        |                   10 |                10
+      860 | Staff860   | Surname860 | freelancer      |                   10 |                10
+      863 | Staff863   | Surname863 | employee        |                   10 |                10
+      870 | Staff870   | Surname870 | employee        |                   10 |                10
+      873 | Staff873   | Surname873 | employee        |                   10 |                10
+      880 | Staff880   | Surname880 | freelancer      |                   10 |                10
+      883 | Staff883   | Surname883 | employee        |                   10 |                10
+      890 | Staff890   | Surname890 | employee        |                   10 |                10
+      893 | Staff893   | Surname893 | employee        |                   10 |                10
+       90 | Staff90    | Surname90  | employee        |                   10 |                10
+      900 | Staff900   | Surname900 | freelancer      |                   10 |                10
+       93 | Staff93    | Surname93  | employee        |                   10 |                10
+(900 rows)
+
+        start_at        |         end_at         | asset_tag |   equipment_name    | equipment_type |       project_name       |     reserved_by     
+------------------------+------------------------+-----------+---------------------+----------------+--------------------------+---------------------
+ 2026-07-01 08:00:00+01 | 2026-07-01 12:00:00+01 | EQ-000137 | Equipment Item 137  | camera         | Production Project 01781 | Staff429 Surname429
+ 2026-07-01 08:00:00+01 | 2026-07-01 13:00:00+01 | EQ-000173 | Equipment Item 173  | camera         | Production Project 02249 | Staff141 Surname141
+ 2026-07-01 08:00:00+01 | 2026-07-01 10:00:00+01 | EQ-000317 | Equipment Item 317  | camera         | Production Project 04121 | Staff789 Surname789
+ 2026-07-01 08:00:00+01 | 2026-07-01 11:00:00+01 | EQ-000353 | Equipment Item 353  | camera         | Production Project 04589 | Staff501 Surname501
+ 2026-07-01 08:00:00+01 | 2026-07-01 15:00:00+01 | EQ-000497 | Equipment Item 497  | camera         | Production Project 06461 | Staff249 Surname249
+ 2026-07-01 08:00:00+01 | 2026-07-01 16:00:00+01 | EQ-000533 | Equipment Item 533  | camera         | Production Project 06929 | Staff861 Surname861
+ 2026-07-01 08:00:00+01 | 2026-07-01 13:00:00+01 | EQ-000677 | Equipment Item 677  | camera         | Production Project 08801 | Staff609 Surname609
+ 2026-07-01 08:00:00+01 | 2026-07-01 14:00:00+01 | EQ-000713 | Equipment Item 713  | camera         | Production Project 09269 | Staff321 Surname321
+ 2026-07-01 08:00:00+01 | 2026-07-01 11:00:00+01 | EQ-000857 | Equipment Item 857  | camera         | Production Project 01141 | Staff69 Surname69
+ 2026-07-01 08:00:00+01 | 2026-07-01 12:00:00+01 | EQ-000893 | Equipment Item 893  | camera         | Production Project 01609 | Staff681 Surname681
+ 2026-07-01 08:00:00+01 | 2026-07-01 16:00:00+01 | EQ-001037 | Equipment Item 1037 | camera         | Production Project 03481 | Staff429 Surname429
+ 2026-07-01 08:00:00+01 | 2026-07-01 10:00:00+01 | EQ-001073 | Equipment Item 1073 | camera         | Production Project 03949 | Staff141 Surname141
+ 2026-07-01 08:00:00+01 | 2026-07-01 14:00:00+01 | EQ-001217 | Equipment Item 1217 | camera         | Production Project 05821 | Staff789 Surname789
+ 2026-07-01 08:00:00+01 | 2026-07-01 15:00:00+01 | EQ-001253 | Equipment Item 1253 | camera         | Production Project 06289 | Staff501 Surname501
+ 2026-07-01 08:00:00+01 | 2026-07-01 12:00:00+01 | EQ-001397 | Equipment Item 1397 | camera         | Production Project 08161 | Staff249 Surname249
+ 2026-07-01 08:00:00+01 | 2026-07-01 13:00:00+01 | EQ-001433 | Equipment Item 1433 | camera         | Production Project 08629 | Staff861 Surname861
+ 2026-07-01 08:00:00+01 | 2026-07-01 10:00:00+01 | EQ-001577 | Equipment Item 1577 | camera         | Production Project 00501 | Staff609 Surname609
+ 2026-07-01 08:00:00+01 | 2026-07-01 11:00:00+01 | EQ-001613 | Equipment Item 1613 | camera         | Production Project 00969 | Staff321 Surname321
+ 2026-07-01 08:00:00+01 | 2026-07-01 15:00:00+01 | EQ-001757 | Equipment Item 1757 | camera         | Production Project 02841 | Staff69 Surname69
+ 2026-07-01 08:00:00+01 | 2026-07-01 16:00:00+01 | EQ-001793 | Equipment Item 1793 | camera         | Production Project 03309 | Staff681 Surname681
+ 2026-07-01 08:00:00+01 | 2026-07-01 13:00:00+01 | EQ-001937 | Equipment Item 1937 | camera         | Production Project 05181 | Staff429 Surname429
+ 2026-07-01 08:00:00+01 | 2026-07-01 14:00:00+01 | EQ-001973 | Equipment Item 1973 | camera         | Production Project 05649 | Staff141 Surname141
+ 2026-07-01 08:00:00+01 | 2026-07-01 11:00:00+01 | EQ-002117 | Equipment Item 2117 | camera         | Production Project 07521 | Staff789 Surname789
+ 2026-07-01 08:00:00+01 | 2026-07-01 12:00:00+01 | EQ-002153 | Equipment Item 2153 | camera         | Production Project 07989 | Staff501 Surname501
+ 2026-07-01 08:00:00+01 | 2026-07-01 16:00:00+01 | EQ-002297 | Equipment Item 2297 | camera         | Production Project 09861 | Staff249 Surname249
+ 2026-07-01 08:00:00+01 | 2026-07-01 10:00:00+01 | EQ-002333 | Equipment Item 2333 | camera         | Production Project 00329 | Staff861 Surname861
+ 2026-07-01 08:00:00+01 | 2026-07-01 14:00:00+01 | EQ-002477 | Equipment Item 2477 | camera         | Production Project 02201 | Staff609 Surname609
+ 2026-07-01 08:00:00+01 | 2026-07-01 15:00:00+01 | EQ-002513 | Equipment Item 2513 | camera         | Production Project 02669 | Staff321 Surname321
+ 2026-07-01 08:00:00+01 | 2026-07-01 12:00:00+01 | EQ-002657 | Equipment Item 2657 | camera         | Production Project 04541 | Staff69 Surname69
+ 2026-07-01 08:00:00+01 | 2026-07-01 13:00:00+01 | EQ-002693 | Equipment Item 2693 | camera         | Production Project 05009 | Staff681 Surname681
+ 2026-07-01 08:00:00+01 | 2026-07-01 10:00:00+01 | EQ-002837 | Equipment Item 2837 | camera         | Production Project 06881 | Staff429 Surname429
+ 2026-07-01 08:00:00+01 | 2026-07-01 11:00:00+01 | EQ-002873 | Equipment Item 2873 | camera         | Production Project 07349 | Staff141 Surname141
+ 2026-07-01 08:00:00+01 | 2026-07-01 15:00:00+01 | EQ-003017 | Equipment Item 3017 | camera         | Production Project 09221 | Staff789 Surname789
+ 2026-07-01 08:00:00+01 | 2026-07-01 16:00:00+01 | EQ-003053 | Equipment Item 3053 | camera         | Production Project 09689 | Staff501 Surname501
+ 2026-07-01 08:00:00+01 | 2026-07-01 13:00:00+01 | EQ-003197 | Equipment Item 3197 | camera         | Production Project 01561 | Staff249 Surname249
+ 2026-07-01 08:00:00+01 | 2026-07-01 14:00:00+01 | EQ-003233 | Equipment Item 3233 | camera         | Production Project 02029 | Staff861 Surname861
+ 2026-07-01 08:00:00+01 | 2026-07-01 11:00:00+01 | EQ-003377 | Equipment Item 3377 | camera         | Production Project 03901 | Staff609 Surname609
+ 2026-07-01 08:00:00+01 | 2026-07-01 12:00:00+01 | EQ-003413 | Equipment Item 3413 | camera         | Production Project 04369 | Staff321 Surname321
+ 2026-07-01 08:00:00+01 | 2026-07-01 16:00:00+01 | EQ-003557 | Equipment Item 3557 | camera         | Production Project 06241 | Staff69 Surname69
+ 2026-07-01 08:00:00+01 | 2026-07-01 10:00:00+01 | EQ-003593 | Equipment Item 3593 | camera         | Production Project 06709 | Staff681 Surname681
+ 2026-07-01 08:00:00+01 | 2026-07-01 14:00:00+01 | EQ-003737 | Equipment Item 3737 | camera         | Production Project 08581 | Staff429 Surname429
+ 2026-07-01 08:00:00+01 | 2026-07-01 15:00:00+01 | EQ-003773 | Equipment Item 3773 | camera         | Production Project 09049 | Staff141 Surname141
+ 2026-07-01 08:00:00+01 | 2026-07-01 12:00:00+01 | EQ-003917 | Equipment Item 3917 | camera         | Production Project 00921 | Staff789 Surname789
+ 2026-07-01 08:00:00+01 | 2026-07-01 13:00:00+01 | EQ-003953 | Equipment Item 3953 | camera         | Production Project 01389 | Staff501 Surname501
+ 2026-07-01 08:00:00+01 | 2026-07-01 10:00:00+01 | EQ-004097 | Equipment Item 4097 | camera         | Production Project 03261 | Staff249 Surname249
+ 2026-07-01 08:00:00+01 | 2026-07-01 11:00:00+01 | EQ-004133 | Equipment Item 4133 | camera         | Production Project 03729 | Staff861 Surname861
+ 2026-07-01 08:00:00+01 | 2026-07-01 15:00:00+01 | EQ-004277 | Equipment Item 4277 | camera         | Production Project 05601 | Staff609 Surname609
+ 2026-07-01 08:00:00+01 | 2026-07-01 16:00:00+01 | EQ-004313 | Equipment Item 4313 | camera         | Production Project 06069 | Staff321 Surname321
+ 2026-07-01 08:00:00+01 | 2026-07-01 13:00:00+01 | EQ-004457 | Equipment Item 4457 | camera         | Production Project 07941 | Staff69 Surname69
+ 2026-07-01 08:00:00+01 | 2026-07-01 14:00:00+01 | EQ-004493 | Equipment Item 4493 | camera         | Production Project 08409 | Staff681 Surname681
+ 2026-07-01 08:00:00+01 | 2026-07-01 11:00:00+01 | EQ-004637 | Equipment Item 4637 | camera         | Production Project 00281 | Staff429 Surname429
+ 2026-07-01 08:00:00+01 | 2026-07-01 12:00:00+01 | EQ-004673 | Equipment Item 4673 | camera         | Production Project 00749 | Staff141 Surname141
+ 2026-07-01 08:00:00+01 | 2026-07-01 16:00:00+01 | EQ-004817 | Equipment Item 4817 | camera         | Production Project 02621 | Staff789 Surname789
+ 2026-07-01 08:00:00+01 | 2026-07-01 10:00:00+01 | EQ-004853 | Equipment Item 4853 | camera         | Production Project 03089 | Staff501 Surname501
+ 2026-07-01 08:00:00+01 | 2026-07-01 14:00:00+01 | EQ-004997 | Equipment Item 4997 | camera         | Production Project 04961 | Staff249 Surname249
+ 2026-07-02 16:00:00+01 | 2026-07-03 00:00:00+01 | EQ-000057 | Equipment Item 57   | camera         | Production Project 00741 | Staff869 Surname869
+ 2026-07-02 16:00:00+01 | 2026-07-02 18:00:00+01 | EQ-000093 | Equipment Item 93   | camera         | Production Project 01209 | Staff581 Surname581
+ 2026-07-02 16:00:00+01 | 2026-07-02 22:00:00+01 | EQ-000237 | Equipment Item 237  | camera         | Production Project 03081 | Staff329 Surname329
+ 2026-07-02 16:00:00+01 | 2026-07-02 23:00:00+01 | EQ-000273 | Equipment Item 273  | camera         | Production Project 03549 | Staff41 Surname41
+ 2026-07-02 16:00:00+01 | 2026-07-02 20:00:00+01 | EQ-000417 | Equipment Item 417  | camera         | Production Project 05421 | Staff689 Surname689
+ 2026-07-02 16:00:00+01 | 2026-07-02 21:00:00+01 | EQ-000453 | Equipment Item 453  | camera         | Production Project 05889 | Staff401 Surname401
+ 2026-07-02 16:00:00+01 | 2026-07-02 18:00:00+01 | EQ-000597 | Equipment Item 597  | camera         | Production Project 07761 | Staff149 Surname149
+ 2026-07-02 16:00:00+01 | 2026-07-02 19:00:00+01 | EQ-000633 | Equipment Item 633  | camera         | Production Project 08229 | Staff761 Surname761
+ 2026-07-02 16:00:00+01 | 2026-07-02 23:00:00+01 | EQ-000777 | Equipment Item 777  | camera         | Production Project 00101 | Staff509 Surname509
+ 2026-07-02 16:00:00+01 | 2026-07-03 00:00:00+01 | EQ-000813 | Equipment Item 813  | camera         | Production Project 00569 | Staff221 Surname221
+ 2026-07-02 16:00:00+01 | 2026-07-02 21:00:00+01 | EQ-000957 | Equipment Item 957  | camera         | Production Project 02441 | Staff869 Surname869
+ 2026-07-02 16:00:00+01 | 2026-07-02 22:00:00+01 | EQ-000993 | Equipment Item 993  | camera         | Production Project 02909 | Staff581 Surname581
+ 2026-07-02 16:00:00+01 | 2026-07-02 19:00:00+01 | EQ-001137 | Equipment Item 1137 | camera         | Production Project 04781 | Staff329 Surname329
+ 2026-07-02 16:00:00+01 | 2026-07-02 20:00:00+01 | EQ-001173 | Equipment Item 1173 | camera         | Production Project 05249 | Staff41 Surname41
+ 2026-07-02 16:00:00+01 | 2026-07-03 00:00:00+01 | EQ-001317 | Equipment Item 1317 | camera         | Production Project 07121 | Staff689 Surname689
+ 2026-07-02 16:00:00+01 | 2026-07-02 18:00:00+01 | EQ-001353 | Equipment Item 1353 | camera         | Production Project 07589 | Staff401 Surname401
+ 2026-07-02 16:00:00+01 | 2026-07-02 22:00:00+01 | EQ-001497 | Equipment Item 1497 | camera         | Production Project 09461 | Staff149 Surname149
+ 2026-07-02 16:00:00+01 | 2026-07-02 23:00:00+01 | EQ-001533 | Equipment Item 1533 | camera         | Production Project 09929 | Staff761 Surname761
+ 2026-07-02 16:00:00+01 | 2026-07-02 20:00:00+01 | EQ-001677 | Equipment Item 1677 | camera         | Production Project 01801 | Staff509 Surname509
+ 2026-07-02 16:00:00+01 | 2026-07-02 21:00:00+01 | EQ-001713 | Equipment Item 1713 | camera         | Production Project 02269 | Staff221 Surname221
+ 2026-07-02 16:00:00+01 | 2026-07-02 18:00:00+01 | EQ-001857 | Equipment Item 1857 | camera         | Production Project 04141 | Staff869 Surname869
+ 2026-07-02 16:00:00+01 | 2026-07-02 19:00:00+01 | EQ-001893 | Equipment Item 1893 | camera         | Production Project 04609 | Staff581 Surname581
+ 2026-07-02 16:00:00+01 | 2026-07-02 23:00:00+01 | EQ-002037 | Equipment Item 2037 | camera         | Production Project 06481 | Staff329 Surname329
+ 2026-07-02 16:00:00+01 | 2026-07-03 00:00:00+01 | EQ-002073 | Equipment Item 2073 | camera         | Production Project 06949 | Staff41 Surname41
+ 2026-07-02 16:00:00+01 | 2026-07-02 21:00:00+01 | EQ-002217 | Equipment Item 2217 | camera         | Production Project 08821 | Staff689 Surname689
+ 2026-07-02 16:00:00+01 | 2026-07-02 22:00:00+01 | EQ-002253 | Equipment Item 2253 | camera         | Production Project 09289 | Staff401 Surname401
+ 2026-07-02 16:00:00+01 | 2026-07-02 19:00:00+01 | EQ-002397 | Equipment Item 2397 | camera         | Production Project 01161 | Staff149 Surname149
+ 2026-07-02 16:00:00+01 | 2026-07-02 20:00:00+01 | EQ-002433 | Equipment Item 2433 | camera         | Production Project 01629 | Staff761 Surname761
+ 2026-07-02 16:00:00+01 | 2026-07-03 00:00:00+01 | EQ-002577 | Equipment Item 2577 | camera         | Production Project 03501 | Staff509 Surname509
+ 2026-07-02 16:00:00+01 | 2026-07-02 18:00:00+01 | EQ-002613 | Equipment Item 2613 | camera         | Production Project 03969 | Staff221 Surname221
+ 2026-07-02 16:00:00+01 | 2026-07-02 22:00:00+01 | EQ-002757 | Equipment Item 2757 | camera         | Production Project 05841 | Staff869 Surname869
+ 2026-07-02 16:00:00+01 | 2026-07-02 23:00:00+01 | EQ-002793 | Equipment Item 2793 | camera         | Production Project 06309 | Staff581 Surname581
+ 2026-07-02 16:00:00+01 | 2026-07-02 20:00:00+01 | EQ-002937 | Equipment Item 2937 | camera         | Production Project 08181 | Staff329 Surname329
+ 2026-07-02 16:00:00+01 | 2026-07-02 21:00:00+01 | EQ-002973 | Equipment Item 2973 | camera         | Production Project 08649 | Staff41 Surname41
+ 2026-07-02 16:00:00+01 | 2026-07-02 18:00:00+01 | EQ-003117 | Equipment Item 3117 | camera         | Production Project 00521 | Staff689 Surname689
+ 2026-07-02 16:00:00+01 | 2026-07-02 19:00:00+01 | EQ-003153 | Equipment Item 3153 | camera         | Production Project 00989 | Staff401 Surname401
+ 2026-07-02 16:00:00+01 | 2026-07-02 23:00:00+01 | EQ-003297 | Equipment Item 3297 | camera         | Production Project 02861 | Staff149 Surname149
+ 2026-07-02 16:00:00+01 | 2026-07-03 00:00:00+01 | EQ-003333 | Equipment Item 3333 | camera         | Production Project 03329 | Staff761 Surname761
+ 2026-07-02 16:00:00+01 | 2026-07-02 21:00:00+01 | EQ-003477 | Equipment Item 3477 | camera         | Production Project 05201 | Staff509 Surname509
+ 2026-07-02 16:00:00+01 | 2026-07-02 22:00:00+01 | EQ-003513 | Equipment Item 3513 | camera         | Production Project 05669 | Staff221 Surname221
+ 2026-07-02 16:00:00+01 | 2026-07-02 19:00:00+01 | EQ-003657 | Equipment Item 3657 | camera         | Production Project 07541 | Staff869 Surname869
+ 2026-07-02 16:00:00+01 | 2026-07-02 20:00:00+01 | EQ-003693 | Equipment Item 3693 | camera         | Production Project 08009 | Staff581 Surname581
+ 2026-07-02 16:00:00+01 | 2026-07-03 00:00:00+01 | EQ-003837 | Equipment Item 3837 | camera         | Production Project 09881 | Staff329 Surname329
+ 2026-07-02 16:00:00+01 | 2026-07-02 18:00:00+01 | EQ-003873 | Equipment Item 3873 | camera         | Production Project 00349 | Staff41 Surname41
+ 2026-07-02 16:00:00+01 | 2026-07-02 22:00:00+01 | EQ-004017 | Equipment Item 4017 | camera         | Production Project 02221 | Staff689 Surname689
+ 2026-07-02 16:00:00+01 | 2026-07-02 23:00:00+01 | EQ-004053 | Equipment Item 4053 | camera         | Production Project 02689 | Staff401 Surname401
+ 2026-07-02 16:00:00+01 | 2026-07-02 20:00:00+01 | EQ-004197 | Equipment Item 4197 | camera         | Production Project 04561 | Staff149 Surname149
+ 2026-07-02 16:00:00+01 | 2026-07-02 21:00:00+01 | EQ-004233 | Equipment Item 4233 | camera         | Production Project 05029 | Staff761 Surname761
+ 2026-07-02 16:00:00+01 | 2026-07-02 18:00:00+01 | EQ-004377 | Equipment Item 4377 | camera         | Production Project 06901 | Staff509 Surname509
+ 2026-07-02 16:00:00+01 | 2026-07-02 19:00:00+01 | EQ-004413 | Equipment Item 4413 | camera         | Production Project 07369 | Staff221 Surname221
+ 2026-07-02 16:00:00+01 | 2026-07-02 23:00:00+01 | EQ-004557 | Equipment Item 4557 | camera         | Production Project 09241 | Staff869 Surname869
+ 2026-07-02 16:00:00+01 | 2026-07-03 00:00:00+01 | EQ-004593 | Equipment Item 4593 | camera         | Production Project 09709 | Staff581 Surname581
+ 2026-07-02 16:00:00+01 | 2026-07-02 21:00:00+01 | EQ-004737 | Equipment Item 4737 | camera         | Production Project 01581 | Staff329 Surname329
+ 2026-07-02 16:00:00+01 | 2026-07-02 22:00:00+01 | EQ-004773 | Equipment Item 4773 | camera         | Production Project 02049 | Staff41 Surname41
+ 2026-07-02 16:00:00+01 | 2026-07-02 19:00:00+01 | EQ-004917 | Equipment Item 4917 | camera         | Production Project 03921 | Staff689 Surname689
+ 2026-07-02 16:00:00+01 | 2026-07-02 20:00:00+01 | EQ-004953 | Equipment Item 4953 | camera         | Production Project 04389 | Staff401 Surname401
+ 2026-07-03 00:00:00+01 | 2026-07-03 06:00:00+01 | EQ-000013 | Equipment Item 13   | camera         | Production Project 00169 | Staff121 Surname121
+ 2026-07-03 00:00:00+01 | 2026-07-03 03:00:00+01 | EQ-000157 | Equipment Item 157  | camera         | Production Project 02041 | Staff769 Surname769
+ 2026-07-03 00:00:00+01 | 2026-07-03 04:00:00+01 | EQ-000193 | Equipment Item 193  | camera         | Production Project 02509 | Staff481 Surname481
+ 2026-07-03 00:00:00+01 | 2026-07-03 08:00:00+01 | EQ-000337 | Equipment Item 337  | camera         | Production Project 04381 | Staff229 Surname229
+ 2026-07-03 00:00:00+01 | 2026-07-03 02:00:00+01 | EQ-000373 | Equipment Item 373  | camera         | Production Project 04849 | Staff841 Surname841
+ 2026-07-03 00:00:00+01 | 2026-07-03 06:00:00+01 | EQ-000517 | Equipment Item 517  | camera         | Production Project 06721 | Staff589 Surname589
+ 2026-07-03 00:00:00+01 | 2026-07-03 07:00:00+01 | EQ-000553 | Equipment Item 553  | camera         | Production Project 07189 | Staff301 Surname301
+ 2026-07-03 00:00:00+01 | 2026-07-03 04:00:00+01 | EQ-000697 | Equipment Item 697  | camera         | Production Project 09061 | Staff49 Surname49
+ 2026-07-03 00:00:00+01 | 2026-07-03 05:00:00+01 | EQ-000733 | Equipment Item 733  | camera         | Production Project 09529 | Staff661 Surname661
+ 2026-07-03 00:00:00+01 | 2026-07-03 02:00:00+01 | EQ-000877 | Equipment Item 877  | camera         | Production Project 01401 | Staff409 Surname409
+ 2026-07-03 00:00:00+01 | 2026-07-03 03:00:00+01 | EQ-000913 | Equipment Item 913  | camera         | Production Project 01869 | Staff121 Surname121
+ 2026-07-03 00:00:00+01 | 2026-07-03 07:00:00+01 | EQ-001057 | Equipment Item 1057 | camera         | Production Project 03741 | Staff769 Surname769
+ 2026-07-03 00:00:00+01 | 2026-07-03 08:00:00+01 | EQ-001093 | Equipment Item 1093 | camera         | Production Project 04209 | Staff481 Surname481
+ 2026-07-03 00:00:00+01 | 2026-07-03 05:00:00+01 | EQ-001237 | Equipment Item 1237 | camera         | Production Project 06081 | Staff229 Surname229
+ 2026-07-03 00:00:00+01 | 2026-07-03 06:00:00+01 | EQ-001273 | Equipment Item 1273 | camera         | Production Project 06549 | Staff841 Surname841
+ 2026-07-03 00:00:00+01 | 2026-07-03 03:00:00+01 | EQ-001417 | Equipment Item 1417 | camera         | Production Project 08421 | Staff589 Surname589
+ 2026-07-03 00:00:00+01 | 2026-07-03 04:00:00+01 | EQ-001453 | Equipment Item 1453 | camera         | Production Project 08889 | Staff301 Surname301
+ 2026-07-03 00:00:00+01 | 2026-07-03 08:00:00+01 | EQ-001597 | Equipment Item 1597 | camera         | Production Project 00761 | Staff49 Surname49
+ 2026-07-03 00:00:00+01 | 2026-07-03 02:00:00+01 | EQ-001633 | Equipment Item 1633 | camera         | Production Project 01229 | Staff661 Surname661
+ 2026-07-03 00:00:00+01 | 2026-07-03 06:00:00+01 | EQ-001777 | Equipment Item 1777 | camera         | Production Project 03101 | Staff409 Surname409
+ 2026-07-03 00:00:00+01 | 2026-07-03 07:00:00+01 | EQ-001813 | Equipment Item 1813 | camera         | Production Project 03569 | Staff121 Surname121
+ 2026-07-03 00:00:00+01 | 2026-07-03 04:00:00+01 | EQ-001957 | Equipment Item 1957 | camera         | Production Project 05441 | Staff769 Surname769
+ 2026-07-03 00:00:00+01 | 2026-07-03 05:00:00+01 | EQ-001993 | Equipment Item 1993 | camera         | Production Project 05909 | Staff481 Surname481
+ 2026-07-03 00:00:00+01 | 2026-07-03 02:00:00+01 | EQ-002137 | Equipment Item 2137 | camera         | Production Project 07781 | Staff229 Surname229
+ 2026-07-03 00:00:00+01 | 2026-07-03 03:00:00+01 | EQ-002173 | Equipment Item 2173 | camera         | Production Project 08249 | Staff841 Surname841
+ 2026-07-03 00:00:00+01 | 2026-07-03 07:00:00+01 | EQ-002317 | Equipment Item 2317 | camera         | Production Project 00121 | Staff589 Surname589
+ 2026-07-03 00:00:00+01 | 2026-07-03 08:00:00+01 | EQ-002353 | Equipment Item 2353 | camera         | Production Project 00589 | Staff301 Surname301
+ 2026-07-03 00:00:00+01 | 2026-07-03 05:00:00+01 | EQ-002497 | Equipment Item 2497 | camera         | Production Project 02461 | Staff49 Surname49
+ 2026-07-03 00:00:00+01 | 2026-07-03 06:00:00+01 | EQ-002533 | Equipment Item 2533 | camera         | Production Project 02929 | Staff661 Surname661
+ 2026-07-03 00:00:00+01 | 2026-07-03 03:00:00+01 | EQ-002677 | Equipment Item 2677 | camera         | Production Project 04801 | Staff409 Surname409
+ 2026-07-03 00:00:00+01 | 2026-07-03 04:00:00+01 | EQ-002713 | Equipment Item 2713 | camera         | Production Project 05269 | Staff121 Surname121
+ 2026-07-03 00:00:00+01 | 2026-07-03 08:00:00+01 | EQ-002857 | Equipment Item 2857 | camera         | Production Project 07141 | Staff769 Surname769
+ 2026-07-03 00:00:00+01 | 2026-07-03 02:00:00+01 | EQ-002893 | Equipment Item 2893 | camera         | Production Project 07609 | Staff481 Surname481
+ 2026-07-03 00:00:00+01 | 2026-07-03 06:00:00+01 | EQ-003037 | Equipment Item 3037 | camera         | Production Project 09481 | Staff229 Surname229
+ 2026-07-03 00:00:00+01 | 2026-07-03 07:00:00+01 | EQ-003073 | Equipment Item 3073 | camera         | Production Project 09949 | Staff841 Surname841
+ 2026-07-03 00:00:00+01 | 2026-07-03 04:00:00+01 | EQ-003217 | Equipment Item 3217 | camera         | Production Project 01821 | Staff589 Surname589
+ 2026-07-03 00:00:00+01 | 2026-07-03 05:00:00+01 | EQ-003253 | Equipment Item 3253 | camera         | Production Project 02289 | Staff301 Surname301
+ 2026-07-03 00:00:00+01 | 2026-07-03 02:00:00+01 | EQ-003397 | Equipment Item 3397 | camera         | Production Project 04161 | Staff49 Surname49
+ 2026-07-03 00:00:00+01 | 2026-07-03 03:00:00+01 | EQ-003433 | Equipment Item 3433 | camera         | Production Project 04629 | Staff661 Surname661
+ 2026-07-03 00:00:00+01 | 2026-07-03 07:00:00+01 | EQ-003577 | Equipment Item 3577 | camera         | Production Project 06501 | Staff409 Surname409
+ 2026-07-03 00:00:00+01 | 2026-07-03 08:00:00+01 | EQ-003613 | Equipment Item 3613 | camera         | Production Project 06969 | Staff121 Surname121
+ 2026-07-03 00:00:00+01 | 2026-07-03 05:00:00+01 | EQ-003757 | Equipment Item 3757 | camera         | Production Project 08841 | Staff769 Surname769
+ 2026-07-03 00:00:00+01 | 2026-07-03 06:00:00+01 | EQ-003793 | Equipment Item 3793 | camera         | Production Project 09309 | Staff481 Surname481
+ 2026-07-03 00:00:00+01 | 2026-07-03 03:00:00+01 | EQ-003937 | Equipment Item 3937 | camera         | Production Project 01181 | Staff229 Surname229
+ 2026-07-03 00:00:00+01 | 2026-07-03 04:00:00+01 | EQ-003973 | Equipment Item 3973 | camera         | Production Project 01649 | Staff841 Surname841
+ 2026-07-03 00:00:00+01 | 2026-07-03 08:00:00+01 | EQ-004117 | Equipment Item 4117 | camera         | Production Project 03521 | Staff589 Surname589
+ 2026-07-03 00:00:00+01 | 2026-07-03 02:00:00+01 | EQ-004153 | Equipment Item 4153 | camera         | Production Project 03989 | Staff301 Surname301
+ 2026-07-03 00:00:00+01 | 2026-07-03 06:00:00+01 | EQ-004297 | Equipment Item 4297 | camera         | Production Project 05861 | Staff49 Surname49
+ 2026-07-03 00:00:00+01 | 2026-07-03 07:00:00+01 | EQ-004333 | Equipment Item 4333 | camera         | Production Project 06329 | Staff661 Surname661
+ 2026-07-03 00:00:00+01 | 2026-07-03 04:00:00+01 | EQ-004477 | Equipment Item 4477 | camera         | Production Project 08201 | Staff409 Surname409
+ 2026-07-03 00:00:00+01 | 2026-07-03 05:00:00+01 | EQ-004513 | Equipment Item 4513 | camera         | Production Project 08669 | Staff121 Surname121
+ 2026-07-03 00:00:00+01 | 2026-07-03 02:00:00+01 | EQ-004657 | Equipment Item 4657 | camera         | Production Project 00541 | Staff769 Surname769
+ 2026-07-03 00:00:00+01 | 2026-07-03 03:00:00+01 | EQ-004693 | Equipment Item 4693 | camera         | Production Project 01009 | Staff481 Surname481
+ 2026-07-03 00:00:00+01 | 2026-07-03 07:00:00+01 | EQ-004837 | Equipment Item 4837 | camera         | Production Project 02881 | Staff229 Surname229
+ 2026-07-03 00:00:00+01 | 2026-07-03 08:00:00+01 | EQ-004873 | Equipment Item 4873 | camera         | Production Project 03349 | Staff841 Surname841
+ 2026-07-04 08:00:00+01 | 2026-07-04 15:00:00+01 | EQ-000077 | Equipment Item 77   | camera         | Production Project 01001 | Staff309 Surname309
+ 2026-07-04 08:00:00+01 | 2026-07-04 16:00:00+01 | EQ-000113 | Equipment Item 113  | camera         | Production Project 01469 | Staff21 Surname21
+ 2026-07-04 08:00:00+01 | 2026-07-04 13:00:00+01 | EQ-000257 | Equipment Item 257  | camera         | Production Project 03341 | Staff669 Surname669
+ 2026-07-04 08:00:00+01 | 2026-07-04 14:00:00+01 | EQ-000293 | Equipment Item 293  | camera         | Production Project 03809 | Staff381 Surname381
+ 2026-07-04 08:00:00+01 | 2026-07-04 11:00:00+01 | EQ-000437 | Equipment Item 437  | camera         | Production Project 05681 | Staff129 Surname129
+ 2026-07-04 08:00:00+01 | 2026-07-04 12:00:00+01 | EQ-000473 | Equipment Item 473  | camera         | Production Project 06149 | Staff741 Surname741
+ 2026-07-04 08:00:00+01 | 2026-07-04 16:00:00+01 | EQ-000617 | Equipment Item 617  | camera         | Production Project 08021 | Staff489 Surname489
+ 2026-07-04 08:00:00+01 | 2026-07-04 10:00:00+01 | EQ-000653 | Equipment Item 653  | camera         | Production Project 08489 | Staff201 Surname201
+ 2026-07-04 08:00:00+01 | 2026-07-04 14:00:00+01 | EQ-000797 | Equipment Item 797  | camera         | Production Project 00361 | Staff849 Surname849
+ 2026-07-04 08:00:00+01 | 2026-07-04 15:00:00+01 | EQ-000833 | Equipment Item 833  | camera         | Production Project 00829 | Staff561 Surname561
+ 2026-07-04 08:00:00+01 | 2026-07-04 12:00:00+01 | EQ-000977 | Equipment Item 977  | camera         | Production Project 02701 | Staff309 Surname309
+ 2026-07-04 08:00:00+01 | 2026-07-04 13:00:00+01 | EQ-001013 | Equipment Item 1013 | camera         | Production Project 03169 | Staff21 Surname21
+ 2026-07-04 08:00:00+01 | 2026-07-04 10:00:00+01 | EQ-001157 | Equipment Item 1157 | camera         | Production Project 05041 | Staff669 Surname669
+ 2026-07-04 08:00:00+01 | 2026-07-04 11:00:00+01 | EQ-001193 | Equipment Item 1193 | camera         | Production Project 05509 | Staff381 Surname381
+ 2026-07-04 08:00:00+01 | 2026-07-04 15:00:00+01 | EQ-001337 | Equipment Item 1337 | camera         | Production Project 07381 | Staff129 Surname129
+ 2026-07-04 08:00:00+01 | 2026-07-04 16:00:00+01 | EQ-001373 | Equipment Item 1373 | camera         | Production Project 07849 | Staff741 Surname741
+ 2026-07-04 08:00:00+01 | 2026-07-04 13:00:00+01 | EQ-001517 | Equipment Item 1517 | camera         | Production Project 09721 | Staff489 Surname489
+ 2026-07-04 08:00:00+01 | 2026-07-04 14:00:00+01 | EQ-001553 | Equipment Item 1553 | camera         | Production Project 00189 | Staff201 Surname201
+ 2026-07-04 08:00:00+01 | 2026-07-04 11:00:00+01 | EQ-001697 | Equipment Item 1697 | camera         | Production Project 02061 | Staff849 Surname849
+ 2026-07-04 08:00:00+01 | 2026-07-04 12:00:00+01 | EQ-001733 | Equipment Item 1733 | camera         | Production Project 02529 | Staff561 Surname561
+ 2026-07-04 08:00:00+01 | 2026-07-04 16:00:00+01 | EQ-001877 | Equipment Item 1877 | camera         | Production Project 04401 | Staff309 Surname309
+ 2026-07-04 08:00:00+01 | 2026-07-04 10:00:00+01 | EQ-001913 | Equipment Item 1913 | camera         | Production Project 04869 | Staff21 Surname21
+ 2026-07-04 08:00:00+01 | 2026-07-04 14:00:00+01 | EQ-002057 | Equipment Item 2057 | camera         | Production Project 06741 | Staff669 Surname669
+ 2026-07-04 08:00:00+01 | 2026-07-04 15:00:00+01 | EQ-002093 | Equipment Item 2093 | camera         | Production Project 07209 | Staff381 Surname381
+ 2026-07-04 08:00:00+01 | 2026-07-04 12:00:00+01 | EQ-002237 | Equipment Item 2237 | camera         | Production Project 09081 | Staff129 Surname129
+ 2026-07-04 08:00:00+01 | 2026-07-04 13:00:00+01 | EQ-002273 | Equipment Item 2273 | camera         | Production Project 09549 | Staff741 Surname741
+ 2026-07-04 08:00:00+01 | 2026-07-04 10:00:00+01 | EQ-002417 | Equipment Item 2417 | camera         | Production Project 01421 | Staff489 Surname489
+ 2026-07-04 08:00:00+01 | 2026-07-04 11:00:00+01 | EQ-002453 | Equipment Item 2453 | camera         | Production Project 01889 | Staff201 Surname201
+ 2026-07-04 08:00:00+01 | 2026-07-04 15:00:00+01 | EQ-002597 | Equipment Item 2597 | camera         | Production Project 03761 | Staff849 Surname849
+ 2026-07-04 08:00:00+01 | 2026-07-04 16:00:00+01 | EQ-002633 | Equipment Item 2633 | camera         | Production Project 04229 | Staff561 Surname561
+ 2026-07-04 08:00:00+01 | 2026-07-04 13:00:00+01 | EQ-002777 | Equipment Item 2777 | camera         | Production Project 06101 | Staff309 Surname309
+ 2026-07-04 08:00:00+01 | 2026-07-04 14:00:00+01 | EQ-002813 | Equipment Item 2813 | camera         | Production Project 06569 | Staff21 Surname21
+ 2026-07-04 08:00:00+01 | 2026-07-04 11:00:00+01 | EQ-002957 | Equipment Item 2957 | camera         | Production Project 08441 | Staff669 Surname669
+ 2026-07-04 08:00:00+01 | 2026-07-04 12:00:00+01 | EQ-002993 | Equipment Item 2993 | camera         | Production Project 08909 | Staff381 Surname381
+ 2026-07-04 08:00:00+01 | 2026-07-04 16:00:00+01 | EQ-003137 | Equipment Item 3137 | camera         | Production Project 00781 | Staff129 Surname129
+ 2026-07-04 08:00:00+01 | 2026-07-04 10:00:00+01 | EQ-003173 | Equipment Item 3173 | camera         | Production Project 01249 | Staff741 Surname741
+ 2026-07-04 08:00:00+01 | 2026-07-04 14:00:00+01 | EQ-003317 | Equipment Item 3317 | camera         | Production Project 03121 | Staff489 Surname489
+ 2026-07-04 08:00:00+01 | 2026-07-04 15:00:00+01 | EQ-003353 | Equipment Item 3353 | camera         | Production Project 03589 | Staff201 Surname201
+ 2026-07-04 08:00:00+01 | 2026-07-04 12:00:00+01 | EQ-003497 | Equipment Item 3497 | camera         | Production Project 05461 | Staff849 Surname849
+ 2026-07-04 08:00:00+01 | 2026-07-04 13:00:00+01 | EQ-003533 | Equipment Item 3533 | camera         | Production Project 05929 | Staff561 Surname561
+ 2026-07-04 08:00:00+01 | 2026-07-04 10:00:00+01 | EQ-003677 | Equipment Item 3677 | camera         | Production Project 07801 | Staff309 Surname309
+ 2026-07-04 08:00:00+01 | 2026-07-04 11:00:00+01 | EQ-003713 | Equipment Item 3713 | camera         | Production Project 08269 | Staff21 Surname21
+ 2026-07-04 08:00:00+01 | 2026-07-04 15:00:00+01 | EQ-003857 | Equipment Item 3857 | camera         | Production Project 00141 | Staff669 Surname669
+ 2026-07-04 08:00:00+01 | 2026-07-04 16:00:00+01 | EQ-003893 | Equipment Item 3893 | camera         | Production Project 00609 | Staff381 Surname381
+ 2026-07-04 08:00:00+01 | 2026-07-04 13:00:00+01 | EQ-004037 | Equipment Item 4037 | camera         | Production Project 02481 | Staff129 Surname129
+ 2026-07-04 08:00:00+01 | 2026-07-04 14:00:00+01 | EQ-004073 | Equipment Item 4073 | camera         | Production Project 02949 | Staff741 Surname741
+ 2026-07-04 08:00:00+01 | 2026-07-04 11:00:00+01 | EQ-004217 | Equipment Item 4217 | camera         | Production Project 04821 | Staff489 Surname489
+ 2026-07-04 08:00:00+01 | 2026-07-04 12:00:00+01 | EQ-004253 | Equipment Item 4253 | camera         | Production Project 05289 | Staff201 Surname201
+ 2026-07-04 08:00:00+01 | 2026-07-04 16:00:00+01 | EQ-004397 | Equipment Item 4397 | camera         | Production Project 07161 | Staff849 Surname849
+ 2026-07-04 08:00:00+01 | 2026-07-04 10:00:00+01 | EQ-004433 | Equipment Item 4433 | camera         | Production Project 07629 | Staff561 Surname561
+ 2026-07-04 08:00:00+01 | 2026-07-04 14:00:00+01 | EQ-004577 | Equipment Item 4577 | camera         | Production Project 09501 | Staff309 Surname309
+ 2026-07-04 08:00:00+01 | 2026-07-04 15:00:00+01 | EQ-004613 | Equipment Item 4613 | camera         | Production Project 09969 | Staff21 Surname21
+ 2026-07-04 08:00:00+01 | 2026-07-04 12:00:00+01 | EQ-004757 | Equipment Item 4757 | camera         | Production Project 01841 | Staff669 Surname669
+ 2026-07-04 08:00:00+01 | 2026-07-04 13:00:00+01 | EQ-004793 | Equipment Item 4793 | camera         | Production Project 02309 | Staff381 Surname381
+ 2026-07-04 08:00:00+01 | 2026-07-04 10:00:00+01 | EQ-004937 | Equipment Item 4937 | camera         | Production Project 04181 | Staff129 Surname129
+ 2026-07-04 08:00:00+01 | 2026-07-04 11:00:00+01 | EQ-004973 | Equipment Item 4973 | camera         | Production Project 04649 | Staff741 Surname741
+ 2026-07-05 16:00:00+01 | 2026-07-05 21:00:00+01 | EQ-000033 | Equipment Item 33   | camera         | Production Project 00429 | Staff461 Surname461
+ 2026-07-05 16:00:00+01 | 2026-07-05 18:00:00+01 | EQ-000177 | Equipment Item 177  | camera         | Production Project 02301 | Staff209 Surname209
+ 2026-07-05 16:00:00+01 | 2026-07-05 19:00:00+01 | EQ-000213 | Equipment Item 213  | camera         | Production Project 02769 | Staff821 Surname821
+ 2026-07-05 16:00:00+01 | 2026-07-05 23:00:00+01 | EQ-000357 | Equipment Item 357  | camera         | Production Project 04641 | Staff569 Surname569
+ 2026-07-05 16:00:00+01 | 2026-07-06 00:00:00+01 | EQ-000393 | Equipment Item 393  | camera         | Production Project 05109 | Staff281 Surname281
+ 2026-07-05 16:00:00+01 | 2026-07-05 21:00:00+01 | EQ-000537 | Equipment Item 537  | camera         | Production Project 06981 | Staff29 Surname29
+ 2026-07-05 16:00:00+01 | 2026-07-05 22:00:00+01 | EQ-000573 | Equipment Item 573  | camera         | Production Project 07449 | Staff641 Surname641
+ 2026-07-05 16:00:00+01 | 2026-07-05 19:00:00+01 | EQ-000717 | Equipment Item 717  | camera         | Production Project 09321 | Staff389 Surname389
+ 2026-07-05 16:00:00+01 | 2026-07-05 20:00:00+01 | EQ-000753 | Equipment Item 753  | camera         | Production Project 09789 | Staff101 Surname101
+ 2026-07-05 16:00:00+01 | 2026-07-06 00:00:00+01 | EQ-000897 | Equipment Item 897  | camera         | Production Project 01661 | Staff749 Surname749
+ 2026-07-05 16:00:00+01 | 2026-07-05 18:00:00+01 | EQ-000933 | Equipment Item 933  | camera         | Production Project 02129 | Staff461 Surname461
+ 2026-07-05 16:00:00+01 | 2026-07-05 22:00:00+01 | EQ-001077 | Equipment Item 1077 | camera         | Production Project 04001 | Staff209 Surname209
+ 2026-07-05 16:00:00+01 | 2026-07-05 23:00:00+01 | EQ-001113 | Equipment Item 1113 | camera         | Production Project 04469 | Staff821 Surname821
+ 2026-07-05 16:00:00+01 | 2026-07-05 20:00:00+01 | EQ-001257 | Equipment Item 1257 | camera         | Production Project 06341 | Staff569 Surname569
+ 2026-07-05 16:00:00+01 | 2026-07-05 21:00:00+01 | EQ-001293 | Equipment Item 1293 | camera         | Production Project 06809 | Staff281 Surname281
+ 2026-07-05 16:00:00+01 | 2026-07-05 18:00:00+01 | EQ-001437 | Equipment Item 1437 | camera         | Production Project 08681 | Staff29 Surname29
+ 2026-07-05 16:00:00+01 | 2026-07-05 19:00:00+01 | EQ-001473 | Equipment Item 1473 | camera         | Production Project 09149 | Staff641 Surname641
+ 2026-07-05 16:00:00+01 | 2026-07-05 23:00:00+01 | EQ-001617 | Equipment Item 1617 | camera         | Production Project 01021 | Staff389 Surname389
+ 2026-07-05 16:00:00+01 | 2026-07-06 00:00:00+01 | EQ-001653 | Equipment Item 1653 | camera         | Production Project 01489 | Staff101 Surname101
+ 2026-07-05 16:00:00+01 | 2026-07-05 21:00:00+01 | EQ-001797 | Equipment Item 1797 | camera         | Production Project 03361 | Staff749 Surname749
+ 2026-07-05 16:00:00+01 | 2026-07-05 22:00:00+01 | EQ-001833 | Equipment Item 1833 | camera         | Production Project 03829 | Staff461 Surname461
+ 2026-07-05 16:00:00+01 | 2026-07-05 19:00:00+01 | EQ-001977 | Equipment Item 1977 | camera         | Production Project 05701 | Staff209 Surname209
+ 2026-07-05 16:00:00+01 | 2026-07-05 20:00:00+01 | EQ-002013 | Equipment Item 2013 | camera         | Production Project 06169 | Staff821 Surname821
+ 2026-07-05 16:00:00+01 | 2026-07-06 00:00:00+01 | EQ-002157 | Equipment Item 2157 | camera         | Production Project 08041 | Staff569 Surname569
+ 2026-07-05 16:00:00+01 | 2026-07-05 18:00:00+01 | EQ-002193 | Equipment Item 2193 | camera         | Production Project 08509 | Staff281 Surname281
+ 2026-07-05 16:00:00+01 | 2026-07-05 22:00:00+01 | EQ-002337 | Equipment Item 2337 | camera         | Production Project 00381 | Staff29 Surname29
+ 2026-07-05 16:00:00+01 | 2026-07-05 23:00:00+01 | EQ-002373 | Equipment Item 2373 | camera         | Production Project 00849 | Staff641 Surname641
+ 2026-07-05 16:00:00+01 | 2026-07-05 20:00:00+01 | EQ-002517 | Equipment Item 2517 | camera         | Production Project 02721 | Staff389 Surname389
+ 2026-07-05 16:00:00+01 | 2026-07-05 21:00:00+01 | EQ-002553 | Equipment Item 2553 | camera         | Production Project 03189 | Staff101 Surname101
+ 2026-07-05 16:00:00+01 | 2026-07-05 18:00:00+01 | EQ-002697 | Equipment Item 2697 | camera         | Production Project 05061 | Staff749 Surname749
+ 2026-07-05 16:00:00+01 | 2026-07-05 19:00:00+01 | EQ-002733 | Equipment Item 2733 | camera         | Production Project 05529 | Staff461 Surname461
+ 2026-07-05 16:00:00+01 | 2026-07-05 23:00:00+01 | EQ-002877 | Equipment Item 2877 | camera         | Production Project 07401 | Staff209 Surname209
+ 2026-07-05 16:00:00+01 | 2026-07-06 00:00:00+01 | EQ-002913 | Equipment Item 2913 | camera         | Production Project 07869 | Staff821 Surname821
+ 2026-07-05 16:00:00+01 | 2026-07-05 21:00:00+01 | EQ-003057 | Equipment Item 3057 | camera         | Production Project 09741 | Staff569 Surname569
+ 2026-07-05 16:00:00+01 | 2026-07-05 22:00:00+01 | EQ-003093 | Equipment Item 3093 | camera         | Production Project 00209 | Staff281 Surname281
+ 2026-07-05 16:00:00+01 | 2026-07-05 19:00:00+01 | EQ-003237 | Equipment Item 3237 | camera         | Production Project 02081 | Staff29 Surname29
+ 2026-07-05 16:00:00+01 | 2026-07-05 20:00:00+01 | EQ-003273 | Equipment Item 3273 | camera         | Production Project 02549 | Staff641 Surname641
+ 2026-07-05 16:00:00+01 | 2026-07-06 00:00:00+01 | EQ-003417 | Equipment Item 3417 | camera         | Production Project 04421 | Staff389 Surname389
+ 2026-07-05 16:00:00+01 | 2026-07-05 18:00:00+01 | EQ-003453 | Equipment Item 3453 | camera         | Production Project 04889 | Staff101 Surname101
+ 2026-07-05 16:00:00+01 | 2026-07-05 22:00:00+01 | EQ-003597 | Equipment Item 3597 | camera         | Production Project 06761 | Staff749 Surname749
+ 2026-07-05 16:00:00+01 | 2026-07-05 23:00:00+01 | EQ-003633 | Equipment Item 3633 | camera         | Production Project 07229 | Staff461 Surname461
+ 2026-07-05 16:00:00+01 | 2026-07-05 20:00:00+01 | EQ-003777 | Equipment Item 3777 | camera         | Production Project 09101 | Staff209 Surname209
+ 2026-07-05 16:00:00+01 | 2026-07-05 21:00:00+01 | EQ-003813 | Equipment Item 3813 | camera         | Production Project 09569 | Staff821 Surname821
+ 2026-07-05 16:00:00+01 | 2026-07-05 18:00:00+01 | EQ-003957 | Equipment Item 3957 | camera         | Production Project 01441 | Staff569 Surname569
+ 2026-07-05 16:00:00+01 | 2026-07-05 19:00:00+01 | EQ-003993 | Equipment Item 3993 | camera         | Production Project 01909 | Staff281 Surname281
+ 2026-07-05 16:00:00+01 | 2026-07-05 23:00:00+01 | EQ-004137 | Equipment Item 4137 | camera         | Production Project 03781 | Staff29 Surname29
+ 2026-07-05 16:00:00+01 | 2026-07-06 00:00:00+01 | EQ-004173 | Equipment Item 4173 | camera         | Production Project 04249 | Staff641 Surname641
+ 2026-07-05 16:00:00+01 | 2026-07-05 21:00:00+01 | EQ-004317 | Equipment Item 4317 | camera         | Production Project 06121 | Staff389 Surname389
+ 2026-07-05 16:00:00+01 | 2026-07-05 22:00:00+01 | EQ-004353 | Equipment Item 4353 | camera         | Production Project 06589 | Staff101 Surname101
+ 2026-07-05 16:00:00+01 | 2026-07-05 19:00:00+01 | EQ-004497 | Equipment Item 4497 | camera         | Production Project 08461 | Staff749 Surname749
+ 2026-07-05 16:00:00+01 | 2026-07-05 20:00:00+01 | EQ-004533 | Equipment Item 4533 | camera         | Production Project 08929 | Staff461 Surname461
+ 2026-07-05 16:00:00+01 | 2026-07-06 00:00:00+01 | EQ-004677 | Equipment Item 4677 | camera         | Production Project 00801 | Staff209 Surname209
+ 2026-07-05 16:00:00+01 | 2026-07-05 18:00:00+01 | EQ-004713 | Equipment Item 4713 | camera         | Production Project 01269 | Staff821 Surname821
+ 2026-07-05 16:00:00+01 | 2026-07-05 22:00:00+01 | EQ-004857 | Equipment Item 4857 | camera         | Production Project 03141 | Staff569 Surname569
+ 2026-07-05 16:00:00+01 | 2026-07-05 23:00:00+01 | EQ-004893 | Equipment Item 4893 | camera         | Production Project 03609 | Staff281 Surname281
+ 2026-07-06 00:00:00+01 | 2026-07-06 06:00:00+01 | EQ-000097 | Equipment Item 97   | camera         | Production Project 01261 | Staff649 Surname649
+ 2026-07-06 00:00:00+01 | 2026-07-06 07:00:00+01 | EQ-000133 | Equipment Item 133  | camera         | Production Project 01729 | Staff361 Surname361
+ 2026-07-06 00:00:00+01 | 2026-07-06 04:00:00+01 | EQ-000277 | Equipment Item 277  | camera         | Production Project 03601 | Staff109 Surname109
+ 2026-07-06 00:00:00+01 | 2026-07-06 05:00:00+01 | EQ-000313 | Equipment Item 313  | camera         | Production Project 04069 | Staff721 Surname721
+ 2026-07-06 00:00:00+01 | 2026-07-06 02:00:00+01 | EQ-000457 | Equipment Item 457  | camera         | Production Project 05941 | Staff469 Surname469
+ 2026-07-06 00:00:00+01 | 2026-07-06 03:00:00+01 | EQ-000493 | Equipment Item 493  | camera         | Production Project 06409 | Staff181 Surname181
+ 2026-07-06 00:00:00+01 | 2026-07-06 07:00:00+01 | EQ-000637 | Equipment Item 637  | camera         | Production Project 08281 | Staff829 Surname829
+ 2026-07-06 00:00:00+01 | 2026-07-06 08:00:00+01 | EQ-000673 | Equipment Item 673  | camera         | Production Project 08749 | Staff541 Surname541
+ 2026-07-06 00:00:00+01 | 2026-07-06 05:00:00+01 | EQ-000817 | Equipment Item 817  | camera         | Production Project 00621 | Staff289 Surname289
+ 2026-07-06 00:00:00+01 | 2026-07-06 06:00:00+01 | EQ-000853 | Equipment Item 853  | camera         | Production Project 01089 | Staff1 Surname1
+ 2026-07-06 00:00:00+01 | 2026-07-06 03:00:00+01 | EQ-000997 | Equipment Item 997  | camera         | Production Project 02961 | Staff649 Surname649
+ 2026-07-06 00:00:00+01 | 2026-07-06 04:00:00+01 | EQ-001033 | Equipment Item 1033 | camera         | Production Project 03429 | Staff361 Surname361
+ 2026-07-06 00:00:00+01 | 2026-07-06 08:00:00+01 | EQ-001177 | Equipment Item 1177 | camera         | Production Project 05301 | Staff109 Surname109
+ 2026-07-06 00:00:00+01 | 2026-07-06 02:00:00+01 | EQ-001213 | Equipment Item 1213 | camera         | Production Project 05769 | Staff721 Surname721
+ 2026-07-06 00:00:00+01 | 2026-07-06 06:00:00+01 | EQ-001357 | Equipment Item 1357 | camera         | Production Project 07641 | Staff469 Surname469
+ 2026-07-06 00:00:00+01 | 2026-07-06 07:00:00+01 | EQ-001393 | Equipment Item 1393 | camera         | Production Project 08109 | Staff181 Surname181
+ 2026-07-06 00:00:00+01 | 2026-07-06 04:00:00+01 | EQ-001537 | Equipment Item 1537 | camera         | Production Project 09981 | Staff829 Surname829
+ 2026-07-06 00:00:00+01 | 2026-07-06 05:00:00+01 | EQ-001573 | Equipment Item 1573 | camera         | Production Project 00449 | Staff541 Surname541
+ 2026-07-06 00:00:00+01 | 2026-07-06 02:00:00+01 | EQ-001717 | Equipment Item 1717 | camera         | Production Project 02321 | Staff289 Surname289
+ 2026-07-06 00:00:00+01 | 2026-07-06 03:00:00+01 | EQ-001753 | Equipment Item 1753 | camera         | Production Project 02789 | Staff1 Surname1
+ 2026-07-06 00:00:00+01 | 2026-07-06 07:00:00+01 | EQ-001897 | Equipment Item 1897 | camera         | Production Project 04661 | Staff649 Surname649
+ 2026-07-06 00:00:00+01 | 2026-07-06 08:00:00+01 | EQ-001933 | Equipment Item 1933 | camera         | Production Project 05129 | Staff361 Surname361
+ 2026-07-06 00:00:00+01 | 2026-07-06 05:00:00+01 | EQ-002077 | Equipment Item 2077 | camera         | Production Project 07001 | Staff109 Surname109
+ 2026-07-06 00:00:00+01 | 2026-07-06 06:00:00+01 | EQ-002113 | Equipment Item 2113 | camera         | Production Project 07469 | Staff721 Surname721
+ 2026-07-06 00:00:00+01 | 2026-07-06 03:00:00+01 | EQ-002257 | Equipment Item 2257 | camera         | Production Project 09341 | Staff469 Surname469
+ 2026-07-06 00:00:00+01 | 2026-07-06 04:00:00+01 | EQ-002293 | Equipment Item 2293 | camera         | Production Project 09809 | Staff181 Surname181
+ 2026-07-06 00:00:00+01 | 2026-07-06 08:00:00+01 | EQ-002437 | Equipment Item 2437 | camera         | Production Project 01681 | Staff829 Surname829
+ 2026-07-06 00:00:00+01 | 2026-07-06 02:00:00+01 | EQ-002473 | Equipment Item 2473 | camera         | Production Project 02149 | Staff541 Surname541
+ 2026-07-06 00:00:00+01 | 2026-07-06 06:00:00+01 | EQ-002617 | Equipment Item 2617 | camera         | Production Project 04021 | Staff289 Surname289
+ 2026-07-06 00:00:00+01 | 2026-07-06 07:00:00+01 | EQ-002653 | Equipment Item 2653 | camera         | Production Project 04489 | Staff1 Surname1
+ 2026-07-06 00:00:00+01 | 2026-07-06 04:00:00+01 | EQ-002797 | Equipment Item 2797 | camera         | Production Project 06361 | Staff649 Surname649
+ 2026-07-06 00:00:00+01 | 2026-07-06 05:00:00+01 | EQ-002833 | Equipment Item 2833 | camera         | Production Project 06829 | Staff361 Surname361
+ 2026-07-06 00:00:00+01 | 2026-07-06 02:00:00+01 | EQ-002977 | Equipment Item 2977 | camera         | Production Project 08701 | Staff109 Surname109
+ 2026-07-06 00:00:00+01 | 2026-07-06 03:00:00+01 | EQ-003013 | Equipment Item 3013 | camera         | Production Project 09169 | Staff721 Surname721
+ 2026-07-06 00:00:00+01 | 2026-07-06 07:00:00+01 | EQ-003157 | Equipment Item 3157 | camera         | Production Project 01041 | Staff469 Surname469
+ 2026-07-06 00:00:00+01 | 2026-07-06 08:00:00+01 | EQ-003193 | Equipment Item 3193 | camera         | Production Project 01509 | Staff181 Surname181
+ 2026-07-06 00:00:00+01 | 2026-07-06 05:00:00+01 | EQ-003337 | Equipment Item 3337 | camera         | Production Project 03381 | Staff829 Surname829
+ 2026-07-06 00:00:00+01 | 2026-07-06 06:00:00+01 | EQ-003373 | Equipment Item 3373 | camera         | Production Project 03849 | Staff541 Surname541
+ 2026-07-06 00:00:00+01 | 2026-07-06 03:00:00+01 | EQ-003517 | Equipment Item 3517 | camera         | Production Project 05721 | Staff289 Surname289
+ 2026-07-06 00:00:00+01 | 2026-07-06 04:00:00+01 | EQ-003553 | Equipment Item 3553 | camera         | Production Project 06189 | Staff1 Surname1
+ 2026-07-06 00:00:00+01 | 2026-07-06 08:00:00+01 | EQ-003697 | Equipment Item 3697 | camera         | Production Project 08061 | Staff649 Surname649
+ 2026-07-06 00:00:00+01 | 2026-07-06 02:00:00+01 | EQ-003733 | Equipment Item 3733 | camera         | Production Project 08529 | Staff361 Surname361
+ 2026-07-06 00:00:00+01 | 2026-07-06 06:00:00+01 | EQ-003877 | Equipment Item 3877 | camera         | Production Project 00401 | Staff109 Surname109
+ 2026-07-06 00:00:00+01 | 2026-07-06 07:00:00+01 | EQ-003913 | Equipment Item 3913 | camera         | Production Project 00869 | Staff721 Surname721
+ 2026-07-06 00:00:00+01 | 2026-07-06 04:00:00+01 | EQ-004057 | Equipment Item 4057 | camera         | Production Project 02741 | Staff469 Surname469
+ 2026-07-06 00:00:00+01 | 2026-07-06 05:00:00+01 | EQ-004093 | Equipment Item 4093 | camera         | Production Project 03209 | Staff181 Surname181
+ 2026-07-06 00:00:00+01 | 2026-07-06 02:00:00+01 | EQ-004237 | Equipment Item 4237 | camera         | Production Project 05081 | Staff829 Surname829
+ 2026-07-06 00:00:00+01 | 2026-07-06 03:00:00+01 | EQ-004273 | Equipment Item 4273 | camera         | Production Project 05549 | Staff541 Surname541
+ 2026-07-06 00:00:00+01 | 2026-07-06 07:00:00+01 | EQ-004417 | Equipment Item 4417 | camera         | Production Project 07421 | Staff289 Surname289
+ 2026-07-06 00:00:00+01 | 2026-07-06 08:00:00+01 | EQ-004453 | Equipment Item 4453 | camera         | Production Project 07889 | Staff1 Surname1
+ 2026-07-06 00:00:00+01 | 2026-07-06 05:00:00+01 | EQ-004597 | Equipment Item 4597 | camera         | Production Project 09761 | Staff649 Surname649
+ 2026-07-06 00:00:00+01 | 2026-07-06 06:00:00+01 | EQ-004633 | Equipment Item 4633 | camera         | Production Project 00229 | Staff361 Surname361
+ 2026-07-06 00:00:00+01 | 2026-07-06 03:00:00+01 | EQ-004777 | Equipment Item 4777 | camera         | Production Project 02101 | Staff109 Surname109
+ 2026-07-06 00:00:00+01 | 2026-07-06 04:00:00+01 | EQ-004813 | Equipment Item 4813 | camera         | Production Project 02569 | Staff721 Surname721
+ 2026-07-06 00:00:00+01 | 2026-07-06 08:00:00+01 | EQ-004957 | Equipment Item 4957 | camera         | Production Project 04441 | Staff469 Surname469
+ 2026-07-06 00:00:00+01 | 2026-07-06 02:00:00+01 | EQ-004993 | Equipment Item 4993 | camera         | Production Project 04909 | Staff181 Surname181
+ 2026-07-07 08:00:00+01 | 2026-07-07 11:00:00+01 | EQ-000017 | Equipment Item 17   | camera         | Production Project 00221 | Staff189 Surname189
+ 2026-07-07 08:00:00+01 | 2026-07-07 12:00:00+01 | EQ-000053 | Equipment Item 53   | camera         | Production Project 00689 | Staff801 Surname801
+ 2026-07-07 08:00:00+01 | 2026-07-07 16:00:00+01 | EQ-000197 | Equipment Item 197  | camera         | Production Project 02561 | Staff549 Surname549
+ 2026-07-07 08:00:00+01 | 2026-07-07 10:00:00+01 | EQ-000233 | Equipment Item 233  | camera         | Production Project 03029 | Staff261 Surname261
+ 2026-07-07 08:00:00+01 | 2026-07-07 14:00:00+01 | EQ-000377 | Equipment Item 377  | camera         | Production Project 04901 | Staff9 Surname9
+ 2026-07-07 08:00:00+01 | 2026-07-07 15:00:00+01 | EQ-000413 | Equipment Item 413  | camera         | Production Project 05369 | Staff621 Surname621
+ 2026-07-07 08:00:00+01 | 2026-07-07 12:00:00+01 | EQ-000557 | Equipment Item 557  | camera         | Production Project 07241 | Staff369 Surname369
+ 2026-07-07 08:00:00+01 | 2026-07-07 13:00:00+01 | EQ-000593 | Equipment Item 593  | camera         | Production Project 07709 | Staff81 Surname81
+ 2026-07-07 08:00:00+01 | 2026-07-07 10:00:00+01 | EQ-000737 | Equipment Item 737  | camera         | Production Project 09581 | Staff729 Surname729
+ 2026-07-07 08:00:00+01 | 2026-07-07 11:00:00+01 | EQ-000773 | Equipment Item 773  | camera         | Production Project 00049 | Staff441 Surname441
+ 2026-07-07 08:00:00+01 | 2026-07-07 15:00:00+01 | EQ-000917 | Equipment Item 917  | camera         | Production Project 01921 | Staff189 Surname189
+ 2026-07-07 08:00:00+01 | 2026-07-07 16:00:00+01 | EQ-000953 | Equipment Item 953  | camera         | Production Project 02389 | Staff801 Surname801
+ 2026-07-07 08:00:00+01 | 2026-07-07 13:00:00+01 | EQ-001097 | Equipment Item 1097 | camera         | Production Project 04261 | Staff549 Surname549
+ 2026-07-07 08:00:00+01 | 2026-07-07 14:00:00+01 | EQ-001133 | Equipment Item 1133 | camera         | Production Project 04729 | Staff261 Surname261
+ 2026-07-07 08:00:00+01 | 2026-07-07 11:00:00+01 | EQ-001277 | Equipment Item 1277 | camera         | Production Project 06601 | Staff9 Surname9
+ 2026-07-07 08:00:00+01 | 2026-07-07 12:00:00+01 | EQ-001313 | Equipment Item 1313 | camera         | Production Project 07069 | Staff621 Surname621
+ 2026-07-07 08:00:00+01 | 2026-07-07 16:00:00+01 | EQ-001457 | Equipment Item 1457 | camera         | Production Project 08941 | Staff369 Surname369
+ 2026-07-07 08:00:00+01 | 2026-07-07 10:00:00+01 | EQ-001493 | Equipment Item 1493 | camera         | Production Project 09409 | Staff81 Surname81
+ 2026-07-07 08:00:00+01 | 2026-07-07 14:00:00+01 | EQ-001637 | Equipment Item 1637 | camera         | Production Project 01281 | Staff729 Surname729
+ 2026-07-07 08:00:00+01 | 2026-07-07 15:00:00+01 | EQ-001673 | Equipment Item 1673 | camera         | Production Project 01749 | Staff441 Surname441
+ 2026-07-07 08:00:00+01 | 2026-07-07 12:00:00+01 | EQ-001817 | Equipment Item 1817 | camera         | Production Project 03621 | Staff189 Surname189
+ 2026-07-07 08:00:00+01 | 2026-07-07 13:00:00+01 | EQ-001853 | Equipment Item 1853 | camera         | Production Project 04089 | Staff801 Surname801
+ 2026-07-07 08:00:00+01 | 2026-07-07 10:00:00+01 | EQ-001997 | Equipment Item 1997 | camera         | Production Project 05961 | Staff549 Surname549
+ 2026-07-07 08:00:00+01 | 2026-07-07 11:00:00+01 | EQ-002033 | Equipment Item 2033 | camera         | Production Project 06429 | Staff261 Surname261
+ 2026-07-07 08:00:00+01 | 2026-07-07 15:00:00+01 | EQ-002177 | Equipment Item 2177 | camera         | Production Project 08301 | Staff9 Surname9
+ 2026-07-07 08:00:00+01 | 2026-07-07 16:00:00+01 | EQ-002213 | Equipment Item 2213 | camera         | Production Project 08769 | Staff621 Surname621
+ 2026-07-07 08:00:00+01 | 2026-07-07 13:00:00+01 | EQ-002357 | Equipment Item 2357 | camera         | Production Project 00641 | Staff369 Surname369
+ 2026-07-07 08:00:00+01 | 2026-07-07 14:00:00+01 | EQ-002393 | Equipment Item 2393 | camera         | Production Project 01109 | Staff81 Surname81
+ 2026-07-07 08:00:00+01 | 2026-07-07 11:00:00+01 | EQ-002537 | Equipment Item 2537 | camera         | Production Project 02981 | Staff729 Surname729
+ 2026-07-07 08:00:00+01 | 2026-07-07 12:00:00+01 | EQ-002573 | Equipment Item 2573 | camera         | Production Project 03449 | Staff441 Surname441
+ 2026-07-07 08:00:00+01 | 2026-07-07 16:00:00+01 | EQ-002717 | Equipment Item 2717 | camera         | Production Project 05321 | Staff189 Surname189
+ 2026-07-07 08:00:00+01 | 2026-07-07 10:00:00+01 | EQ-002753 | Equipment Item 2753 | camera         | Production Project 05789 | Staff801 Surname801
+ 2026-07-07 08:00:00+01 | 2026-07-07 14:00:00+01 | EQ-002897 | Equipment Item 2897 | camera         | Production Project 07661 | Staff549 Surname549
+ 2026-07-07 08:00:00+01 | 2026-07-07 15:00:00+01 | EQ-002933 | Equipment Item 2933 | camera         | Production Project 08129 | Staff261 Surname261
+ 2026-07-07 08:00:00+01 | 2026-07-07 12:00:00+01 | EQ-003077 | Equipment Item 3077 | camera         | Production Project 00001 | Staff9 Surname9
+ 2026-07-07 08:00:00+01 | 2026-07-07 13:00:00+01 | EQ-003113 | Equipment Item 3113 | camera         | Production Project 00469 | Staff621 Surname621
+ 2026-07-07 08:00:00+01 | 2026-07-07 10:00:00+01 | EQ-003257 | Equipment Item 3257 | camera         | Production Project 02341 | Staff369 Surname369
+ 2026-07-07 08:00:00+01 | 2026-07-07 11:00:00+01 | EQ-003293 | Equipment Item 3293 | camera         | Production Project 02809 | Staff81 Surname81
+ 2026-07-07 08:00:00+01 | 2026-07-07 15:00:00+01 | EQ-003437 | Equipment Item 3437 | camera         | Production Project 04681 | Staff729 Surname729
+ 2026-07-07 08:00:00+01 | 2026-07-07 16:00:00+01 | EQ-003473 | Equipment Item 3473 | camera         | Production Project 05149 | Staff441 Surname441
+ 2026-07-07 08:00:00+01 | 2026-07-07 13:00:00+01 | EQ-003617 | Equipment Item 3617 | camera         | Production Project 07021 | Staff189 Surname189
+ 2026-07-07 08:00:00+01 | 2026-07-07 14:00:00+01 | EQ-003653 | Equipment Item 3653 | camera         | Production Project 07489 | Staff801 Surname801
+ 2026-07-07 08:00:00+01 | 2026-07-07 11:00:00+01 | EQ-003797 | Equipment Item 3797 | camera         | Production Project 09361 | Staff549 Surname549
+ 2026-07-07 08:00:00+01 | 2026-07-07 12:00:00+01 | EQ-003833 | Equipment Item 3833 | camera         | Production Project 09829 | Staff261 Surname261
+ 2026-07-07 08:00:00+01 | 2026-07-07 16:00:00+01 | EQ-003977 | Equipment Item 3977 | camera         | Production Project 01701 | Staff9 Surname9
+ 2026-07-07 08:00:00+01 | 2026-07-07 10:00:00+01 | EQ-004013 | Equipment Item 4013 | camera         | Production Project 02169 | Staff621 Surname621
+ 2026-07-07 08:00:00+01 | 2026-07-07 14:00:00+01 | EQ-004157 | Equipment Item 4157 | camera         | Production Project 04041 | Staff369 Surname369
+ 2026-07-07 08:00:00+01 | 2026-07-07 15:00:00+01 | EQ-004193 | Equipment Item 4193 | camera         | Production Project 04509 | Staff81 Surname81
+ 2026-07-07 08:00:00+01 | 2026-07-07 12:00:00+01 | EQ-004337 | Equipment Item 4337 | camera         | Production Project 06381 | Staff729 Surname729
+ 2026-07-07 08:00:00+01 | 2026-07-07 13:00:00+01 | EQ-004373 | Equipment Item 4373 | camera         | Production Project 06849 | Staff441 Surname441
+ 2026-07-07 08:00:00+01 | 2026-07-07 10:00:00+01 | EQ-004517 | Equipment Item 4517 | camera         | Production Project 08721 | Staff189 Surname189
+ 2026-07-07 08:00:00+01 | 2026-07-07 11:00:00+01 | EQ-004553 | Equipment Item 4553 | camera         | Production Project 09189 | Staff801 Surname801
+ 2026-07-07 08:00:00+01 | 2026-07-07 15:00:00+01 | EQ-004697 | Equipment Item 4697 | camera         | Production Project 01061 | Staff549 Surname549
+ 2026-07-07 08:00:00+01 | 2026-07-07 16:00:00+01 | EQ-004733 | Equipment Item 4733 | camera         | Production Project 01529 | Staff261 Surname261
+ 2026-07-07 08:00:00+01 | 2026-07-07 13:00:00+01 | EQ-004877 | Equipment Item 4877 | camera         | Production Project 03401 | Staff9 Surname9
+ 2026-07-07 08:00:00+01 | 2026-07-07 14:00:00+01 | EQ-004913 | Equipment Item 4913 | camera         | Production Project 03869 | Staff621 Surname621
+(389 rows)
+
+ query_1_rows | query_2_rows | query_3_rows 
+--------------+--------------+--------------
+         1265 |          900 |          389
+(1 row)
+

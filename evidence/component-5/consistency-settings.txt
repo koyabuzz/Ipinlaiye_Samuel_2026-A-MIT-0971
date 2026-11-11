@@ -1,0 +1,34 @@
+{
+  defaultRWConcern: {
+    defaultReadConcern: {
+      level: 'local'
+    },
+    defaultWriteConcern: {
+      w: 'majority',
+      wtimeout: 0
+    },
+    defaultWriteConcernSource: 'implicit',
+    defaultReadConcernSource: 'implicit',
+    localUpdateWallClockTime: ISODate('2026-11-11T07:10:32.548Z'),
+    ok: 1,
+    '$clusterTime': {
+      clusterTime: Timestamp({ t: 1794381030, i: 1 }),
+      signature: {
+        hash: Binary.createFromBase64('ZGnlpCfclVO9l7jDv1Fu3wylynU=', 0),
+        keyId: Long('7706807363671425029')
+      }
+    },
+    operationTime: Timestamp({ t: 1794381030, i: 1 })
+  },
+  storageEngine: {
+    name: 'wiredTiger',
+    supportsCommittedReads: true,
+    oldestRequiredTimestampForCrashRecovery: Timestamp({ t: 1794380974, i: 1 }),
+    dropPendingIdents: Long('0'),
+    supportsSnapshotReadConcern: true,
+    readOnly: false,
+    persistent: true,
+    backupCursorOpen: false
+  },
+  writeConcernMajorityJournalDefault: undefined
+}

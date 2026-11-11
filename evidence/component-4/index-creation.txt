@@ -1,0 +1,73 @@
+{
+  projects: 'ix_project_status_type_start'
+}
+{
+  mediaAssets: 'ix_asset_status_created_project'
+}
+{
+  reservations: 'ix_reservation_equipment_period'
+}
+{
+  staffEmail: 'uq_staff_email'
+}
+{
+  equipmentTag: 'uq_equipment_asset_tag'
+}
+{
+  indexes: {
+    projects: [
+      {
+        v: 2,
+        key: {
+          _id: 1
+        },
+        name: '_id_'
+      },
+      {
+        v: 2,
+        key: {
+          status: 1,
+          type: 1,
+          'schedule.startDate': 1
+        },
+        name: 'ix_project_status_type_start'
+      }
+    ],
+    mediaAssets: [
+      {
+        v: 2,
+        key: {
+          _id: 1
+        },
+        name: '_id_'
+      },
+      {
+        v: 2,
+        key: {
+          status: 1,
+          createdAt: -1,
+          projectId: 1
+        },
+        name: 'ix_asset_status_created_project'
+      }
+    ],
+    equipmentReservations: [
+      {
+        v: 2,
+        key: {
+          _id: 1
+        },
+        name: '_id_'
+      },
+      {
+        v: 2,
+        key: {
+          equipmentId: 1,
+          startAt: 1,
+          endAt: 1
+        },
+        name: 'ix_reservation_equipment_period'
+      }
+    ]
+  }
+}

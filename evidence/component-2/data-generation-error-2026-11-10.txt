@@ -1,0 +1,44 @@
+MIT8103 Component 2 synthetic data generation diagnostic
+Date: 2026-11-10 (Africa/Lagos)
+Database: mit8103_media_portfolio
+PostgreSQL: 18.4 (Postgres.app)
+
+Command:
+psql --dbname=mit8103_media_portfolio --no-psqlrc --file=component-2-query-optimisation/sql/02_generate_synthetic_data.sql
+
+Actual output:
+Timing is on.
+BEGIN
+Time: 0.118 ms
+DO
+Time: 3.603 ms
+INSERT 0 500
+Time: 4.175 ms
+INSERT 0 1000
+Time: 6.221 ms
+INSERT 0 10000
+Time: 57.237 ms
+INSERT 0 5000
+Time: 29.553 ms
+INSERT 0 50000
+Time: 564.807 ms
+psql:component-2-query-optimisation/sql/02_generate_synthetic_data.sql:91: ERROR:  integer out of range
+Time: 100.692 ms
+
+Diagnosis:
+The media_asset file_size_bytes expression performs
+    (g % 10000) * 250000
+using integer arithmetic before the complete expression is cast to bigint. The
+intermediate value can exceed the PostgreSQL integer maximum. The generator
+stopped and its open transaction was automatically rolled back when psql exited.
+
+Post-error safety verification:
+client=0, project=0, staff=0, project_assignment=0, media_asset=0,
+equipment=0, equipment_reservation=0
+
+No candidate optimisation indexes were created and no benchmark was run.
+
+Proposed correction for review:
+Cast an operand before multiplication, for example:
+    1000000::bigint + (g % 10000)::bigint * 250000
+

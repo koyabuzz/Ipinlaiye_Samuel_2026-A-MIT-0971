@@ -1,0 +1,43 @@
+SET
+SET
+Activity and blockers
+  pid  |     application_name      | state  | wait_event_type |  wait_event   | blocking_pids |          xact_start           |          query_start          |                                        query                                         
+-------+---------------------------+--------+-----------------+---------------+---------------+-------------------------------+-------------------------------+--------------------------------------------------------------------------------------
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | active | Timeout         | PgSleep       | {}            | 2026-11-10 18:04:13.224178+01 | 2026-11-10 18:04:13.231011+01 | SELECT pg_sleep(5);
+ 22674 | MIT8103_C3_RES_B_SUCCEEDS | active | Lock            | transactionid | {22669}       | 2026-11-10 18:04:13.759929+01 | 2026-11-10 18:04:13.760009+01 | INSERT INTO equipment_reservation                                                   +
+       |                           |        |                 |               |               |                               |                               |  (reservation_id,equipment_id,project_id,reserved_by,start_at,end_at,status,purpose)+
+       |                           |        |                 |               |               |                               |                               | OVERRIDING SYSTEM VALUE                                                             +
+       |                           |        |                 |               |               |                               |                               | VALUES (-300004,1,1,1,'2035-01-16 11:00+01','2035-01-16 13:00+01',                  +
+       |                           |        |                 |               |               |                               |                               |         'confirmed','Component 3 Session B succeeds after rollback');
+(2 rows)
+
+Locks for experiment sessions
+  pid  |     application_name      |   locktype    |       mode       | granted |             relation             | transactionid | virtualxid 
+-------+---------------------------+---------------+------------------+---------+----------------------------------+---------------+------------
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | relation      | AccessShareLock  | t       | pk_staff                         |               | 
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | relation      | AccessShareLock  | t       | staff                            |               | 
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | relation      | AccessShareLock  | t       | uq_staff_email_ci                |               | 
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | relation      | RowExclusiveLock | t       | equipment_reservation            |               | 
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | relation      | RowShareLock     | t       | project                          |               | 
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | relation      | RowShareLock     | t       | equipment                        |               | 
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | relation      | RowShareLock     | t       | uq_equipment_serial_number       |               | 
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | relation      | RowShareLock     | t       | pk_equipment                     |               | 
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | relation      | RowShareLock     | t       | uq_staff_email_ci                |               | 
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | relation      | RowShareLock     | t       | pk_project                       |               | 
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | relation      | RowShareLock     | t       | staff                            |               | 
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | relation      | RowShareLock     | t       | uq_equipment_asset_tag           |               | 
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | relation      | RowShareLock     | t       | pk_staff                         |               | 
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | transactionid | ExclusiveLock    | t       |                                  |        753720 | 
+ 22669 | MIT8103_C3_RES_A_ROLLBACK | virtualxid    | ExclusiveLock    | t       |                                  |               | 44/6
+ 22674 | MIT8103_C3_RES_B_SUCCEEDS | transactionid | ShareLock        | f       |                                  |        753720 | 
+ 22674 | MIT8103_C3_RES_B_SUCCEEDS | relation      | AccessShareLock  | t       | uq_staff_email_ci                |               | 
+ 22674 | MIT8103_C3_RES_B_SUCCEEDS | relation      | AccessShareLock  | t       | staff                            |               | 
+ 22674 | MIT8103_C3_RES_B_SUCCEEDS | relation      | AccessShareLock  | t       | pk_staff                         |               | 
+ 22674 | MIT8103_C3_RES_B_SUCCEEDS | relation      | RowExclusiveLock | t       | equipment_reservation            |               | 
+ 22674 | MIT8103_C3_RES_B_SUCCEEDS | relation      | RowExclusiveLock | t       | pk_equipment_reservation         |               | 
+ 22674 | MIT8103_C3_RES_B_SUCCEEDS | relation      | RowExclusiveLock | t       | ex_reservation_no_active_overlap |               | 
+ 22674 | MIT8103_C3_RES_B_SUCCEEDS | relation      | RowExclusiveLock | t       | ix_reservation_blocking_start    |               | 
+ 22674 | MIT8103_C3_RES_B_SUCCEEDS | transactionid | ExclusiveLock    | t       |                                  |        753721 | 
+ 22674 | MIT8103_C3_RES_B_SUCCEEDS | virtualxid    | ExclusiveLock    | t       |                                  |               | 45/6
+(25 rows)
+

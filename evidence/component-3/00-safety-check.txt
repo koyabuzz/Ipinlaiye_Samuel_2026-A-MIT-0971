@@ -1,0 +1,35 @@
+      database_name      |   server_version    
+-------------------------+---------------------
+ mit8103_media_portfolio | 18.4 (Postgres.app)
+(1 row)
+
+      table_name       |  rows  
+-----------------------+--------
+ client                |    500
+ staff                 |   1000
+ equipment             |   5000
+ project               |  10000
+ project_assignment    |  50000
+ equipment_reservation | 200000
+ media_asset           | 500000
+(7 rows)
+
+ project_id | status 
+------------+--------
+          1 | active
+(1 row)
+
+ staff_id | active 
+----------+--------
+        1 | t
+(1 row)
+
+ equipment_id | active 
+--------------+--------
+            1 | t
+(1 row)
+
+ object_type | test_id 
+-------------+---------
+(0 rows)
+

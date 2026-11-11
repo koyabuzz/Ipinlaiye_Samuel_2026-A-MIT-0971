@@ -1,0 +1,650 @@
+                                                                                                      QUERY PLAN                                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=2046.02..2046.14 rows=50 width=89) (actual time=7.075..7.079 rows=50.00 loops=1)
+   Buffers: shared hit=370
+   ->  Sort  (cost=2046.02..2054.10 rows=3234 width=89) (actual time=7.074..7.076 rows=50.00 loops=1)
+         Sort Key: (sum(ma.file_size_bytes)) DESC
+         Sort Method: top-N heapsort  Memory: 36kB
+         Buffers: shared hit=370
+         ->  HashAggregate  (cost=1793.06..1938.59 rows=3234 width=89) (actual time=6.623..6.842 rows=1265.00 loops=1)
+               Group Key: p.project_id, c.client_name
+               Filter: (count(*) >= 3)
+               Batches: 1  Memory Usage: 657kB
+               Rows Removed by Filter: 220
+               Buffers: shared hit=367
+               ->  Hash Join  (cost=400.67..1671.78 rows=9702 width=57) (actual time=1.255..5.437 rows=9910.00 loops=1)
+                     Hash Cond: (p.client_id = c.client_id)
+                     Buffers: shared hit=367
+                     ->  Hash Join  (cost=380.42..1625.85 rows=9702 width=49) (actual time=1.179..4.516 rows=9910.00 loops=1)
+                           Hash Cond: (ma.project_id = p.project_id)
+                           Buffers: shared hit=358
+                           ->  Index Only Scan using ix_media_asset_review_created_project on media_asset ma  (cost=0.42..1182.16 rows=24255 width=20) (actual time=0.017..1.408 rows=24785.00 loops=1)
+                                 Index Cond: ((status = 'review'::text) AND (created_at >= '2026-01-01 00:00:00+01'::timestamp with time zone) AND (created_at < '2026-04-01 00:00:00+01'::timestamp with time zone))
+                                 Heap Fetches: 0
+                                 Index Searches: 1
+                                 Buffers: shared hit=153
+                           ->  Hash  (cost=330.00..330.00 rows=4000 width=33) (actual time=1.156..1.156 rows=4000.00 loops=1)
+                                 Buckets: 4096  Batches: 1  Memory Usage: 298kB
+                                 Buffers: shared hit=205
+                                 ->  Seq Scan on project p  (cost=0.00..330.00 rows=4000 width=33) (actual time=0.005..0.804 rows=4000.00 loops=1)
+                                       Filter: ((status)::text = 'active'::text)
+                                       Rows Removed by Filter: 6000
+                                       Buffers: shared hit=205
+                     ->  Hash  (cost=14.00..14.00 rows=500 width=16) (actual time=0.072..0.072 rows=500.00 loops=1)
+                           Buckets: 1024  Batches: 1  Memory Usage: 32kB
+                           Buffers: shared hit=9
+                           ->  Seq Scan on client c  (cost=0.00..14.00 rows=500 width=16) (actual time=0.003..0.036 rows=500.00 loops=1)
+                                 Buffers: shared hit=9
+ Planning:
+   Buffers: shared hit=320
+ Planning Time: 0.816 ms
+ Execution Time: 7.198 ms
+(39 rows)
+
+                                                                                                      QUERY PLAN                                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=2046.02..2046.14 rows=50 width=89) (actual time=6.757..6.761 rows=50.00 loops=1)
+   Buffers: shared hit=367
+   ->  Sort  (cost=2046.02..2054.10 rows=3234 width=89) (actual time=6.756..6.758 rows=50.00 loops=1)
+         Sort Key: (sum(ma.file_size_bytes)) DESC
+         Sort Method: top-N heapsort  Memory: 36kB
+         Buffers: shared hit=367
+         ->  HashAggregate  (cost=1793.06..1938.59 rows=3234 width=89) (actual time=6.314..6.534 rows=1265.00 loops=1)
+               Group Key: p.project_id, c.client_name
+               Filter: (count(*) >= 3)
+               Batches: 1  Memory Usage: 657kB
+               Rows Removed by Filter: 220
+               Buffers: shared hit=367
+               ->  Hash Join  (cost=400.67..1671.78 rows=9702 width=57) (actual time=0.971..5.109 rows=9910.00 loops=1)
+                     Hash Cond: (p.client_id = c.client_id)
+                     Buffers: shared hit=367
+                     ->  Hash Join  (cost=380.42..1625.85 rows=9702 width=49) (actual time=0.911..4.179 rows=9910.00 loops=1)
+                           Hash Cond: (ma.project_id = p.project_id)
+                           Buffers: shared hit=358
+                           ->  Index Only Scan using ix_media_asset_review_created_project on media_asset ma  (cost=0.42..1182.16 rows=24255 width=20) (actual time=0.009..1.262 rows=24785.00 loops=1)
+                                 Index Cond: ((status = 'review'::text) AND (created_at >= '2026-01-01 00:00:00+01'::timestamp with time zone) AND (created_at < '2026-04-01 00:00:00+01'::timestamp with time zone))
+                                 Heap Fetches: 0
+                                 Index Searches: 1
+                                 Buffers: shared hit=153
+                           ->  Hash  (cost=330.00..330.00 rows=4000 width=33) (actual time=0.901..0.902 rows=4000.00 loops=1)
+                                 Buckets: 4096  Batches: 1  Memory Usage: 298kB
+                                 Buffers: shared hit=205
+                                 ->  Seq Scan on project p  (cost=0.00..330.00 rows=4000 width=33) (actual time=0.002..0.607 rows=4000.00 loops=1)
+                                       Filter: ((status)::text = 'active'::text)
+                                       Rows Removed by Filter: 6000
+                                       Buffers: shared hit=205
+                     ->  Hash  (cost=14.00..14.00 rows=500 width=16) (actual time=0.058..0.058 rows=500.00 loops=1)
+                           Buckets: 1024  Batches: 1  Memory Usage: 32kB
+                           Buffers: shared hit=9
+                           ->  Seq Scan on client c  (cost=0.00..14.00 rows=500 width=16) (actual time=0.003..0.026 rows=500.00 loops=1)
+                                 Buffers: shared hit=9
+ Planning:
+   Buffers: shared hit=20
+ Planning Time: 0.147 ms
+ Execution Time: 6.781 ms
+(39 rows)
+
+                                                                                                      QUERY PLAN                                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=2046.02..2046.14 rows=50 width=89) (actual time=6.541..6.545 rows=50.00 loops=1)
+   Buffers: shared hit=367
+   ->  Sort  (cost=2046.02..2054.10 rows=3234 width=89) (actual time=6.541..6.542 rows=50.00 loops=1)
+         Sort Key: (sum(ma.file_size_bytes)) DESC
+         Sort Method: top-N heapsort  Memory: 36kB
+         Buffers: shared hit=367
+         ->  HashAggregate  (cost=1793.06..1938.59 rows=3234 width=89) (actual time=6.103..6.321 rows=1265.00 loops=1)
+               Group Key: p.project_id, c.client_name
+               Filter: (count(*) >= 3)
+               Batches: 1  Memory Usage: 657kB
+               Rows Removed by Filter: 220
+               Buffers: shared hit=367
+               ->  Hash Join  (cost=400.67..1671.78 rows=9702 width=57) (actual time=0.979..4.950 rows=9910.00 loops=1)
+                     Hash Cond: (p.client_id = c.client_id)
+                     Buffers: shared hit=367
+                     ->  Hash Join  (cost=380.42..1625.85 rows=9702 width=49) (actual time=0.917..4.052 rows=9910.00 loops=1)
+                           Hash Cond: (ma.project_id = p.project_id)
+                           Buffers: shared hit=358
+                           ->  Index Only Scan using ix_media_asset_review_created_project on media_asset ma  (cost=0.42..1182.16 rows=24255 width=20) (actual time=0.014..1.223 rows=24785.00 loops=1)
+                                 Index Cond: ((status = 'review'::text) AND (created_at >= '2026-01-01 00:00:00+01'::timestamp with time zone) AND (created_at < '2026-04-01 00:00:00+01'::timestamp with time zone))
+                                 Heap Fetches: 0
+                                 Index Searches: 1
+                                 Buffers: shared hit=153
+                           ->  Hash  (cost=330.00..330.00 rows=4000 width=33) (actual time=0.901..0.901 rows=4000.00 loops=1)
+                                 Buckets: 4096  Batches: 1  Memory Usage: 298kB
+                                 Buffers: shared hit=205
+                                 ->  Seq Scan on project p  (cost=0.00..330.00 rows=4000 width=33) (actual time=0.002..0.612 rows=4000.00 loops=1)
+                                       Filter: ((status)::text = 'active'::text)
+                                       Rows Removed by Filter: 6000
+                                       Buffers: shared hit=205
+                     ->  Hash  (cost=14.00..14.00 rows=500 width=16) (actual time=0.060..0.060 rows=500.00 loops=1)
+                           Buckets: 1024  Batches: 1  Memory Usage: 32kB
+                           Buffers: shared hit=9
+                           ->  Seq Scan on client c  (cost=0.00..14.00 rows=500 width=16) (actual time=0.003..0.027 rows=500.00 loops=1)
+                                 Buffers: shared hit=9
+ Planning:
+   Buffers: shared hit=20
+ Planning Time: 0.178 ms
+ Execution Time: 6.572 ms
+(39 rows)
+
+                                                                                                      QUERY PLAN                                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=2046.02..2046.14 rows=50 width=89) (actual time=6.484..6.487 rows=50.00 loops=1)
+   Buffers: shared hit=367
+   ->  Sort  (cost=2046.02..2054.10 rows=3234 width=89) (actual time=6.484..6.486 rows=50.00 loops=1)
+         Sort Key: (sum(ma.file_size_bytes)) DESC
+         Sort Method: top-N heapsort  Memory: 36kB
+         Buffers: shared hit=367
+         ->  HashAggregate  (cost=1793.06..1938.59 rows=3234 width=89) (actual time=6.046..6.264 rows=1265.00 loops=1)
+               Group Key: p.project_id, c.client_name
+               Filter: (count(*) >= 3)
+               Batches: 1  Memory Usage: 657kB
+               Rows Removed by Filter: 220
+               Buffers: shared hit=367
+               ->  Hash Join  (cost=400.67..1671.78 rows=9702 width=57) (actual time=0.940..4.895 rows=9910.00 loops=1)
+                     Hash Cond: (p.client_id = c.client_id)
+                     Buffers: shared hit=367
+                     ->  Hash Join  (cost=380.42..1625.85 rows=9702 width=49) (actual time=0.882..3.997 rows=9910.00 loops=1)
+                           Hash Cond: (ma.project_id = p.project_id)
+                           Buffers: shared hit=358
+                           ->  Index Only Scan using ix_media_asset_review_created_project on media_asset ma  (cost=0.42..1182.16 rows=24255 width=20) (actual time=0.008..1.182 rows=24785.00 loops=1)
+                                 Index Cond: ((status = 'review'::text) AND (created_at >= '2026-01-01 00:00:00+01'::timestamp with time zone) AND (created_at < '2026-04-01 00:00:00+01'::timestamp with time zone))
+                                 Heap Fetches: 0
+                                 Index Searches: 1
+                                 Buffers: shared hit=153
+                           ->  Hash  (cost=330.00..330.00 rows=4000 width=33) (actual time=0.872..0.872 rows=4000.00 loops=1)
+                                 Buckets: 4096  Batches: 1  Memory Usage: 298kB
+                                 Buffers: shared hit=205
+                                 ->  Seq Scan on project p  (cost=0.00..330.00 rows=4000 width=33) (actual time=0.002..0.583 rows=4000.00 loops=1)
+                                       Filter: ((status)::text = 'active'::text)
+                                       Rows Removed by Filter: 6000
+                                       Buffers: shared hit=205
+                     ->  Hash  (cost=14.00..14.00 rows=500 width=16) (actual time=0.057..0.057 rows=500.00 loops=1)
+                           Buckets: 1024  Batches: 1  Memory Usage: 32kB
+                           Buffers: shared hit=9
+                           ->  Seq Scan on client c  (cost=0.00..14.00 rows=500 width=16) (actual time=0.002..0.024 rows=500.00 loops=1)
+                                 Buffers: shared hit=9
+ Planning:
+   Buffers: shared hit=20
+ Planning Time: 0.137 ms
+ Execution Time: 6.504 ms
+(39 rows)
+
+                                                                                                      QUERY PLAN                                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=2046.02..2046.14 rows=50 width=89) (actual time=6.470..6.474 rows=50.00 loops=1)
+   Buffers: shared hit=367
+   ->  Sort  (cost=2046.02..2054.10 rows=3234 width=89) (actual time=6.470..6.472 rows=50.00 loops=1)
+         Sort Key: (sum(ma.file_size_bytes)) DESC
+         Sort Method: top-N heapsort  Memory: 36kB
+         Buffers: shared hit=367
+         ->  HashAggregate  (cost=1793.06..1938.59 rows=3234 width=89) (actual time=6.032..6.248 rows=1265.00 loops=1)
+               Group Key: p.project_id, c.client_name
+               Filter: (count(*) >= 3)
+               Batches: 1  Memory Usage: 657kB
+               Rows Removed by Filter: 220
+               Buffers: shared hit=367
+               ->  Hash Join  (cost=400.67..1671.78 rows=9702 width=57) (actual time=0.932..4.895 rows=9910.00 loops=1)
+                     Hash Cond: (p.client_id = c.client_id)
+                     Buffers: shared hit=367
+                     ->  Hash Join  (cost=380.42..1625.85 rows=9702 width=49) (actual time=0.875..3.995 rows=9910.00 loops=1)
+                           Hash Cond: (ma.project_id = p.project_id)
+                           Buffers: shared hit=358
+                           ->  Index Only Scan using ix_media_asset_review_created_project on media_asset ma  (cost=0.42..1182.16 rows=24255 width=20) (actual time=0.008..1.184 rows=24785.00 loops=1)
+                                 Index Cond: ((status = 'review'::text) AND (created_at >= '2026-01-01 00:00:00+01'::timestamp with time zone) AND (created_at < '2026-04-01 00:00:00+01'::timestamp with time zone))
+                                 Heap Fetches: 0
+                                 Index Searches: 1
+                                 Buffers: shared hit=153
+                           ->  Hash  (cost=330.00..330.00 rows=4000 width=33) (actual time=0.866..0.866 rows=4000.00 loops=1)
+                                 Buckets: 4096  Batches: 1  Memory Usage: 298kB
+                                 Buffers: shared hit=205
+                                 ->  Seq Scan on project p  (cost=0.00..330.00 rows=4000 width=33) (actual time=0.001..0.577 rows=4000.00 loops=1)
+                                       Filter: ((status)::text = 'active'::text)
+                                       Rows Removed by Filter: 6000
+                                       Buffers: shared hit=205
+                     ->  Hash  (cost=14.00..14.00 rows=500 width=16) (actual time=0.056..0.056 rows=500.00 loops=1)
+                           Buckets: 1024  Batches: 1  Memory Usage: 32kB
+                           Buffers: shared hit=9
+                           ->  Seq Scan on client c  (cost=0.00..14.00 rows=500 width=16) (actual time=0.002..0.024 rows=500.00 loops=1)
+                                 Buffers: shared hit=9
+ Planning:
+   Buffers: shared hit=20
+ Planning Time: 0.126 ms
+ Execution Time: 6.489 ms
+(39 rows)
+
+                                                                        QUERY PLAN                                                                         
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=3009.17..3011.42 rows=900 width=47) (actual time=17.834..17.853 rows=900.00 loops=1)
+   Sort Key: (count(*)) DESC, s.last_name, s.first_name
+   Sort Method: quicksort  Memory: 87kB
+   Buffers: shared hit=774
+   ->  GroupAggregate  (cost=2816.27..2965.01 rows=900 width=47) (actual time=15.567..17.135 rows=900.00 loops=1)
+         Group Key: s.staff_id
+         Buffers: shared hit=768
+         ->  Sort  (cost=2816.27..2851.20 rows=13974 width=35) (actual time=15.563..15.950 rows=18000.00 loops=1)
+               Sort Key: s.staff_id, pa.project_id
+               Sort Method: quicksort  Memory: 1753kB
+               Buffers: shared hit=768
+               ->  Hash Join  (cost=417.25..1854.13 rows=13974 width=35) (actual time=0.943..9.736 rows=18000.00 loops=1)
+                     Hash Cond: (pa.staff_id = s.staff_id)
+                     Buffers: shared hit=765
+                     ->  Hash Join  (cost=380.00..1775.94 rows=15527 width=8) (actual time=0.784..7.728 rows=20000.00 loops=1)
+                           Hash Cond: (pa.project_id = p.project_id)
+                           Buffers: shared hit=749
+                           ->  Seq Scan on project_assignment pa  (cost=0.00..1294.00 rows=38818 width=8) (actual time=0.002..3.446 rows=50000.00 loops=1)
+                                 Filter: ((assigned_from <= '2026-11-10'::date) AND ((assigned_until IS NULL) OR (assigned_until >= '2026-11-10'::date)))
+                                 Buffers: shared hit=544
+                           ->  Hash  (cost=330.00..330.00 rows=4000 width=4) (actual time=0.780..0.780 rows=4000.00 loops=1)
+                                 Buckets: 4096  Batches: 1  Memory Usage: 173kB
+                                 Buffers: shared hit=205
+                                 ->  Seq Scan on project p  (cost=0.00..330.00 rows=4000 width=4) (actual time=0.001..0.564 rows=4000.00 loops=1)
+                                       Filter: ((status)::text = 'active'::text)
+                                       Rows Removed by Filter: 6000
+                                       Buffers: shared hit=205
+                     ->  Hash  (cost=26.00..26.00 rows=900 width=31) (actual time=0.159..0.159 rows=900.00 loops=1)
+                           Buckets: 1024  Batches: 1  Memory Usage: 66kB
+                           Buffers: shared hit=16
+                           ->  Seq Scan on staff s  (cost=0.00..26.00 rows=900 width=31) (actual time=0.003..0.085 rows=900.00 loops=1)
+                                 Filter: active
+                                 Rows Removed by Filter: 100
+                                 Buffers: shared hit=16
+ Planning:
+   Buffers: shared hit=194
+ Planning Time: 0.530 ms
+ Execution Time: 17.884 ms
+(38 rows)
+
+                                                                        QUERY PLAN                                                                         
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=3009.17..3011.42 rows=900 width=47) (actual time=17.101..17.122 rows=900.00 loops=1)
+   Sort Key: (count(*)) DESC, s.last_name, s.first_name
+   Sort Method: quicksort  Memory: 87kB
+   Buffers: shared hit=765
+   ->  GroupAggregate  (cost=2816.27..2965.01 rows=900 width=47) (actual time=14.826..16.399 rows=900.00 loops=1)
+         Group Key: s.staff_id
+         Buffers: shared hit=765
+         ->  Sort  (cost=2816.27..2851.20 rows=13974 width=35) (actual time=14.822..15.211 rows=18000.00 loops=1)
+               Sort Key: s.staff_id, pa.project_id
+               Sort Method: quicksort  Memory: 1753kB
+               Buffers: shared hit=765
+               ->  Hash Join  (cost=417.25..1854.13 rows=13974 width=35) (actual time=0.946..9.156 rows=18000.00 loops=1)
+                     Hash Cond: (pa.staff_id = s.staff_id)
+                     Buffers: shared hit=765
+                     ->  Hash Join  (cost=380.00..1775.94 rows=15527 width=8) (actual time=0.802..7.145 rows=20000.00 loops=1)
+                           Hash Cond: (pa.project_id = p.project_id)
+                           Buffers: shared hit=749
+                           ->  Seq Scan on project_assignment pa  (cost=0.00..1294.00 rows=38818 width=8) (actual time=0.002..2.822 rows=50000.00 loops=1)
+                                 Filter: ((assigned_from <= '2026-11-10'::date) AND ((assigned_until IS NULL) OR (assigned_until >= '2026-11-10'::date)))
+                                 Buffers: shared hit=544
+                           ->  Hash  (cost=330.00..330.00 rows=4000 width=4) (actual time=0.799..0.799 rows=4000.00 loops=1)
+                                 Buckets: 4096  Batches: 1  Memory Usage: 173kB
+                                 Buffers: shared hit=205
+                                 ->  Seq Scan on project p  (cost=0.00..330.00 rows=4000 width=4) (actual time=0.001..0.587 rows=4000.00 loops=1)
+                                       Filter: ((status)::text = 'active'::text)
+                                       Rows Removed by Filter: 6000
+                                       Buffers: shared hit=205
+                     ->  Hash  (cost=26.00..26.00 rows=900 width=31) (actual time=0.143..0.143 rows=900.00 loops=1)
+                           Buckets: 1024  Batches: 1  Memory Usage: 66kB
+                           Buffers: shared hit=16
+                           ->  Seq Scan on staff s  (cost=0.00..26.00 rows=900 width=31) (actual time=0.003..0.072 rows=900.00 loops=1)
+                                 Filter: active
+                                 Rows Removed by Filter: 100
+                                 Buffers: shared hit=16
+ Planning:
+   Buffers: shared hit=24
+ Planning Time: 0.147 ms
+ Execution Time: 17.154 ms
+(38 rows)
+
+                                                                        QUERY PLAN                                                                         
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=3009.17..3011.42 rows=900 width=47) (actual time=18.168..18.190 rows=900.00 loops=1)
+   Sort Key: (count(*)) DESC, s.last_name, s.first_name
+   Sort Method: quicksort  Memory: 87kB
+   Buffers: shared hit=765
+   ->  GroupAggregate  (cost=2816.27..2965.01 rows=900 width=47) (actual time=15.832..17.457 rows=900.00 loops=1)
+         Group Key: s.staff_id
+         Buffers: shared hit=765
+         ->  Sort  (cost=2816.27..2851.20 rows=13974 width=35) (actual time=15.825..16.227 rows=18000.00 loops=1)
+               Sort Key: s.staff_id, pa.project_id
+               Sort Method: quicksort  Memory: 1753kB
+               Buffers: shared hit=765
+               ->  Hash Join  (cost=417.25..1854.13 rows=13974 width=35) (actual time=1.033..9.814 rows=18000.00 loops=1)
+                     Hash Cond: (pa.staff_id = s.staff_id)
+                     Buffers: shared hit=765
+                     ->  Hash Join  (cost=380.00..1775.94 rows=15527 width=8) (actual time=0.883..7.716 rows=20000.00 loops=1)
+                           Hash Cond: (pa.project_id = p.project_id)
+                           Buffers: shared hit=749
+                           ->  Seq Scan on project_assignment pa  (cost=0.00..1294.00 rows=38818 width=8) (actual time=0.002..3.107 rows=50000.00 loops=1)
+                                 Filter: ((assigned_from <= '2026-11-10'::date) AND ((assigned_until IS NULL) OR (assigned_until >= '2026-11-10'::date)))
+                                 Buffers: shared hit=544
+                           ->  Hash  (cost=330.00..330.00 rows=4000 width=4) (actual time=0.879..0.880 rows=4000.00 loops=1)
+                                 Buckets: 4096  Batches: 1  Memory Usage: 173kB
+                                 Buffers: shared hit=205
+                                 ->  Seq Scan on project p  (cost=0.00..330.00 rows=4000 width=4) (actual time=0.001..0.658 rows=4000.00 loops=1)
+                                       Filter: ((status)::text = 'active'::text)
+                                       Rows Removed by Filter: 6000
+                                       Buffers: shared hit=205
+                     ->  Hash  (cost=26.00..26.00 rows=900 width=31) (actual time=0.149..0.149 rows=900.00 loops=1)
+                           Buckets: 1024  Batches: 1  Memory Usage: 66kB
+                           Buffers: shared hit=16
+                           ->  Seq Scan on staff s  (cost=0.00..26.00 rows=900 width=31) (actual time=0.003..0.076 rows=900.00 loops=1)
+                                 Filter: active
+                                 Rows Removed by Filter: 100
+                                 Buffers: shared hit=16
+ Planning:
+   Buffers: shared hit=24
+ Planning Time: 0.162 ms
+ Execution Time: 18.233 ms
+(38 rows)
+
+                                                                        QUERY PLAN                                                                         
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=3009.17..3011.42 rows=900 width=47) (actual time=17.736..17.755 rows=900.00 loops=1)
+   Sort Key: (count(*)) DESC, s.last_name, s.first_name
+   Sort Method: quicksort  Memory: 87kB
+   Buffers: shared hit=765
+   ->  GroupAggregate  (cost=2816.27..2965.01 rows=900 width=47) (actual time=15.491..17.050 rows=900.00 loops=1)
+         Group Key: s.staff_id
+         Buffers: shared hit=765
+         ->  Sort  (cost=2816.27..2851.20 rows=13974 width=35) (actual time=15.486..15.872 rows=18000.00 loops=1)
+               Sort Key: s.staff_id, pa.project_id
+               Sort Method: quicksort  Memory: 1753kB
+               Buffers: shared hit=765
+               ->  Hash Join  (cost=417.25..1854.13 rows=13974 width=35) (actual time=1.065..9.675 rows=18000.00 loops=1)
+                     Hash Cond: (pa.staff_id = s.staff_id)
+                     Buffers: shared hit=765
+                     ->  Hash Join  (cost=380.00..1775.94 rows=15527 width=8) (actual time=0.910..7.609 rows=20000.00 loops=1)
+                           Hash Cond: (pa.project_id = p.project_id)
+                           Buffers: shared hit=749
+                           ->  Seq Scan on project_assignment pa  (cost=0.00..1294.00 rows=38818 width=8) (actual time=0.002..3.091 rows=50000.00 loops=1)
+                                 Filter: ((assigned_from <= '2026-11-10'::date) AND ((assigned_until IS NULL) OR (assigned_until >= '2026-11-10'::date)))
+                                 Buffers: shared hit=544
+                           ->  Hash  (cost=330.00..330.00 rows=4000 width=4) (actual time=0.906..0.906 rows=4000.00 loops=1)
+                                 Buckets: 4096  Batches: 1  Memory Usage: 173kB
+                                 Buffers: shared hit=205
+                                 ->  Seq Scan on project p  (cost=0.00..330.00 rows=4000 width=4) (actual time=0.002..0.686 rows=4000.00 loops=1)
+                                       Filter: ((status)::text = 'active'::text)
+                                       Rows Removed by Filter: 6000
+                                       Buffers: shared hit=205
+                     ->  Hash  (cost=26.00..26.00 rows=900 width=31) (actual time=0.154..0.154 rows=900.00 loops=1)
+                           Buckets: 1024  Batches: 1  Memory Usage: 66kB
+                           Buffers: shared hit=16
+                           ->  Seq Scan on staff s  (cost=0.00..26.00 rows=900 width=31) (actual time=0.005..0.079 rows=900.00 loops=1)
+                                 Filter: active
+                                 Rows Removed by Filter: 100
+                                 Buffers: shared hit=16
+ Planning:
+   Buffers: shared hit=24
+ Planning Time: 0.219 ms
+ Execution Time: 17.795 ms
+(38 rows)
+
+                                                                        QUERY PLAN                                                                         
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=3009.17..3011.42 rows=900 width=47) (actual time=17.100..17.120 rows=900.00 loops=1)
+   Sort Key: (count(*)) DESC, s.last_name, s.first_name
+   Sort Method: quicksort  Memory: 87kB
+   Buffers: shared hit=765
+   ->  GroupAggregate  (cost=2816.27..2965.01 rows=900 width=47) (actual time=14.866..16.419 rows=900.00 loops=1)
+         Group Key: s.staff_id
+         Buffers: shared hit=765
+         ->  Sort  (cost=2816.27..2851.20 rows=13974 width=35) (actual time=14.863..15.244 rows=18000.00 loops=1)
+               Sort Key: s.staff_id, pa.project_id
+               Sort Method: quicksort  Memory: 1753kB
+               Buffers: shared hit=765
+               ->  Hash Join  (cost=417.25..1854.13 rows=13974 width=35) (actual time=0.968..9.159 rows=18000.00 loops=1)
+                     Hash Cond: (pa.staff_id = s.staff_id)
+                     Buffers: shared hit=765
+                     ->  Hash Join  (cost=380.00..1775.94 rows=15527 width=8) (actual time=0.821..7.145 rows=20000.00 loops=1)
+                           Hash Cond: (pa.project_id = p.project_id)
+                           Buffers: shared hit=749
+                           ->  Seq Scan on project_assignment pa  (cost=0.00..1294.00 rows=38818 width=8) (actual time=0.002..2.824 rows=50000.00 loops=1)
+                                 Filter: ((assigned_from <= '2026-11-10'::date) AND ((assigned_until IS NULL) OR (assigned_until >= '2026-11-10'::date)))
+                                 Buffers: shared hit=544
+                           ->  Hash  (cost=330.00..330.00 rows=4000 width=4) (actual time=0.817..0.818 rows=4000.00 loops=1)
+                                 Buckets: 4096  Batches: 1  Memory Usage: 173kB
+                                 Buffers: shared hit=205
+                                 ->  Seq Scan on project p  (cost=0.00..330.00 rows=4000 width=4) (actual time=0.001..0.606 rows=4000.00 loops=1)
+                                       Filter: ((status)::text = 'active'::text)
+                                       Rows Removed by Filter: 6000
+                                       Buffers: shared hit=205
+                     ->  Hash  (cost=26.00..26.00 rows=900 width=31) (actual time=0.146..0.146 rows=900.00 loops=1)
+                           Buckets: 1024  Batches: 1  Memory Usage: 66kB
+                           Buffers: shared hit=16
+                           ->  Seq Scan on staff s  (cost=0.00..26.00 rows=900 width=31) (actual time=0.004..0.074 rows=900.00 loops=1)
+                                 Filter: active
+                                 Rows Removed by Filter: 100
+                                 Buffers: shared hit=16
+ Planning:
+   Buffers: shared hit=24
+ Planning Time: 0.176 ms
+ Execution Time: 17.153 ms
+(38 rows)
+
+                                                                                            QUERY PLAN                                                                                             
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=2886.38..2899.48 rows=5240 width=110) (actual time=4.332..4.342 rows=389.00 loops=1)
+   Sort Key: er.start_at, e.asset_tag
+   Sort Method: quicksort  Memory: 70kB
+   Buffers: shared hit=547
+   ->  Hash Join  (cost=614.04..2562.67 rows=5240 width=110) (actual time=3.960..4.270 rows=389.00 loops=1)
+         Hash Cond: (er.reserved_by = s.staff_id)
+         Buffers: shared hit=544
+         ->  Hash Join  (cost=575.54..2497.26 rows=5240 width=82) (actual time=3.827..4.070 rows=389.00 loops=1)
+               Hash Cond: (er.project_id = p.project_id)
+               Buffers: shared hit=528
+               ->  Hash Join  (cost=145.54..2053.49 rows=5240 width=61) (actual time=2.682..2.888 rows=389.00 loops=1)
+                     Hash Cond: (er.equipment_id = e.equipment_id)
+                     Buffers: shared hit=323
+                     ->  Index Only Scan using ix_reservation_blocking_start on equipment_reservation er  (cost=0.42..1853.31 rows=20958 width=28) (actual time=2.226..2.342 rows=1572.00 loops=1)
+                           Index Cond: (start_at < '2026-07-08 00:00:00+01'::timestamp with time zone)
+                           Filter: (end_at > '2026-07-01 00:00:00+01'::timestamp with time zone)
+                           Rows Removed by Filter: 40206
+                           Heap Fetches: 26
+                           Index Searches: 1
+                           Buffers: shared hit=256
+                     ->  Hash  (cost=129.50..129.50 rows=1250 width=41) (actual time=0.438..0.438 rows=1250.00 loops=1)
+                           Buckets: 2048  Batches: 1  Memory Usage: 108kB
+                           Buffers: shared hit=67
+                           ->  Seq Scan on equipment e  (cost=0.00..129.50 rows=1250 width=41) (actual time=0.004..0.326 rows=1250.00 loops=1)
+                                 Filter: ((equipment_type)::text = 'camera'::text)
+                                 Rows Removed by Filter: 3750
+                                 Buffers: shared hit=67
+               ->  Hash  (cost=305.00..305.00 rows=10000 width=29) (actual time=1.142..1.142 rows=10000.00 loops=1)
+                     Buckets: 16384  Batches: 1  Memory Usage: 753kB
+                     Buffers: shared hit=205
+                     ->  Seq Scan on project p  (cost=0.00..305.00 rows=10000 width=29) (actual time=0.002..0.510 rows=10000.00 loops=1)
+                           Buffers: shared hit=205
+         ->  Hash  (cost=26.00..26.00 rows=1000 width=22) (actual time=0.130..0.130 rows=1000.00 loops=1)
+               Buckets: 1024  Batches: 1  Memory Usage: 63kB
+               Buffers: shared hit=16
+               ->  Seq Scan on staff s  (cost=0.00..26.00 rows=1000 width=22) (actual time=0.003..0.052 rows=1000.00 loops=1)
+                     Buffers: shared hit=16
+ Planning:
+   Buffers: shared hit=204
+ Planning Time: 0.660 ms
+ Execution Time: 4.365 ms
+(41 rows)
+
+                                                                                            QUERY PLAN                                                                                             
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=2886.38..2899.48 rows=5240 width=110) (actual time=3.724..3.732 rows=389.00 loops=1)
+   Sort Key: er.start_at, e.asset_tag
+   Sort Method: quicksort  Memory: 70kB
+   Buffers: shared hit=544
+   ->  Hash Join  (cost=614.04..2562.67 rows=5240 width=110) (actual time=3.385..3.668 rows=389.00 loops=1)
+         Hash Cond: (er.reserved_by = s.staff_id)
+         Buffers: shared hit=544
+         ->  Hash Join  (cost=575.54..2497.26 rows=5240 width=82) (actual time=3.256..3.472 rows=389.00 loops=1)
+               Hash Cond: (er.project_id = p.project_id)
+               Buffers: shared hit=528
+               ->  Hash Join  (cost=145.54..2053.49 rows=5240 width=61) (actual time=2.142..2.323 rows=389.00 loops=1)
+                     Hash Cond: (er.equipment_id = e.equipment_id)
+                     Buffers: shared hit=323
+                     ->  Index Only Scan using ix_reservation_blocking_start on equipment_reservation er  (cost=0.42..1853.31 rows=20958 width=28) (actual time=1.772..1.861 rows=1572.00 loops=1)
+                           Index Cond: (start_at < '2026-07-08 00:00:00+01'::timestamp with time zone)
+                           Filter: (end_at > '2026-07-01 00:00:00+01'::timestamp with time zone)
+                           Rows Removed by Filter: 40206
+                           Heap Fetches: 26
+                           Index Searches: 1
+                           Buffers: shared hit=256
+                     ->  Hash  (cost=129.50..129.50 rows=1250 width=41) (actual time=0.358..0.358 rows=1250.00 loops=1)
+                           Buckets: 2048  Batches: 1  Memory Usage: 108kB
+                           Buffers: shared hit=67
+                           ->  Seq Scan on equipment e  (cost=0.00..129.50 rows=1250 width=41) (actual time=0.002..0.242 rows=1250.00 loops=1)
+                                 Filter: ((equipment_type)::text = 'camera'::text)
+                                 Rows Removed by Filter: 3750
+                                 Buffers: shared hit=67
+               ->  Hash  (cost=305.00..305.00 rows=10000 width=29) (actual time=1.112..1.112 rows=10000.00 loops=1)
+                     Buckets: 16384  Batches: 1  Memory Usage: 753kB
+                     Buffers: shared hit=205
+                     ->  Seq Scan on project p  (cost=0.00..305.00 rows=10000 width=29) (actual time=0.001..0.481 rows=10000.00 loops=1)
+                           Buffers: shared hit=205
+         ->  Hash  (cost=26.00..26.00 rows=1000 width=22) (actual time=0.128..0.128 rows=1000.00 loops=1)
+               Buckets: 1024  Batches: 1  Memory Usage: 63kB
+               Buffers: shared hit=16
+               ->  Seq Scan on staff s  (cost=0.00..26.00 rows=1000 width=22) (actual time=0.002..0.051 rows=1000.00 loops=1)
+                     Buffers: shared hit=16
+ Planning:
+   Buffers: shared hit=15
+ Planning Time: 0.160 ms
+ Execution Time: 3.753 ms
+(41 rows)
+
+                                                                                            QUERY PLAN                                                                                             
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=2886.38..2899.48 rows=5240 width=110) (actual time=3.749..3.757 rows=389.00 loops=1)
+   Sort Key: er.start_at, e.asset_tag
+   Sort Method: quicksort  Memory: 70kB
+   Buffers: shared hit=544
+   ->  Hash Join  (cost=614.04..2562.67 rows=5240 width=110) (actual time=3.409..3.693 rows=389.00 loops=1)
+         Hash Cond: (er.reserved_by = s.staff_id)
+         Buffers: shared hit=544
+         ->  Hash Join  (cost=575.54..2497.26 rows=5240 width=82) (actual time=3.281..3.498 rows=389.00 loops=1)
+               Hash Cond: (er.project_id = p.project_id)
+               Buffers: shared hit=528
+               ->  Hash Join  (cost=145.54..2053.49 rows=5240 width=61) (actual time=2.177..2.359 rows=389.00 loops=1)
+                     Hash Cond: (er.equipment_id = e.equipment_id)
+                     Buffers: shared hit=323
+                     ->  Index Only Scan using ix_reservation_blocking_start on equipment_reservation er  (cost=0.42..1853.31 rows=20958 width=28) (actual time=1.807..1.896 rows=1572.00 loops=1)
+                           Index Cond: (start_at < '2026-07-08 00:00:00+01'::timestamp with time zone)
+                           Filter: (end_at > '2026-07-01 00:00:00+01'::timestamp with time zone)
+                           Rows Removed by Filter: 40206
+                           Heap Fetches: 26
+                           Index Searches: 1
+                           Buffers: shared hit=256
+                     ->  Hash  (cost=129.50..129.50 rows=1250 width=41) (actual time=0.358..0.358 rows=1250.00 loops=1)
+                           Buckets: 2048  Batches: 1  Memory Usage: 108kB
+                           Buffers: shared hit=67
+                           ->  Seq Scan on equipment e  (cost=0.00..129.50 rows=1250 width=41) (actual time=0.002..0.241 rows=1250.00 loops=1)
+                                 Filter: ((equipment_type)::text = 'camera'::text)
+                                 Rows Removed by Filter: 3750
+                                 Buffers: shared hit=67
+               ->  Hash  (cost=305.00..305.00 rows=10000 width=29) (actual time=1.102..1.102 rows=10000.00 loops=1)
+                     Buckets: 16384  Batches: 1  Memory Usage: 753kB
+                     Buffers: shared hit=205
+                     ->  Seq Scan on project p  (cost=0.00..305.00 rows=10000 width=29) (actual time=0.001..0.476 rows=10000.00 loops=1)
+                           Buffers: shared hit=205
+         ->  Hash  (cost=26.00..26.00 rows=1000 width=22) (actual time=0.127..0.127 rows=1000.00 loops=1)
+               Buckets: 1024  Batches: 1  Memory Usage: 63kB
+               Buffers: shared hit=16
+               ->  Seq Scan on staff s  (cost=0.00..26.00 rows=1000 width=22) (actual time=0.002..0.050 rows=1000.00 loops=1)
+                     Buffers: shared hit=16
+ Planning:
+   Buffers: shared hit=15
+ Planning Time: 0.144 ms
+ Execution Time: 3.775 ms
+(41 rows)
+
+                                                                                            QUERY PLAN                                                                                             
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=2886.38..2899.48 rows=5240 width=110) (actual time=3.696..3.705 rows=389.00 loops=1)
+   Sort Key: er.start_at, e.asset_tag
+   Sort Method: quicksort  Memory: 70kB
+   Buffers: shared hit=544
+   ->  Hash Join  (cost=614.04..2562.67 rows=5240 width=110) (actual time=3.357..3.642 rows=389.00 loops=1)
+         Hash Cond: (er.reserved_by = s.staff_id)
+         Buffers: shared hit=544
+         ->  Hash Join  (cost=575.54..2497.26 rows=5240 width=82) (actual time=3.229..3.446 rows=389.00 loops=1)
+               Hash Cond: (er.project_id = p.project_id)
+               Buffers: shared hit=528
+               ->  Hash Join  (cost=145.54..2053.49 rows=5240 width=61) (actual time=2.130..2.311 rows=389.00 loops=1)
+                     Hash Cond: (er.equipment_id = e.equipment_id)
+                     Buffers: shared hit=323
+                     ->  Index Only Scan using ix_reservation_blocking_start on equipment_reservation er  (cost=0.42..1853.31 rows=20958 width=28) (actual time=1.763..1.851 rows=1572.00 loops=1)
+                           Index Cond: (start_at < '2026-07-08 00:00:00+01'::timestamp with time zone)
+                           Filter: (end_at > '2026-07-01 00:00:00+01'::timestamp with time zone)
+                           Rows Removed by Filter: 40206
+                           Heap Fetches: 26
+                           Index Searches: 1
+                           Buffers: shared hit=256
+                     ->  Hash  (cost=129.50..129.50 rows=1250 width=41) (actual time=0.355..0.355 rows=1250.00 loops=1)
+                           Buckets: 2048  Batches: 1  Memory Usage: 108kB
+                           Buffers: shared hit=67
+                           ->  Seq Scan on equipment e  (cost=0.00..129.50 rows=1250 width=41) (actual time=0.001..0.239 rows=1250.00 loops=1)
+                                 Filter: ((equipment_type)::text = 'camera'::text)
+                                 Rows Removed by Filter: 3750
+                                 Buffers: shared hit=67
+               ->  Hash  (cost=305.00..305.00 rows=10000 width=29) (actual time=1.098..1.098 rows=10000.00 loops=1)
+                     Buckets: 16384  Batches: 1  Memory Usage: 753kB
+                     Buffers: shared hit=205
+                     ->  Seq Scan on project p  (cost=0.00..305.00 rows=10000 width=29) (actual time=0.001..0.473 rows=10000.00 loops=1)
+                           Buffers: shared hit=205
+         ->  Hash  (cost=26.00..26.00 rows=1000 width=22) (actual time=0.127..0.127 rows=1000.00 loops=1)
+               Buckets: 1024  Batches: 1  Memory Usage: 63kB
+               Buffers: shared hit=16
+               ->  Seq Scan on staff s  (cost=0.00..26.00 rows=1000 width=22) (actual time=0.002..0.050 rows=1000.00 loops=1)
+                     Buffers: shared hit=16
+ Planning:
+   Buffers: shared hit=15
+ Planning Time: 0.140 ms
+ Execution Time: 3.722 ms
+(41 rows)
+
+                                                                                            QUERY PLAN                                                                                             
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=2886.38..2899.48 rows=5240 width=110) (actual time=3.739..3.748 rows=389.00 loops=1)
+   Sort Key: er.start_at, e.asset_tag
+   Sort Method: quicksort  Memory: 70kB
+   Buffers: shared hit=544
+   ->  Hash Join  (cost=614.04..2562.67 rows=5240 width=110) (actual time=3.399..3.684 rows=389.00 loops=1)
+         Hash Cond: (er.reserved_by = s.staff_id)
+         Buffers: shared hit=544
+         ->  Hash Join  (cost=575.54..2497.26 rows=5240 width=82) (actual time=3.271..3.489 rows=389.00 loops=1)
+               Hash Cond: (er.project_id = p.project_id)
+               Buffers: shared hit=528
+               ->  Hash Join  (cost=145.54..2053.49 rows=5240 width=61) (actual time=2.169..2.351 rows=389.00 loops=1)
+                     Hash Cond: (er.equipment_id = e.equipment_id)
+                     Buffers: shared hit=323
+                     ->  Index Only Scan using ix_reservation_blocking_start on equipment_reservation er  (cost=0.42..1853.31 rows=20958 width=28) (actual time=1.801..1.890 rows=1572.00 loops=1)
+                           Index Cond: (start_at < '2026-07-08 00:00:00+01'::timestamp with time zone)
+                           Filter: (end_at > '2026-07-01 00:00:00+01'::timestamp with time zone)
+                           Rows Removed by Filter: 40206
+                           Heap Fetches: 26
+                           Index Searches: 1
+                           Buffers: shared hit=256
+                     ->  Hash  (cost=129.50..129.50 rows=1250 width=41) (actual time=0.357..0.357 rows=1250.00 loops=1)
+                           Buckets: 2048  Batches: 1  Memory Usage: 108kB
+                           Buffers: shared hit=67
+                           ->  Seq Scan on equipment e  (cost=0.00..129.50 rows=1250 width=41) (actual time=0.001..0.240 rows=1250.00 loops=1)
+                                 Filter: ((equipment_type)::text = 'camera'::text)
+                                 Rows Removed by Filter: 3750
+                                 Buffers: shared hit=67
+               ->  Hash  (cost=305.00..305.00 rows=10000 width=29) (actual time=1.100..1.100 rows=10000.00 loops=1)
+                     Buckets: 16384  Batches: 1  Memory Usage: 753kB
+                     Buffers: shared hit=205
+                     ->  Seq Scan on project p  (cost=0.00..305.00 rows=10000 width=29) (actual time=0.001..0.472 rows=10000.00 loops=1)
+                           Buffers: shared hit=205
+         ->  Hash  (cost=26.00..26.00 rows=1000 width=22) (actual time=0.126..0.126 rows=1000.00 loops=1)
+               Buckets: 1024  Batches: 1  Memory Usage: 63kB
+               Buffers: shared hit=16
+               ->  Seq Scan on staff s  (cost=0.00..26.00 rows=1000 width=22) (actual time=0.002..0.050 rows=1000.00 loops=1)
+                     Buffers: shared hit=16
+ Planning:
+   Buffers: shared hit=15
+ Planning Time: 0.135 ms
+ Execution Time: 3.765 ms
+(41 rows)
+

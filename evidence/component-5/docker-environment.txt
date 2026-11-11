@@ -1,0 +1,1 @@
+kernel=7.0.12-linuxkit arch=aarch64 cpus=10 memory_bytes=8319504384

@@ -1,0 +1,43 @@
+Timing is on.
+SET
+Time: 0.088 ms
+SET
+Time: 0.020 ms
+SET
+Time: 0.015 ms
+ session_b_pid |       session_b_started       
+---------------+-------------------------------
+         22674 | 2026-11-10 18:04:13.759868+01
+(1 row)
+
+Time: 0.217 ms
+BEGIN
+Time: 0.018 ms
+   blocked_insert_attempted    
+-------------------------------
+ 2026-11-10 18:04:13.759967+01
+(1 row)
+
+Time: 0.022 ms
+INSERT 0 1
+Time: 4479.548 ms (00:04.480)
+ reservation_id |  status   
+----------------+-----------
+        -300004 | confirmed
+(1 row)
+
+Time: 1.100 ms
+ insert_completed_after_a_rollback 
+-----------------------------------
+ 2026-11-10 18:04:18.241286+01
+(1 row)
+
+Time: 0.127 ms
+ROLLBACK
+Time: 0.287 ms
+ session_b_record_after_rollback 
+---------------------------------
+                               0
+(1 row)
+
+Time: 3.471 ms

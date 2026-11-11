@@ -1,0 +1,6 @@
+ Container mit8103-c5-keyfile-init Starting 
+ Container mit8103-c5-keyfile-init Started 
+ Container mit8103-c5-keyfile-init Waiting 
+ Container mit8103-c5-keyfile-init Exited 
+ Container mit8103-c5-mongo1 Starting 
+ Container mit8103-c5-mongo1 Started 

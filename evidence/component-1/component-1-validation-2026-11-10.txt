@@ -1,0 +1,66 @@
+MIT8103 Component 1 database validation
+Date: 2026-11-10 (Africa/Lagos)
+Database: mit8103_media_portfolio
+Server: PostgreSQL 18.4 (Postgres.app), Apple Silicon
+
+Schema execution command:
+psql --dbname=mit8103_media_portfolio --no-psqlrc --set=ON_ERROR_STOP=1 --file=component-1-design/sql/001_schema_draft.sql
+
+Schema execution output:
+BEGIN
+CREATE EXTENSION
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE FUNCTION
+CREATE TRIGGER
+COMMIT
+
+Validation command:
+psql --dbname=mit8103_media_portfolio --no-psqlrc --set=ON_ERROR_STOP=1 --file=component-1-design/sql/002_validation_tests.sql
+
+Final validation results:
+              test_name               | outcome |                            detail
+--------------------------------------+---------+---------------------------------------------------------------
+ 01 seven application tables          | PASS    | expected 7, found 7
+ 02 primary keys                      | PASS    | expected 7, found 7
+ 03 foreign keys                      | PASS    | expected 8, found 8
+ 04 multiple NULL staff emails        | PASS    | two staff rows with NULL email inserted successfully
+ 05 case-insensitive email uniqueness | PASS    | email differing only by case was rejected
+ 06 inactive staff trigger            | PASS    | inactive staff member was rejected with SQLSTATE 23514
+ 07 pending overlap                   | PASS    | overlapping pending reservations were accepted
+ 08 blocking overlap                  | PASS    | overlapping confirmed/checked-out reservation was rejected
+ 09 back-to-back confirmed            | PASS    | reservation starting at the prior end time was accepted
+ 10 historical statuses non-blocking  | PASS    | overlapping cancelled and returned reservations were accepted
+ 11 historical delete restriction     | PASS    | referenced client deletion was rejected
+(11 rows)
+
+ passed | failed | total
+--------+--------+-------
+     11 |      0 |    11
+(1 row)
+
+ROLLBACK
+
+Post-validation audit:
+- Seven public application tables present.
+- Seven primary keys and eight foreign keys present.
+- btree_gist present in the isolated project database.
+- uq_staff_email_ci is a unique lower(email) partial index for non-NULL values.
+- ex_reservation_no_active_overlap is present.
+- trg_reservation_staff_active is present.
+- All seven application tables contained zero rows after test rollback.
+
+Test-harness note:
+The first validation attempt reached the historical deletion test but its
+exception handler expected foreign_key_violation. PostgreSQL ON DELETE RESTRICT
+raised the broader integrity constraint exception, so the transaction aborted
+and was automatically rolled back. The handler was corrected to
+integrity_constraint_violation and explicit repeatable test identifiers were
+added. The final complete run above passed 11 of 11 checks and rolled back.
+

@@ -1,0 +1,4 @@
+ Container mit8103-component4-mongodb Recreate 
+ Container mit8103-component4-mongodb Recreated 
+ Container mit8103-component4-mongodb Starting 
+ Container mit8103-component4-mongodb Started 

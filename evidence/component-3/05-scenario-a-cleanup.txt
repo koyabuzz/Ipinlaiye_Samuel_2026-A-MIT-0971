@@ -1,0 +1,8 @@
+BEGIN
+DELETE 1
+COMMIT
+ reservation_minus_300001_after_cleanup 
+----------------------------------------
+                                      0
+(1 row)
+

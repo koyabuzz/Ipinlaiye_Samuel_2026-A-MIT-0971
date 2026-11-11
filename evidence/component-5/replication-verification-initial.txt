@@ -1,0 +1,250 @@
+--- mongo1 ---
+{
+  hello: {
+    topologyVersion: {
+      processId: ObjectId('6af4145812d2c9b2ee00cddf'),
+      counter: Long('6')
+    },
+    hosts: [
+      'mongo1:27017',
+      'mongo2:27017',
+      'mongo3:27017'
+    ],
+    setName: 'rs0',
+    setVersion: 1,
+    isWritablePrimary: true,
+    secondary: false,
+    primary: 'mongo1:27017',
+    me: 'mongo1:27017',
+    electionId: ObjectId('7fffffff0000000000000001'),
+    lastWrite: {
+      opTime: {
+        ts: Timestamp({ t: 1794380944, i: 2 }),
+        t: Long('1')
+      },
+      lastWriteDate: ISODate('2026-11-11T07:09:04.000Z'),
+      majorityOpTime: {
+        ts: Timestamp({ t: 1794380944, i: 2 }),
+        t: Long('1')
+      },
+      majorityWriteDate: ISODate('2026-11-11T07:09:04.000Z')
+    },
+    maxBsonObjectSize: 16777216,
+    maxMessageSizeBytes: 48000000,
+    maxWriteBatchSize: 100000,
+    localTime: ISODate('2026-11-11T07:09:05.850Z'),
+    logicalSessionTimeoutMinutes: 30,
+    connectionId: 113,
+    minWireVersion: 0,
+    maxWireVersion: 27,
+    readOnly: false,
+    ok: 1,
+    '$clusterTime': {
+      clusterTime: Timestamp({ t: 1794380944, i: 2 }),
+      signature: {
+        hash: Binary.createFromBase64('0vxT5tFM1pPquATKNFcc2B5WDwk=', 0),
+        keyId: Long('7706807363671425029')
+      }
+    },
+    operationTime: Timestamp({ t: 1794380944, i: 2 })
+  },
+  count: 30,
+  ids: [
+    'DPRJ-0001',
+    'DPRJ-0002',
+    'DPRJ-0003',
+    'DPRJ-0004',
+    'DPRJ-0005',
+    'DPRJ-0006',
+    'DPRJ-0007',
+    'DPRJ-0008',
+    'DPRJ-0009',
+    'DPRJ-0010',
+    'DPRJ-0011',
+    'DPRJ-0012',
+    'DPRJ-0013',
+    'DPRJ-0014',
+    'DPRJ-0015',
+    'DPRJ-0016',
+    'DPRJ-0017',
+    'DPRJ-0018',
+    'DPRJ-0019',
+    'DPRJ-0020',
+    'DPRJ-0021',
+    'DPRJ-0022',
+    'DPRJ-0023',
+    'DPRJ-0024',
+    'DPRJ-0025',
+    'DPRJ-0026',
+    'DPRJ-0027',
+    'DPRJ-0028',
+    'DPRJ-0029',
+    'DPRJ-0030'
+  ]
+}
+--- mongo2 ---
+{
+  hello: {
+    topologyVersion: {
+      processId: ObjectId('6af41458e95548ba8b65c6c9'),
+      counter: Long('4')
+    },
+    hosts: [
+      'mongo1:27017',
+      'mongo2:27017',
+      'mongo3:27017'
+    ],
+    setName: 'rs0',
+    setVersion: 1,
+    isWritablePrimary: false,
+    secondary: true,
+    primary: 'mongo1:27017',
+    me: 'mongo2:27017',
+    lastWrite: {
+      opTime: {
+        ts: Timestamp({ t: 1794380944, i: 2 }),
+        t: Long('1')
+      },
+      lastWriteDate: ISODate('2026-11-11T07:09:04.000Z'),
+      majorityOpTime: {
+        ts: Timestamp({ t: 1794380944, i: 2 }),
+        t: Long('1')
+      },
+      majorityWriteDate: ISODate('2026-11-11T07:09:04.000Z')
+    },
+    maxBsonObjectSize: 16777216,
+    maxMessageSizeBytes: 48000000,
+    maxWriteBatchSize: 100000,
+    localTime: ISODate('2026-11-11T07:09:06.222Z'),
+    logicalSessionTimeoutMinutes: 30,
+    connectionId: 73,
+    minWireVersion: 0,
+    maxWireVersion: 27,
+    readOnly: false,
+    ok: 1,
+    '$clusterTime': {
+      clusterTime: Timestamp({ t: 1794380944, i: 2 }),
+      signature: {
+        hash: Binary.createFromBase64('0vxT5tFM1pPquATKNFcc2B5WDwk=', 0),
+        keyId: Long('7706807363671425029')
+      }
+    },
+    operationTime: Timestamp({ t: 1794380944, i: 2 })
+  },
+  count: 30,
+  ids: [
+    'DPRJ-0001',
+    'DPRJ-0002',
+    'DPRJ-0003',
+    'DPRJ-0004',
+    'DPRJ-0005',
+    'DPRJ-0006',
+    'DPRJ-0007',
+    'DPRJ-0008',
+    'DPRJ-0009',
+    'DPRJ-0010',
+    'DPRJ-0011',
+    'DPRJ-0012',
+    'DPRJ-0013',
+    'DPRJ-0014',
+    'DPRJ-0015',
+    'DPRJ-0016',
+    'DPRJ-0017',
+    'DPRJ-0018',
+    'DPRJ-0019',
+    'DPRJ-0020',
+    'DPRJ-0021',
+    'DPRJ-0022',
+    'DPRJ-0023',
+    'DPRJ-0024',
+    'DPRJ-0025',
+    'DPRJ-0026',
+    'DPRJ-0027',
+    'DPRJ-0028',
+    'DPRJ-0029',
+    'DPRJ-0030'
+  ]
+}
+--- mongo3 ---
+{
+  hello: {
+    topologyVersion: {
+      processId: ObjectId('6af41458421f1f27d6392304'),
+      counter: Long('4')
+    },
+    hosts: [
+      'mongo1:27017',
+      'mongo2:27017',
+      'mongo3:27017'
+    ],
+    setName: 'rs0',
+    setVersion: 1,
+    isWritablePrimary: false,
+    secondary: true,
+    primary: 'mongo1:27017',
+    me: 'mongo3:27017',
+    lastWrite: {
+      opTime: {
+        ts: Timestamp({ t: 1794380944, i: 2 }),
+        t: Long('1')
+      },
+      lastWriteDate: ISODate('2026-11-11T07:09:04.000Z'),
+      majorityOpTime: {
+        ts: Timestamp({ t: 1794380944, i: 2 }),
+        t: Long('1')
+      },
+      majorityWriteDate: ISODate('2026-11-11T07:09:04.000Z')
+    },
+    maxBsonObjectSize: 16777216,
+    maxMessageSizeBytes: 48000000,
+    maxWriteBatchSize: 100000,
+    localTime: ISODate('2026-11-11T07:09:06.595Z'),
+    logicalSessionTimeoutMinutes: 30,
+    connectionId: 72,
+    minWireVersion: 0,
+    maxWireVersion: 27,
+    readOnly: false,
+    ok: 1,
+    '$clusterTime': {
+      clusterTime: Timestamp({ t: 1794380944, i: 2 }),
+      signature: {
+        hash: Binary.createFromBase64('0vxT5tFM1pPquATKNFcc2B5WDwk=', 0),
+        keyId: Long('7706807363671425029')
+      }
+    },
+    operationTime: Timestamp({ t: 1794380944, i: 2 })
+  },
+  count: 30,
+  ids: [
+    'DPRJ-0001',
+    'DPRJ-0002',
+    'DPRJ-0003',
+    'DPRJ-0004',
+    'DPRJ-0005',
+    'DPRJ-0006',
+    'DPRJ-0007',
+    'DPRJ-0008',
+    'DPRJ-0009',
+    'DPRJ-0010',
+    'DPRJ-0011',
+    'DPRJ-0012',
+    'DPRJ-0013',
+    'DPRJ-0014',
+    'DPRJ-0015',
+    'DPRJ-0016',
+    'DPRJ-0017',
+    'DPRJ-0018',
+    'DPRJ-0019',
+    'DPRJ-0020',
+    'DPRJ-0021',
+    'DPRJ-0022',
+    'DPRJ-0023',
+    'DPRJ-0024',
+    'DPRJ-0025',
+    'DPRJ-0026',
+    'DPRJ-0027',
+    'DPRJ-0028',
+    'DPRJ-0029',
+    'DPRJ-0030'
+  ]
+}

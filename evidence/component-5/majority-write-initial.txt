@@ -1,0 +1,11 @@
+{
+  acknowledged: true,
+  insertedCount: 30,
+  firstId: 'DPRJ-0001',
+  lastId: 'DPRJ-0030',
+  writeConcern: {
+    w: 'majority',
+    wtimeout: 10000
+  },
+  count: 30
+}

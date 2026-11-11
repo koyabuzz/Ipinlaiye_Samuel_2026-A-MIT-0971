@@ -1,0 +1,6 @@
+{
+  operation: 'rs.initiate',
+  result: {
+    ok: 1
+  }
+}

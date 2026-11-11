@@ -1,0 +1,82 @@
+name: mit8103-component5
+
+x-mongo-common: &mongo-common
+  image: mongo:8.2.12-noble
+  restart: "no"
+  command: ["mongod", "--replSet", "rs0", "--keyFile", "/run/mongo-keyfile/keyfile", "--bind_ip_all"]
+  environment:
+    MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME}
+    MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+    MONGO_INITDB_DATABASE: media_distributed
+  networks: [replica_net]
+  mem_limit: 768m
+  depends_on:
+    keyfile-init:
+      condition: service_completed_successfully
+  healthcheck:
+    test:
+      - CMD-SHELL
+      - >-
+        mongosh --quiet --host 127.0.0.1
+        --username "$${MONGO_INITDB_ROOT_USERNAME}"
+        --password "$${MONGO_INITDB_ROOT_PASSWORD}"
+        --authenticationDatabase admin
+        --eval 'quit(db.adminCommand({ping:1}).ok ? 0 : 2)'
+    interval: 5s
+    timeout: 5s
+    retries: 18
+    start_period: 15s
+
+services:
+  keyfile-init:
+    image: mongo:8.2.12-noble
+    container_name: mit8103-c5-keyfile-init
+    restart: "no"
+    command: ["sh", "-c", "cp /source/replica-keyfile /target/keyfile && chown 999:999 /target/keyfile && chmod 400 /target/keyfile"]
+    volumes:
+      - ./secrets/replica-keyfile:/source/replica-keyfile:ro
+      - keyfile_data:/target
+    networks: [replica_net]
+
+  mongo1:
+    <<: *mongo-common
+    container_name: mit8103-c5-mongo1
+    hostname: mongo1
+    volumes:
+      - mongo1_data:/data/db
+      - keyfile_data:/run/mongo-keyfile:ro
+      - ./mongodb:/scripts:ro
+
+  mongo2:
+    <<: *mongo-common
+    container_name: mit8103-c5-mongo2
+    hostname: mongo2
+    volumes:
+      - mongo2_data:/data/db
+      - keyfile_data:/run/mongo-keyfile:ro
+      - ./mongodb:/scripts:ro
+
+  mongo3:
+    <<: *mongo-common
+    container_name: mit8103-c5-mongo3
+    hostname: mongo3
+    volumes:
+      - mongo3_data:/data/db
+      - keyfile_data:/run/mongo-keyfile:ro
+      - ./mongodb:/scripts:ro
+
+networks:
+  replica_net:
+    name: mit8103_c5_replica_net
+    internal: true
+
+volumes:
+  keyfile_data:
+    name: mit8103_c5_keyfile
+  mongo1_data:
+    name: mit8103_c5_mongo1_data
+  mongo2_data:
+    name: mit8103_c5_mongo2_data
+  mongo3_data:
+    name: mit8103_c5_mongo3_data
+

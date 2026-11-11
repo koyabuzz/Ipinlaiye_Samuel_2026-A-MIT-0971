@@ -1,0 +1,5 @@
+NAME                      IMAGE                COMMAND                  SERVICE        CREATED         STATUS                     PORTS
+mit8103-c5-keyfile-init   mongo:8.2.12-noble   "docker-entrypoint.s…"   keyfile-init   8 seconds ago   Exited (0) 7 seconds ago   
+mit8103-c5-mongo1         mongo:8.2.12-noble   "docker-entrypoint.s…"   mongo1         8 seconds ago   Up 6 seconds (healthy)     27017/tcp
+mit8103-c5-mongo2         mongo:8.2.12-noble   "docker-entrypoint.s…"   mongo2         8 seconds ago   Up 6 seconds (healthy)     27017/tcp
+mit8103-c5-mongo3         mongo:8.2.12-noble   "docker-entrypoint.s…"   mongo3         8 seconds ago   Up 6 seconds (healthy)     27017/tcp

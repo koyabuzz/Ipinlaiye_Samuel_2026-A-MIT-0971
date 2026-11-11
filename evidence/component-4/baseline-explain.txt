@@ -1,0 +1,195 @@
+{
+  explainVersion: '1',
+  queryPlanner: {
+    namespace: 'media_portfolio.mediaAssets',
+    parsedQuery: {
+      '$and': [
+        {
+          status: {
+            '$eq': 'review'
+          }
+        },
+        {
+          createdAt: {
+            '$lt': ISODate('2026-04-01T00:00:00.000Z')
+          }
+        },
+        {
+          createdAt: {
+            '$gte': ISODate('2026-01-01T00:00:00.000Z')
+          }
+        }
+      ]
+    },
+    indexFilterSet: false,
+    queryHash: '09DE0136',
+    planCacheShapeHash: '09DE0136',
+    planCacheKey: '4CE2B07F',
+    optimizationTimeMillis: 0,
+    maxIndexedOrSolutionsReached: false,
+    maxIndexedAndSolutionsReached: false,
+    maxScansToExplodeReached: false,
+    prunedSimilarIndexes: false,
+    winningPlan: {
+      isCached: false,
+      stage: 'SORT',
+      sortPattern: {
+        createdAt: -1
+      },
+      memLimit: 104857600,
+      type: 'simple',
+      inputStage: {
+        stage: 'PROJECTION_SIMPLE',
+        transformBy: {
+          projectId: 1,
+          status: 1,
+          createdAt: 1
+        },
+        inputStage: {
+          stage: 'COLLSCAN',
+          filter: {
+            '$and': [
+              {
+                status: {
+                  '$eq': 'review'
+                }
+              },
+              {
+                createdAt: {
+                  '$lt': ISODate('2026-04-01T00:00:00.000Z')
+                }
+              },
+              {
+                createdAt: {
+                  '$gte': ISODate('2026-01-01T00:00:00.000Z')
+                }
+              }
+            ]
+          },
+          direction: 'forward'
+        }
+      }
+    },
+    rejectedPlans: []
+  },
+  executionStats: {
+    executionSuccess: true,
+    nReturned: 554,
+    executionTimeMillis: 5,
+    totalKeysExamined: 0,
+    totalDocsExamined: 10000,
+    executionStages: {
+      isCached: false,
+      stage: 'SORT',
+      nReturned: 554,
+      executionTimeMillisEstimate: 1,
+      works: 10556,
+      advanced: 554,
+      needTime: 10001,
+      needYield: 0,
+      saveState: 0,
+      restoreState: 0,
+      isEOF: 1,
+      sortPattern: {
+        createdAt: -1
+      },
+      memLimit: 104857600,
+      type: 'simple',
+      totalDataSizeSorted: 65926,
+      usedDisk: false,
+      spills: 0,
+      spilledRecords: 0,
+      spilledBytes: 0,
+      spilledDataStorageSize: 0,
+      inputStage: {
+        stage: 'PROJECTION_SIMPLE',
+        nReturned: 554,
+        executionTimeMillisEstimate: 1,
+        works: 10001,
+        advanced: 554,
+        needTime: 9446,
+        needYield: 0,
+        saveState: 0,
+        restoreState: 0,
+        isEOF: 1,
+        transformBy: {
+          projectId: 1,
+          status: 1,
+          createdAt: 1
+        },
+        inputStage: {
+          stage: 'COLLSCAN',
+          filter: {
+            '$and': [
+              {
+                status: {
+                  '$eq': 'review'
+                }
+              },
+              {
+                createdAt: {
+                  '$lt': ISODate('2026-04-01T00:00:00.000Z')
+                }
+              },
+              {
+                createdAt: {
+                  '$gte': ISODate('2026-01-01T00:00:00.000Z')
+                }
+              }
+            ]
+          },
+          nReturned: 554,
+          executionTimeMillisEstimate: 0,
+          works: 10001,
+          advanced: 554,
+          needTime: 9446,
+          needYield: 0,
+          saveState: 0,
+          restoreState: 0,
+          isEOF: 1,
+          direction: 'forward',
+          docsExamined: 10000
+        }
+      }
+    }
+  },
+  queryShapeHash: '9B9D299A6FB60645CF6F8B6AEF4D0E4CD44EC0D5D739B34826F203506E0992A6',
+  command: {
+    find: 'mediaAssets',
+    filter: {
+      status: 'review',
+      createdAt: {
+        '$gte': ISODate('2026-01-01T00:00:00.000Z'),
+        '$lt': ISODate('2026-04-01T00:00:00.000Z')
+      }
+    },
+    sort: {
+      createdAt: -1
+    },
+    projection: {
+      projectId: 1,
+      status: 1,
+      createdAt: 1
+    },
+    '$db': 'media_portfolio'
+  },
+  serverInfo: {
+    host: '18b43e2473e5',
+    port: 27017,
+    version: '8.2.12',
+    gitVersion: '0f912e80210b8fdfdcec618b14b6c0fced055cb8'
+  },
+  serverParameters: {
+    internalQueryFacetBufferSizeBytes: 104857600,
+    internalQueryFacetMaxOutputDocSizeBytes: 104857600,
+    internalLookupStageIntermediateDocumentMaxSizeBytes: 104857600,
+    internalDocumentSourceGroupMaxMemoryBytes: 104857600,
+    internalQueryMaxBlockingSortMemoryUsageBytes: 104857600,
+    internalQueryProhibitBlockingMergeOnMongoS: 0,
+    internalQueryMaxAddToSetBytes: 104857600,
+    internalDocumentSourceSetWindowFieldsMaxMemoryBytes: 104857600,
+    internalQueryFrameworkControl: 'trySbeRestricted',
+    internalQueryPlannerIgnoreIndexWithCollationForRegex: 1
+  },
+  ok: 1
+}

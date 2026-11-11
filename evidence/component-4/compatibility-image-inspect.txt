@@ -1,0 +1,1 @@
+tag=mongo:8.2.12-noble image_id=sha256:dc23b0dde2221277b581dd76933f39f8a765fee9dbd99b9deb19184c063c061f repo_digests=["mongo@sha256:dc23b0dde2221277b581dd76933f39f8a765fee9dbd99b9deb19184c063c061f"] architecture=arm64 os=linux

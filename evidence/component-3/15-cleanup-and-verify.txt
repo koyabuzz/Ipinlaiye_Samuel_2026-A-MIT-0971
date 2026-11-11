@@ -1,0 +1,47 @@
+SET
+SET
+BEGIN
+DELETE 0
+DELETE 0
+DELETE 0
+DELETE 0
+DELETE 1
+DELETE 1
+DELETE 0
+DELETE 0
+COMMIT
+ object_type | test_id 
+-------------+---------
+(0 rows)
+
+      table_name       |  rows  
+-----------------------+--------
+ client                |    500
+ staff                 |   1000
+ equipment             |   5000
+ project               |  10000
+ project_assignment    |  50000
+ equipment_reservation | 200000
+ media_asset           | 500000
+(7 rows)
+
+               indexname               
+---------------------------------------
+ ix_assignment_staff_dates_project
+ ix_media_asset_review_created_project
+ ix_reservation_blocking_start
+(3 rows)
+
+             conname              
+----------------------------------
+ ex_reservation_no_active_overlap
+ fk_reservation_equipment
+ fk_reservation_project
+ fk_reservation_staff
+(4 rows)
+
+            tgname            
+------------------------------
+ trg_reservation_staff_active
+(1 row)
+

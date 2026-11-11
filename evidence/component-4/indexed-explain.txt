@@ -1,0 +1,200 @@
+{
+  explainVersion: '1',
+  queryPlanner: {
+    namespace: 'media_portfolio.mediaAssets',
+    parsedQuery: {
+      '$and': [
+        {
+          status: {
+            '$eq': 'review'
+          }
+        },
+        {
+          createdAt: {
+            '$lt': ISODate('2026-04-01T00:00:00.000Z')
+          }
+        },
+        {
+          createdAt: {
+            '$gte': ISODate('2026-01-01T00:00:00.000Z')
+          }
+        }
+      ]
+    },
+    indexFilterSet: false,
+    queryHash: '09DE0136',
+    planCacheShapeHash: '09DE0136',
+    planCacheKey: 'FA9B4A4E',
+    optimizationTimeMillis: 1,
+    maxIndexedOrSolutionsReached: false,
+    maxIndexedAndSolutionsReached: false,
+    maxScansToExplodeReached: false,
+    prunedSimilarIndexes: false,
+    winningPlan: {
+      isCached: false,
+      stage: 'PROJECTION_SIMPLE',
+      transformBy: {
+        projectId: 1,
+        status: 1,
+        createdAt: 1
+      },
+      inputStage: {
+        stage: 'FETCH',
+        inputStage: {
+          stage: 'IXSCAN',
+          keyPattern: {
+            status: 1,
+            createdAt: -1,
+            projectId: 1
+          },
+          indexName: 'ix_asset_status_created_project',
+          isMultiKey: false,
+          multiKeyPaths: {
+            status: [],
+            createdAt: [],
+            projectId: []
+          },
+          isUnique: false,
+          isSparse: false,
+          isPartial: false,
+          indexVersion: 2,
+          direction: 'forward',
+          indexBounds: {
+            status: [
+              '["review", "review"]'
+            ],
+            createdAt: [
+              '(new Date(1775001600000), new Date(1767225600000)]'
+            ],
+            projectId: [
+              '[MinKey, MaxKey]'
+            ]
+          }
+        }
+      }
+    },
+    rejectedPlans: []
+  },
+  executionStats: {
+    executionSuccess: true,
+    nReturned: 554,
+    executionTimeMillis: 4,
+    totalKeysExamined: 554,
+    totalDocsExamined: 554,
+    executionStages: {
+      isCached: false,
+      stage: 'PROJECTION_SIMPLE',
+      nReturned: 554,
+      executionTimeMillisEstimate: 3,
+      works: 555,
+      advanced: 554,
+      needTime: 0,
+      needYield: 0,
+      saveState: 0,
+      restoreState: 0,
+      isEOF: 1,
+      transformBy: {
+        projectId: 1,
+        status: 1,
+        createdAt: 1
+      },
+      inputStage: {
+        stage: 'FETCH',
+        nReturned: 554,
+        executionTimeMillisEstimate: 3,
+        works: 555,
+        advanced: 554,
+        needTime: 0,
+        needYield: 0,
+        saveState: 0,
+        restoreState: 0,
+        isEOF: 1,
+        docsExamined: 554,
+        alreadyHasObj: 0,
+        inputStage: {
+          stage: 'IXSCAN',
+          nReturned: 554,
+          executionTimeMillisEstimate: 3,
+          works: 555,
+          advanced: 554,
+          needTime: 0,
+          needYield: 0,
+          saveState: 0,
+          restoreState: 0,
+          isEOF: 1,
+          keyPattern: {
+            status: 1,
+            createdAt: -1,
+            projectId: 1
+          },
+          indexName: 'ix_asset_status_created_project',
+          isMultiKey: false,
+          multiKeyPaths: {
+            status: [],
+            createdAt: [],
+            projectId: []
+          },
+          isUnique: false,
+          isSparse: false,
+          isPartial: false,
+          indexVersion: 2,
+          direction: 'forward',
+          indexBounds: {
+            status: [
+              '["review", "review"]'
+            ],
+            createdAt: [
+              '(new Date(1775001600000), new Date(1767225600000)]'
+            ],
+            projectId: [
+              '[MinKey, MaxKey]'
+            ]
+          },
+          keysExamined: 554,
+          seeks: 1,
+          dupsTested: 0,
+          dupsDropped: 0
+        }
+      }
+    }
+  },
+  queryShapeHash: '9B9D299A6FB60645CF6F8B6AEF4D0E4CD44EC0D5D739B34826F203506E0992A6',
+  command: {
+    find: 'mediaAssets',
+    filter: {
+      status: 'review',
+      createdAt: {
+        '$gte': ISODate('2026-01-01T00:00:00.000Z'),
+        '$lt': ISODate('2026-04-01T00:00:00.000Z')
+      }
+    },
+    sort: {
+      createdAt: -1
+    },
+    projection: {
+      projectId: 1,
+      status: 1,
+      createdAt: 1
+    },
+    '$db': 'media_portfolio'
+  },
+  serverInfo: {
+    host: '18b43e2473e5',
+    port: 27017,
+    version: '8.2.12',
+    gitVersion: '0f912e80210b8fdfdcec618b14b6c0fced055cb8'
+  },
+  serverParameters: {
+    internalQueryFacetBufferSizeBytes: 104857600,
+    internalQueryFacetMaxOutputDocSizeBytes: 104857600,
+    internalLookupStageIntermediateDocumentMaxSizeBytes: 104857600,
+    internalDocumentSourceGroupMaxMemoryBytes: 104857600,
+    internalQueryMaxBlockingSortMemoryUsageBytes: 104857600,
+    internalQueryProhibitBlockingMergeOnMongoS: 0,
+    internalQueryMaxAddToSetBytes: 104857600,
+    internalDocumentSourceSetWindowFieldsMaxMemoryBytes: 104857600,
+    internalQueryFrameworkControl: 'trySbeRestricted',
+    internalQueryPlannerIgnoreIndexWithCollationForRegex: 1
+  },
+  ok: 1
+}

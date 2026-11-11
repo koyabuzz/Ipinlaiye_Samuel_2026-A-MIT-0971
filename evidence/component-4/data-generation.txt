@@ -1,0 +1,7 @@
+{
+  projects: 200,
+  staff: 50,
+  mediaAssets: 10000,
+  equipment: 100,
+  equipmentReservations: 2000
+}

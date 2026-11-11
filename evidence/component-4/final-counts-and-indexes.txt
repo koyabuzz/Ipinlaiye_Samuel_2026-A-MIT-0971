@@ -1,0 +1,39 @@
+{
+  version: '8.2.12',
+  collections: [
+    'equipment',
+    'equipmentReservations',
+    'mediaAssets',
+    'projects',
+    'staff'
+  ],
+  counts: {
+    projects: 200,
+    staff: 50,
+    mediaAssets: 10000,
+    equipment: 100,
+    equipmentReservations: 2000
+  },
+  indexes: {
+    projects: [
+      '_id_',
+      'ix_project_status_type_start'
+    ],
+    staff: [
+      '_id_',
+      'uq_staff_email'
+    ],
+    mediaAssets: [
+      '_id_',
+      'ix_asset_status_created_project'
+    ],
+    equipment: [
+      '_id_',
+      'uq_equipment_asset_tag'
+    ],
+    equipmentReservations: [
+      '_id_',
+      'ix_reservation_equipment_period'
+    ]
+  }
+}

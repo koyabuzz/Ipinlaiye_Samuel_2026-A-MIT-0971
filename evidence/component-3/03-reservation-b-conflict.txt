@@ -1,0 +1,39 @@
+Timing is on.
+SET
+Time: 0.200 ms
+SET
+Time: 0.041 ms
+SET
+Time: 0.034 ms
+ session_b_pid |       session_b_started       
+---------------+-------------------------------
+         22596 | 2026-11-10 18:03:51.629242+01
+(1 row)
+
+Time: 0.501 ms
+BEGIN
+Time: 0.027 ms
+ conflicting_insert_attempted 
+------------------------------
+ 2026-11-10 18:03:51.62943+01
+(1 row)
+
+Time: 0.039 ms
+psql:component-3-transactions/sql/03_reservation_b_conflict.sql:13: ERROR:  23P01: conflicting key value violates exclusion constraint "ex_reservation_no_active_overlap"
+DETAIL:  Key (equipment_id, tstzrange(start_at, end_at, '[)'::text))=(1, ["2035-01-15 11:00:00+01","2035-01-15 13:00:00+01")) conflicts with existing key (equipment_id, tstzrange(start_at, end_at, '[)'::text))=(1, ["2035-01-15 10:00:00+01","2035-01-15 12:00:00+01")).
+SCHEMA NAME:  public
+TABLE NAME:  equipment_reservation
+CONSTRAINT NAME:  ex_reservation_no_active_overlap
+LOCATION:  check_exclusion_or_unique_constraint, execIndexing.c:937
+Time: 4492.230 ms (00:04.492)
+psql:component-3-transactions/sql/03_reservation_b_conflict.sql:14: ERROR:  25P02: current transaction is aborted, commands ignored until end of transaction block
+LOCATION:  exec_simple_query, postgres.c:1140
+Time: 2.133 ms
+ROLLBACK
+Time: 1.222 ms
+     session_b_rolled_back     
+-------------------------------
+ 2026-11-10 18:03:56.125832+01
+(1 row)
+
+Time: 1.504 ms

@@ -1,0 +1,45 @@
+name: mit8103-component4
+networks:
+  default:
+    name: mit8103-component4_default
+services:
+  mongodb:
+    container_name: mit8103-component4-mongodb
+    environment:
+      MONGO_INITDB_DATABASE: media_portfolio
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME}
+    healthcheck:
+      interval: 5s
+      retries: 12
+      start_period: 10s
+      test:
+        - CMD-SHELL
+        - 'mongosh --quiet --username "$${MONGO_INITDB_ROOT_USERNAME}" --password
+          "$${MONGO_INITDB_ROOT_PASSWORD}" --authenticationDatabase admin --eval ''quit(db.adminCommand({ping:1}).ok
+          ? 0 : 2)'''
+      timeout: 5s
+    image: mongo:8.2.12-noble
+    networks:
+      default: null
+    ports:
+      - host_ip: 127.0.0.1
+        mode: ingress
+        protocol: tcp
+        published: "27017"
+        target: 27017
+    restart: 'no'
+    volumes:
+      - source: mongo_data
+        target: /data/db
+        type: volume
+        volume: {}
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: /Users/koya/Desktop/MIT8103-Advanced-Database-Portfolio/component-4-nosql/mongodb
+        target: /scripts
+        type: bind
+volumes:
+  mongo_data:
+    name: mit8103_component4_mongo_data

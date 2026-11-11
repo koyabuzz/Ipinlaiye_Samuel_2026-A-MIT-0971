@@ -1,0 +1,1 @@
+status=running exit=0 started=2026-11-11T06:21:31.969182761Z finished=0001-01-01T00:00:00Z image=mongo:8.2.12-noble

@@ -1,0 +1,490 @@
+{
+  counts: {
+    projects: 200,
+    staff: 50,
+    mediaAssets: 10000,
+    equipment: 100,
+    equipmentReservations: 2000
+  },
+  total: 12350,
+  referenceFailures: {
+    missingAssetProjects: [],
+    missingAssetUploaders: [],
+    missingCrewStaff: [],
+    missingReservationProjects: [],
+    missingReservationEquipment: [],
+    missingReservationStaff: [],
+    inactiveReservationStaff: []
+  },
+  bounds: {
+    badCrew: 0,
+    badTags: 0,
+    badVersions: 0,
+    badReservationPeriods: 0
+  },
+  snapshotMismatches: [],
+  crudDemoRemaining: 0,
+  validators: [
+    {
+      name: 'equipment',
+      validator: {
+        '$jsonSchema': {
+          bsonType: 'object',
+          required: [
+            '_id',
+            'assetTag',
+            'name',
+            'type',
+            'condition',
+            'active'
+          ],
+          properties: {
+            _id: {
+              bsonType: 'string',
+              pattern: '^EQP-[0-9]{4}$'
+            },
+            assetTag: {
+              bsonType: 'string'
+            },
+            name: {
+              bsonType: 'string'
+            },
+            type: {
+              enum: [
+                'camera',
+                'lens',
+                'microphone',
+                'lighting'
+              ]
+            },
+            condition: {
+              enum: [
+                'good',
+                'fair',
+                'damaged',
+                'repair',
+                'retired'
+              ]
+            },
+            active: {
+              bsonType: 'bool'
+            }
+          }
+        }
+      },
+      validationLevel: 'strict',
+      validationAction: 'error'
+    },
+    {
+      name: 'equipmentReservations',
+      validator: {
+        '$jsonSchema': {
+          bsonType: 'object',
+          required: [
+            '_id',
+            'projectId',
+            'equipmentId',
+            'reservedByStaffId',
+            'startAt',
+            'endAt',
+            'status',
+            'displaySnapshot',
+            'createdAt'
+          ],
+          properties: {
+            _id: {
+              bsonType: 'string',
+              pattern: '^RES-[0-9]{6}$'
+            },
+            projectId: {
+              bsonType: 'string'
+            },
+            equipmentId: {
+              bsonType: 'string'
+            },
+            reservedByStaffId: {
+              bsonType: 'string'
+            },
+            startAt: {
+              bsonType: 'date'
+            },
+            endAt: {
+              bsonType: 'date'
+            },
+            status: {
+              enum: [
+                'pending',
+                'confirmed',
+                'checked_out',
+                'returned',
+                'cancelled'
+              ]
+            },
+            displaySnapshot: {
+              bsonType: 'object',
+              required: [
+                'projectName',
+                'equipmentName',
+                'reservedByName'
+              ]
+            },
+            createdAt: {
+              bsonType: 'date'
+            }
+          }
+        }
+      },
+      validationLevel: 'strict',
+      validationAction: 'error'
+    },
+    {
+      name: 'mediaAssets',
+      validator: {
+        '$jsonSchema': {
+          bsonType: 'object',
+          required: [
+            '_id',
+            'projectId',
+            'name',
+            'type',
+            'status',
+            'versions',
+            'currentVersion',
+            'createdAt'
+          ],
+          properties: {
+            _id: {
+              bsonType: 'string',
+              pattern: '^AST-[0-9]{6}$'
+            },
+            projectId: {
+              bsonType: 'string',
+              pattern: '^PRJ-[0-9]{4}$'
+            },
+            name: {
+              bsonType: 'string'
+            },
+            type: {
+              enum: [
+                'video',
+                'audio',
+                'image',
+                'document',
+                'other'
+              ]
+            },
+            status: {
+              enum: [
+                'raw',
+                'editing',
+                'review',
+                'approved',
+                'archived'
+              ]
+            },
+            versions: {
+              bsonType: 'array',
+              minItems: 1,
+              maxItems: 5,
+              items: {
+                bsonType: 'object',
+                required: [
+                  'version',
+                  'fileUri',
+                  'format',
+                  'fileSizeBytes',
+                  'uploadedBy',
+                  'createdAt'
+                ],
+                properties: {
+                  version: {
+                    bsonType: 'int',
+                    minimum: 1
+                  },
+                  fileSizeBytes: {
+                    bsonType: 'long',
+                    minimum: 0
+                  },
+                  durationSeconds: {
+                    bsonType: [
+                      'int',
+                      'null'
+                    ],
+                    minimum: 0
+                  },
+                  createdAt: {
+                    bsonType: 'date'
+                  }
+                }
+              }
+            },
+            currentVersion: {
+              bsonType: 'int',
+              minimum: 1,
+              maximum: 5
+            },
+            createdAt: {
+              bsonType: 'date'
+            }
+          }
+        }
+      },
+      validationLevel: 'strict',
+      validationAction: 'error'
+    },
+    {
+      name: 'projects',
+      validator: {
+        '$jsonSchema': {
+          bsonType: 'object',
+          required: [
+            '_id',
+            'name',
+            'type',
+            'status',
+            'client',
+            'schedule',
+            'crew',
+            'tags',
+            'createdAt',
+            'updatedAt'
+          ],
+          properties: {
+            _id: {
+              bsonType: 'string',
+              pattern: '^(PRJ-[0-9]{4}|PRJ-DEMO-001)$'
+            },
+            name: {
+              bsonType: 'string'
+            },
+            type: {
+              enum: [
+                'video',
+                'audio',
+                'photography',
+                'animation',
+                'other'
+              ]
+            },
+            status: {
+              enum: [
+                'planned',
+                'active',
+                'on_hold',
+                'completed',
+                'cancelled'
+              ]
+            },
+            client: {
+              bsonType: 'object',
+              required: [
+                'clientId',
+                'name',
+                'contact'
+              ]
+            },
+            schedule: {
+              bsonType: 'object',
+              required: [
+                'startDate'
+              ],
+              properties: {
+                startDate: {
+                  bsonType: 'date'
+                },
+                endDate: {
+                  bsonType: [
+                    'date',
+                    'null'
+                  ]
+                }
+              }
+            },
+            crew: {
+              bsonType: 'array',
+              maxItems: 12,
+              items: {
+                bsonType: 'object',
+                required: [
+                  'staffId',
+                  'displayName',
+                  'role',
+                  'assignedFrom'
+                ]
+              }
+            },
+            tags: {
+              bsonType: 'array',
+              maxItems: 8,
+              items: {
+                bsonType: 'string'
+              }
+            },
+            assetSummary: {
+              bsonType: 'object'
+            },
+            createdAt: {
+              bsonType: 'date'
+            },
+            updatedAt: {
+              bsonType: 'date'
+            }
+          }
+        }
+      },
+      validationLevel: 'strict',
+      validationAction: 'error'
+    },
+    {
+      name: 'staff',
+      validator: {
+        '$jsonSchema': {
+          bsonType: 'object',
+          required: [
+            '_id',
+            'firstName',
+            'lastName',
+            'email',
+            'jobTitle',
+            'employmentType',
+            'active'
+          ],
+          properties: {
+            _id: {
+              bsonType: 'string',
+              pattern: '^STF-[0-9]{4}$'
+            },
+            firstName: {
+              bsonType: 'string'
+            },
+            lastName: {
+              bsonType: 'string'
+            },
+            email: {
+              bsonType: 'string'
+            },
+            jobTitle: {
+              enum: [
+                'Producer',
+                'Director',
+                'Editor',
+                'Camera Operator',
+                'Sound Engineer'
+              ]
+            },
+            employmentType: {
+              enum: [
+                'employee',
+                'freelancer'
+              ]
+            },
+            active: {
+              bsonType: 'bool'
+            }
+          }
+        }
+      },
+      validationLevel: 'strict',
+      validationAction: 'error'
+    }
+  ]
+}
+PROJECT SAMPLE
+{
+  _id: 'PRJ-0001',
+  name: 'Media Project 0001',
+  type: 'video',
+  status: 'active',
+  description: 'Deterministic MongoDB project 1',
+  client: {
+    clientId: 'CLI-0001',
+    name: 'Client 1',
+    contact: {
+      name: 'Contact 1',
+      email: 'client1@example.test'
+    }
+  },
+  schedule: {
+    startDate: ISODate('2026-01-01T00:00:00.000Z'),
+    endDate: ISODate('2026-01-28T00:00:00.000Z')
+  },
+  crew: [
+    {
+      staffId: 'STF-0008',
+      displayName: 'Staff8 Surname8',
+      role: 'Producer',
+      assignedFrom: ISODate('2026-02-01T00:00:00.000Z'),
+      assignedUntil: null
+    },
+    {
+      staffId: 'STF-0019',
+      displayName: 'Staff19 Surname19',
+      role: 'Director',
+      assignedFrom: ISODate('2026-02-01T00:00:00.000Z'),
+      assignedUntil: null
+    },
+    {
+      staffId: 'STF-0030',
+      displayName: 'Staff30 Surname30',
+      role: 'Editor',
+      assignedFrom: ISODate('2026-02-01T00:00:00.000Z'),
+      assignedUntil: null
+    },
+    {
+      staffId: 'STF-0041',
+      displayName: 'Staff41 Surname41',
+      role: 'Camera Operator',
+      assignedFrom: ISODate('2026-02-01T00:00:00.000Z'),
+      assignedUntil: null
+    }
+  ],
+  tags: [
+    'synthetic',
+    'video'
+  ],
+  assetSummary: {
+    totalAssets: 50,
+    awaitingReview: 10,
+    totalBytes: Long('62500000000')
+  },
+  createdAt: ISODate('2025-12-02T00:00:00.000Z'),
+  updatedAt: ISODate('2026-01-02T00:00:00.000Z')
+}
+ASSET SAMPLE
+{
+  _id: 'AST-000001',
+  projectId: 'PRJ-0001',
+  name: 'Asset 1',
+  type: 'video',
+  status: 'raw',
+  versions: [
+    {
+      version: 1,
+      fileUri: 's3://simulated-mongo/PRJ-0001/AST-000001-v1.dat',
+      format: 'png',
+      fileSizeBytes: Long('1011000'),
+      durationSeconds: 31,
+      uploadedBy: 'STF-0013',
+      createdAt: ISODate('2026-01-03T00:00:00.000Z')
+    }
+  ],
+  currentVersion: 1,
+  createdAt: ISODate('2026-01-02T00:00:00.000Z')
+}
+RESERVATION SAMPLE
+{
+  _id: 'RES-000001',
+  projectId: 'PRJ-0007',
+  equipmentId: 'EQP-0001',
+  reservedByStaffId: 'STF-0017',
+  startAt: ISODate('2026-01-02T01:00:00.000Z'),
+  endAt: ISODate('2026-01-02T04:00:00.000Z'),
+  status: 'pending',
+  displaySnapshot: {
+    projectName: 'Media Project 0007',
+    equipmentName: 'Equipment 1',
+    reservedByName: 'Staff17 Surname17'
+  },
+  purpose: 'Synthetic MongoDB reservation 1',
+  createdAt: ISODate('2025-12-02T00:00:00.000Z')
+}

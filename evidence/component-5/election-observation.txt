@@ -1,0 +1,6 @@
+former_primary=mongo1
+stop_requested_at=2026-11-11T07:09:24Z
+ Container mit8103-c5-mongo1 Stopping 
+ Container mit8103-c5-mongo1 Stopped 
+attempt=1 time=2026-11-11T07:09:28Z mongo2=yes mongo3=no 
+new_primary=mongo2 elected_at=2026-11-11T07:09:28Z

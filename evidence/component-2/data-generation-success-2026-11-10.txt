@@ -1,0 +1,49 @@
+MIT8103 Component 2 corrected data generation
+Date: 2026-11-10 (Africa/Lagos)
+Database: mit8103_media_portfolio
+PostgreSQL: 18.4 (Postgres.app)
+
+Precondition safety check:
+client=0, project=0, staff=0, project_assignment=0, media_asset=0,
+equipment=0, equipment_reservation=0
+
+Corrected generator output summary:
+INSERT 0 500       -- client, 2.046 ms
+INSERT 0 1000      -- staff, 4.327 ms
+INSERT 0 10000     -- project, 58.318 ms
+INSERT 0 5000      -- equipment, 28.520 ms
+INSERT 0 50000     -- project_assignment, 482.945 ms
+INSERT 0 500000    -- media_asset, 7023.614 ms
+INSERT 0 200000    -- equipment_reservation, 3463.657 ms
+COMMIT              -- 0.167 ms
+ANALYZE             -- 388.398 ms
+
+Final counts:
+client=500
+project=10000
+staff=1000
+project_assignment=50000
+media_asset=500000
+equipment=5000
+equipment_reservation=200000
+total=766500
+
+Query-validation distribution correction:
+The first successful generation produced zero Query 1 groups because the asset
+status formula correlated every review asset with a non-active project. No
+constraint failed. Before benchmarking, the formula was changed to use the
+asset sequence independently of project_id, and the same deterministic formula
+was applied to the retained media_asset rows. ANALYZE was rerun.
+
+Final asset status counts:
+approved=100000
+archived=100000
+editing=100000
+raw=100000
+review=100000
+
+Final analytical query counts:
+Query 1 qualifying groups=1265 (top 50 displayed)
+Query 2 rows=900
+Query 3 rows=389
+

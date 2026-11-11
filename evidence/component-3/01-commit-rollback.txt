@@ -1,0 +1,52 @@
+Timing is on.
+SET
+Time: 1.708 ms
+SET
+Time: 0.028 ms
+SET
+Time: 0.021 ms
+ROLLBACK demonstration
+BEGIN
+Time: 0.016 ms
+INSERT 0 1
+Time: 1.179 ms
+ client_id |   client_name    
+-----------+------------------
+   -310001 | C3 Rollback Test
+(1 row)
+
+Time: 0.249 ms
+ROLLBACK
+Time: 0.363 ms
+ rollback_record_after_rollback 
+--------------------------------
+                              0
+(1 row)
+
+Time: 0.314 ms
+COMMIT demonstration
+BEGIN
+Time: 0.019 ms
+INSERT 0 1
+Time: 0.067 ms
+COMMIT
+Time: 0.306 ms
+ client_id |  client_name   
+-----------+----------------
+   -310002 | C3 Commit Test
+(1 row)
+
+Time: 0.049 ms
+Targeted cleanup of committed demonstration record
+BEGIN
+Time: 0.015 ms
+DELETE 1
+Time: 2.644 ms
+COMMIT
+Time: 0.073 ms
+ commit_record_after_cleanup 
+-----------------------------
+                           0
+(1 row)
+
+Time: 0.059 ms

@@ -1,0 +1,37 @@
+Timing is on.
+SET
+Time: 0.083 ms
+SET
+Time: 0.023 ms
+SET
+Time: 0.022 ms
+ session_a_pid |       session_a_started       
+---------------+-------------------------------
+         22592 | 2026-11-10 18:03:51.102569+01
+(1 row)
+
+Time: 4.220 ms
+BEGIN
+Time: 0.019 ms
+INSERT 0 1
+Time: 13.546 ms
+ inserted_and_holding_transaction 
+----------------------------------
+ 2026-11-10 18:03:51.1163+01
+(1 row)
+
+Time: 0.034 ms
+ pg_sleep 
+----------
+ 
+(1 row)
+
+Time: 5001.229 ms (00:05.001)
+COMMIT
+Time: 1.194 ms
+      session_a_committed      
+-------------------------------
+ 2026-11-10 18:03:56.119988+01
+(1 row)
+
+Time: 0.263 ms

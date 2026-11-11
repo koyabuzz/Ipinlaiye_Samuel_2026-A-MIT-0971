@@ -1,0 +1,101 @@
+{
+  set: 'rs0',
+  term: Long('1'),
+  myState: 1,
+  members: [
+    {
+      name: 'mongo1:27017',
+      state: 'PRIMARY',
+      health: 1,
+      self: true,
+      lastApplied: ISODate('2026-11-11T07:08:39.000Z')
+    },
+    {
+      name: 'mongo2:27017',
+      state: 'SECONDARY',
+      health: 1,
+      self: false,
+      lastApplied: ISODate('2026-11-11T07:08:28.000Z')
+    },
+    {
+      name: 'mongo3:27017',
+      state: 'SECONDARY',
+      health: 1,
+      self: false,
+      lastApplied: ISODate('2026-11-11T07:08:28.000Z')
+    }
+  ],
+  config: {
+    _id: 'rs0',
+    version: 1,
+    writeConcernMajorityJournalDefault: undefined,
+    members: [
+      {
+        _id: 0,
+        host: 'mongo1:27017',
+        priority: 2,
+        votes: 1
+      },
+      {
+        _id: 1,
+        host: 'mongo2:27017',
+        priority: 1,
+        votes: 1
+      },
+      {
+        _id: 2,
+        host: 'mongo3:27017',
+        priority: 1,
+        votes: 1
+      }
+    ]
+  },
+  hello: {
+    topologyVersion: {
+      processId: ObjectId('6af4145812d2c9b2ee00cddf'),
+      counter: Long('6')
+    },
+    hosts: [
+      'mongo1:27017',
+      'mongo2:27017',
+      'mongo3:27017'
+    ],
+    setName: 'rs0',
+    setVersion: 1,
+    isWritablePrimary: true,
+    secondary: false,
+    primary: 'mongo1:27017',
+    me: 'mongo1:27017',
+    electionId: ObjectId('7fffffff0000000000000001'),
+    lastWrite: {
+      opTime: {
+        ts: Timestamp({ t: 1794380919, i: 16 }),
+        t: Long('1')
+      },
+      lastWriteDate: ISODate('2026-11-11T07:08:39.000Z'),
+      majorityOpTime: {
+        ts: Timestamp({ t: 1794380919, i: 16 }),
+        t: Long('1')
+      },
+      majorityWriteDate: ISODate('2026-11-11T07:08:39.000Z')
+    },
+    maxBsonObjectSize: 16777216,
+    maxMessageSizeBytes: 48000000,
+    maxWriteBatchSize: 100000,
+    localTime: ISODate('2026-11-11T07:08:40.803Z'),
+    logicalSessionTimeoutMinutes: 30,
+    connectionId: 73,
+    minWireVersion: 0,
+    maxWireVersion: 27,
+    readOnly: false,
+    ok: 1,
+    '$clusterTime': {
+      clusterTime: Timestamp({ t: 1794380919, i: 16 }),
+      signature: {
+        hash: Binary.createFromBase64('ZwjA+78zqs4YTY5q0oF8pecOM0U=', 0),
+        keyId: Long('7706807363671425029')
+      }
+    },
+    operationTime: Timestamp({ t: 1794380919, i: 16 })
+  }
+}

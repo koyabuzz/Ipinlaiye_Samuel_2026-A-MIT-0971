@@ -1,0 +1,5 @@
+{
+  invalidDocumentRejected: true,
+  errorCode: 121,
+  remaining: 0
+}
