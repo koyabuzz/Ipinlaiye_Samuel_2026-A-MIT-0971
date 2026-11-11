@@ -50,7 +50,8 @@ indexes, without forcing planner choices.
 
 Query 1's median fell from **24.040 ms to 6.572 ms**. Its covering media-asset
 index changed a parallel sequential scan into an index-only scan and reduced
-median shared-buffer activity from 19,531 buffers to 367 hits. Query 2 changed
+root-level shared-buffer activity in the median-time plans from 19,531 buffer
+accesses (11,662 hits and 7,869 reads) to 367 hits. Query 2 changed
 from **17.116 ms to 17.795 ms**. PostgreSQL correctly retained a sequential scan
 because much of the assignment table was needed; its candidate index was unused,
 so this result is not presented as an improvement. Query 3's median fell from
@@ -148,9 +149,20 @@ authored by the student. The student is responsible for reviewing,
 understanding, and accurately presenting the submitted work in accordance with
 university policy.
 
-## PERSONAL REFLECTION — STUDENT TO COMPLETE
+## Personal Technical Reflection
 
-*Write a concise first-person reflection here after independently reviewing the
-scripts and evidence. Discuss what you learned, decisions you can justify,
-problems you encountered, and what you would improve. Do not submit this
-instructional placeholder as the finished reflection if reflection is required.*
+This portfolio strengthened my understanding of how database design decisions
+affect performance, consistency, and availability. Working with PostgreSQL
+demonstrated the importance of relational integrity, indexing, transaction
+isolation, and concurrency control. One particularly useful observation was that
+adding an index does not automatically improve query performance, as
+demonstrated by the staff workload query.
+
+The MongoDB exercises helped me understand the differences between relational
+and document-oriented data models. I also gained practical experience with
+distributed database replication, majority writes, primary elections, and
+failover. Resolving Docker and MongoDB compatibility issues reinforced the
+importance of environment verification and systematic troubleshooting.
+
+Overall, the exercise connected database concepts to practical implementation
+decisions in a media production and asset management system.
