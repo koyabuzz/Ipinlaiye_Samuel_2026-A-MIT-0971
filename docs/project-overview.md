@@ -2,11 +2,11 @@
 
 ## Student and case study
 
-Samuel Oluwakoya Ipinlaiye (`2026/A/MIT/0971`) prepared this MIT8103
-portfolio for the Master of Information Technology programme at Miva
-University. The case study is a fictional media production and asset management
-company responsible for clients, projects, production staff, media files,
-equipment, and bookings.
+Samuel Oluwakoya Ipinlaiye (Student ID `301932362`; matriculation number
+`2026/A/MIT/0971`) prepared this MIT8103 portfolio for the Master of
+Information Technology programme at Miva University. The case study is a
+fictional media production and asset management company responsible for
+clients, projects, production staff, media files, equipment, and bookings.
 
 ## Completed architecture
 

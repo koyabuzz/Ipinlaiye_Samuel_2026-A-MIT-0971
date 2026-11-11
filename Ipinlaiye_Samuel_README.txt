@@ -2,6 +2,7 @@ MIT8103 ADVANCED DATABASE SYSTEMS PORTFOLIO
 ===========================================
 
 Student: Samuel Oluwakoya Ipinlaiye
+Student ID: 301932362
 Matriculation number: 2026/A/MIT/0971
 Programme: Master of Information Technology
 Institution: Miva University
@@ -9,7 +10,7 @@ Course: MIT8103 - Advanced Database Systems
 Project: Media Production and Asset Management Database
 
 Public GitHub repository:
-https://github.com/koyabuzz/Ipinlaiye_Samuel_2026-A-MIT-0971
+https://github.com/koyabuzz/Ipinlaiye_Samuel_301932362
 
 PROJECT OVERVIEW
 ----------------
